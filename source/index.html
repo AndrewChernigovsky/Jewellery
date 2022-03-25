@@ -13,6 +13,7 @@
 
 <body class="page__body">
   <div class="page__wrapper">
+    <div class="main-menu main-menu--closed main-menu--nojs">
       <header class="main-header">
         <div class="main-header__content-wrapper">
           <div class="main-header__inner">
@@ -42,14 +43,19 @@
 
                   <div class="cart">
                     <a href="#" class="cart__link" id="cart">
-                      Cart<span>0</span>
+                      <span>Cart</span>
+                      <span>0</span>
+                      <svg role="img" class="cart" width="20" height="20" aria-label="cart">
+                        <use xlink:href="img/sprite.svg#card"></use>
+                      </svg>
                     </a>
+
                   </div>
                 </div>
               </div>
 
             </div>
-            <nav class="main-nav main-nav--opened main-nav--nojs">
+            <nav class="main-nav">
               <div class="main-nav__wrapper">
                 <button class="main-nav__toggle" type="button">
                   <span>Открыть меню</span>
@@ -82,6 +88,8 @@
           </div>
         </div>
       </header>
+    </div>
+
       <main class="main">
         <section class="facts containerMain" id="about-us">
           <h2 class="f-basicSemiBold-Middle">Несколько фактов о нас</h2>

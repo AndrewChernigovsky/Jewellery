@@ -1,0 +1,328 @@
+.main-menu.main-menu--nojs,
+.main-menu {
+  .main-header {
+    &__header-up {
+      border-bottom: 1px solid $basicgray;
+    }
+
+    &__header-up-inner {
+      min-height: 115px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      input[type="search"] {
+        border: 1px solid transparent;
+        min-width: 170px;
+        padding: 10px 5px 10px 10px;
+      }
+
+      label {
+        padding: 5px;
+      }
+
+      input[type="search"],
+      label {
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $black;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:active {
+          color: $black;
+        }
+      }
+
+    }
+
+    &__wrapper {
+      background-color: $basicbrown;
+      min-height: 262px;
+      background-image: image-set('../img/content/header-background/indexHeader-ds.jpg' 1x, '../img/content/header-background/indexHeader-ds@2x.jpg' 2x);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__main-text {
+      text-align: center;
+      font-family: "CormorantGaramond";
+      color: $white;
+
+      h1 {
+        font-size: 3.6rem;
+        font-weight: 700;
+      }
+
+      span {
+        font-family: "CormorantGaramond-MediumItalic";
+        font-size: 2.2rem;
+        font-weight: 500;
+      }
+
+    }
+  }
+
+  .main-nav {
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      min-height: 62px;
+    }
+    &__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      display: none;
+
+      span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+      }
+
+      @media (max-width: $ds) {
+        display: block;
+      }
+    }
+    &__list {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__item {
+      margin-left: 34px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $basicgray3;
+      border: 1px solid transparent;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $black;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        color: $black;
+      }
+
+      &:visited {
+        opacity: 0.6;
+      }
+    }
+  }
+
+}
+
+.main-menu.main-menu--closed {
+
+  .main-header {
+    &__header-up {
+      border-bottom: 1px solid $basicgray;
+
+      @media (max-width: $ds) {
+        border-bottom: none;
+      }
+    }
+
+    &__header-up-inner {
+      min-height: 115px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: $ds) {
+        border-bottom: none;
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      input[type="search"] {
+        border: 1px solid transparent;
+        min-width: 170px;
+        padding: 10px 5px 10px 10px;
+      }
+
+      label {
+        padding: 5px;
+      }
+
+      input[type="search"],
+      label {
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $black;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:active {
+          color: $black;
+        }
+      }
+
+    }
+
+    &__wrapper {
+      background-color: $basicbrown;
+      min-height: 262px;
+      background-image: image-set('../img/content/header-background/indexHeader-ds.jpg' 1x, '../img/content/header-background/indexHeader-ds@2x.jpg' 2x);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__main-text {
+      text-align: center;
+      font-family: "CormorantGaramond";
+      color: $white;
+
+      h1 {
+        font-size: 3.6rem;
+        font-weight: 700;
+      }
+
+      span {
+        font-family: "CormorantGaramond-MediumItalic";
+        font-size: 2.2rem;
+        font-weight: 500;
+      }
+
+    }
+  }
+
+  .main-nav {
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      min-height: 62px;
+    }
+    &__toggle {
+      left: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      display: none;
+
+      span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+      }
+
+      @media (max-width: $ds) {
+        display: block;
+      }
+    }
+
+    &__list {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__item {
+      margin-left: 34px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $basicgray3;
+      border: 1px solid transparent;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $black;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        color: $black;
+      }
+
+      &:visited {
+        opacity: 0.6;
+      }
+    }
+  }
+
+}
