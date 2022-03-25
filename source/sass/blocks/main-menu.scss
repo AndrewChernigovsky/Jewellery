@@ -181,16 +181,6 @@
       display: block;
     }
   }
-
-  &__faq-list {
-    display: none;
-
-    @media (max-width: $ds) {
-      display: block;
-      list-style-type: none;
-      padding: 0;
-    }
-  }
 }
 
 .main-menu--closed.main-menu {
@@ -199,10 +189,6 @@
 
     &__header-up {
       border-bottom: 1px solid $basicgray;
-
-      @media (max-width: $ds) {
-        border-bottom: none;
-      }
     }
 
     &__header-up-inner {
@@ -216,6 +202,10 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+
+      @media (max-width: $ds) {
+        display: none;
+      }
 
       input[type="search"] {
         border: 1px solid transparent;
@@ -279,6 +269,11 @@
   }
 
   .main-nav {
+    display: block;
+
+    @media (max-width: $ds) {
+      display: none;
+    }
 
     &__wrapper {
       display: flex;
@@ -294,12 +289,10 @@
     }
 
     &__item {
-      &__item {
-        margin-left: 34px;
+      margin-left: 34px;
 
-        &:first-child {
-          margin-left: 0;
-        }
+      &:first-child {
+        margin-left: 0;
       }
     }
 
@@ -330,6 +323,37 @@
     }
   }
 
+  .authorization {
+    min-width: 20px;
+    height: 20px;
+    flex: 1;
+    justify-content: flex-end;
+
+   .cart__link {
+     display: flex;
+   }
+  }
+
+  .logo {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+
+    svg {
+      fill: $basicbrown;
+    }
+  }
+
+  .main-menu__faq-list {
+    display: none;
+  }
+
+  .cart {
+    svg {
+      stroke: $black;
+      fill: transparent;
+    }
+  }
 }
 
 .main-menu--opened.main-menu {
@@ -516,33 +540,52 @@
     }
   }
 
+  .main-menu__faq-list {
+    display: none;
+
+    @media (max-width: $ds) {
+      display: block;
+      list-style-type: none;
+      padding: 0;
+    }
+  }
+
   .main-menu__faq-item {
-    text-decoration: none;
-    font-family: "Poppins";
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: $basicgray4;
-    border: 1px solid transparent;
 
-    &:focus {
-      outline: none;
-      border: 1px solid $black;
-    }
+    a {
+      text-decoration: none;
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $basicgray4;
+      border: 1px solid transparent;
 
-    &:hover {
-      opacity: 0.8;
-    }
+      &:focus {
+        outline: none;
+        border: 1px solid $black;
+      }
 
-    &:active {
-      color: $black;
-    }
+      &:hover {
+        opacity: 0.8;
+      }
 
-    &:visited {
-      opacity: 0.6;
+      &:active {
+        color: $black;
+      }
+
+      &:visited {
+        opacity: 0.6;
+      }
     }
   }
 
   .loginMenu {
+    display: none;
+
+    @media (max-width: $ds) {
+      display: block;
+    }
+
     a {
       color: $white;
       font-size: 1.8rem;

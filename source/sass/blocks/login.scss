@@ -8,11 +8,7 @@
 
 .loginMenu {
   display: none;
-
-  @media (max-width: $ds) {
-    display: block;
-  }
-
+  
   a {
     border: 1px solid transparent;
     text-decoration: none;
