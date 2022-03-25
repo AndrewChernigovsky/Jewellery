@@ -1,0 +1,32 @@
+.authorization {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100px;
+
+  a {
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: $basicgray3;
+    font-family: "Poppins";
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $black;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      color: $black;
+    }
+
+    &:visited {
+      opacity: 0.6;
+    }
+  }
+}

@@ -17,7 +17,6 @@ var include = require("posthtml-include");
 var cheerio = require("gulp-cheerio");
 var del = require("del");
 const uglify = require("gulp-uglify");
-const gulpPosthtml = require("gulp-posthtml");
 
 gulp.task("css", function () {
     return gulp
@@ -42,12 +41,12 @@ gulp.task("server", function () {
         ui: false,
     });
 
-    gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+    gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"))
     gulp.watch(
         "source/img/icon-*.svg",
         gulp.series("sprite", "html", "refresh")
     );
-    gulp.watch("source/*.html", gulp.series("html", "refresh"));
+    gulp.watch("source/*.html", gulp.series("html", "refresh"))
     gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
 });
 
@@ -108,7 +107,8 @@ gulp.task("html", function () {
     return gulp
         .src("source/*.html")
         .pipe(posthtml([include()]))
-        .pipe(gulp.dest("build"));
+        .pipe(gulp.dest("build"))
+        .pipe(server.stream());
 });
 
 gulp.task("copy", function () {

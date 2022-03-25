@@ -1,0 +1,24 @@
+.main-header {
+  &__header-up {
+    border-bottom: 1px solid $basicgray;
+  }
+
+  &__header-up-inner {
+    min-height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+
+    input[type="search"] {
+      border: none;
+      min-width: 170px;
+      padding: 10px 5px 10px 10px;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,27 +1,40 @@
+.page {
+  font-size: 10px;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+
+  &__body {
+      margin: 0;
+      height: 100%;
+      font-family: "Poppins", "CormorantGaramond", "Arial", sans-serif;
+  }
+
+  &__wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+      opacity: 0.4;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .container {
-  max-width: $ds;
-  min-width: $sm;
-  margin: 0 auto;
-  padding: 0 10px;
-
-  @media (min-width: $tb) {
-    padding: 0 20px;
-  }
-}
-
-.containerBike {
-  max-width: $ds + 187px;
-  min-width: $sm;
-  margin: 0 auto;
-  padding: 0 10px;
-
-  @media (min-width: $tb) {
-    padding: 0 20px;
-  }
-}
-
-.containerMain {
-  max-width: $ds + 221px;
+  max-width: 1170px;
   min-width: $sm;
   margin: 0 auto;
   padding: 0 10px;
@@ -62,4 +75,11 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+input::placeholder {
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  color: $basicgray1;
+  font-weight: 500;
 }
