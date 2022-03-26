@@ -41,21 +41,6 @@ mainBtnMenu.addEventListener('click', function () {
   }
 });
 
-if(mainMenuOpenedLogin.focus()) {
-  mainMenuOpenedLogin.addEventListener("blur", ()=> {
-    mainBtnMenu.focus()
-  })
-}
-
-document.addEventListener("keydown", function (e) {
-
-  if(e.key === "Tab") {
-    if(e.shiftKey) {
-      mainBtnMenu.focus()
-    }
-  }
-});
-
 const anchors = document.querySelectorAll('a[href*="#"]')
 
 for (let anchor of anchors) {
