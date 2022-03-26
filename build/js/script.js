@@ -1,51 +1,45 @@
 "use strict";
 
-let navMain = document.querySelector('.main-nav'),
-    navToggle = document.querySelector('.main-nav__toggle'),
-    navLinks = document.querySelectorAll('.main-nav__link'),
-    navList = document.querySelector('.main-nav__list'),
-    body = document.getElementsByTagName('body')[0],
-    mainNavClosed = 'main-nav--closed',
-    mainNavOpened = 'main-nav--opened';
+let mainMenu = document.querySelector('.main-menu');
+let mainBtnMenu = document.querySelector('.main-menu__toggle');
+let mainNavNojs = 'main-menu--nojs';
+let mainNavClosed = 'main-menu--closed';
+let mainNavOpened = 'main-menu--opened';
+let navList = document.querySelector('.main-menu__list');
+let body = document.getElementsByTagName('body')[0];
+let mainMenuContent = document.querySelector('.main-header__inner');
 
-navMain.classList.remove("main-nav--nojs");
+mainMenu.classList.remove(mainNavNojs);
 
-if (navMain.classList.contains(mainNavOpened)) {
-  navMain.classList.remove(mainNavOpened);
-  navMain.classList.add(mainNavClosed);
+if (mainMenu.classList.contains(mainNavOpened)) {
+  mainMenu.classList.remove(mainNavOpened);
+  mainMenu.classList.add(mainNavClosed);
 }
 
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains(mainNavClosed)) {
-    navMain.classList.remove(mainNavClosed);
-    navMain.classList.add(mainNavOpened);
+mainBtnMenu.addEventListener('click', function () {
+  if (mainMenu.classList.contains(mainNavClosed)) {
+    mainMenu.classList.remove(mainNavClosed);
+    mainMenu.classList.add(mainNavOpened);
 
   } else {
-    navMain.classList.add(mainNavClosed);
-    navMain.classList.remove(mainNavOpened);
-    navList.style.overflowY='hidden';
+    mainMenu.classList.add(mainNavClosed);
+    mainMenu.classList.remove(mainNavOpened);
+    mainMenuContent.style.overflowY='hidden';
   }
 
-  if(navMain.classList.contains(mainNavOpened)) {
+  if(mainMenu.classList.contains(mainNavOpened)) {
     body.classList.add('overflow-hidden')
-    navList.style.overflowY='scroll';
+    mainMenuContent.style.overflowY='scroll';
   } else {
     body.classList.remove('overflow-hidden')
   }
 
-  if(navMain.classList.contains('none')) {
+  if(mainMenu.classList.contains('none')) {
     body.classList.remove('overflow-hidden')
-    navList.style.overflowY='hidden';
+    mainMenuContent.style.overflowY='hidden';
   }
 });
 
-navLinks.forEach(function(el){
-  el.addEventListener('click', function(){
-    navMain.classList.remove(mainNavOpened)
-    navMain.classList.add(mainNavClosed)
-    body.classList.remove('overflow-hidden')
-  })
-})
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 

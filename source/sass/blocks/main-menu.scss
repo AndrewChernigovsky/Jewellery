@@ -63,18 +63,26 @@
       text-align: center;
       font-family: "CormorantGaramond";
       color: $white;
+      line-height: 0.4;
+      margin-top: -23px;
 
       h1 {
-        font-size: 3.6rem;
+        font-size: 4.5rem;
         font-weight: 700;
+        letter-spacing: 1.4px;
       }
 
       span {
         font-family: "CormorantGaramond-MediumItalic";
-        font-size: 2.2rem;
+        font-size: 3.8rem;
         font-weight: 500;
       }
 
+    }
+
+    &__main-text-content {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -135,9 +143,9 @@
 
 .main-menu {
   &__toggle {
-    left: 20px;
+    left: 32px;
     position: absolute;
-    top: 20px;
+    top: 37px;
     right: 0;
     z-index: 2;
     width: 50px;
@@ -187,6 +195,14 @@
 
   .main-header {
 
+    &__content-wrapper {
+      margin-bottom: -1px;
+
+      @media (max-width: $ds) {
+        padding-bottom: 11px;
+      }
+    }
+
     &__header-up {
       border-bottom: 1px solid $basicgray;
     }
@@ -202,6 +218,7 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+      margin-top: -6px;
 
       @media (max-width: $ds) {
         display: none;
@@ -210,7 +227,7 @@
       input[type="search"] {
         border: 1px solid transparent;
         min-width: 170px;
-        padding: 10px 5px 10px 10px;
+        padding: 10px 5px 10px 7px;
       }
 
       label {
@@ -239,7 +256,7 @@
 
     &__wrapper {
       background-color: $basicbrown;
-      min-height: 262px;
+      min-height: 461px;
       background-image: image-set('../img/content/header-background/indexHeader-ds.jpg' 1x, '../img/content/header-background/indexHeader-ds@2x.jpg' 2x);
       background-repeat: no-repeat;
       background-size: cover;
@@ -247,24 +264,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    &__main-text {
-      text-align: center;
-      font-family: "CormorantGaramond";
-      color: $white;
-
-      h1 {
-        font-size: 3.6rem;
-        font-weight: 700;
-      }
-
-      span {
-        font-family: "CormorantGaramond-MediumItalic";
-        font-size: 2.2rem;
-        font-weight: 500;
-      }
-
     }
   }
 
@@ -286,6 +285,9 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      padding: 0;
+      flex-wrap: wrap;
+      margin-left: 10px;
     }
 
     &__item {
@@ -326,8 +328,22 @@
   .authorization {
     min-width: 20px;
     height: 20px;
-    flex: 1;
+    flex-basis: 25%;
     justify-content: flex-end;
+    margin-bottom: 6px;
+
+    @media (max-width: $ds) {
+      margin-bottom: -11px;
+      margin-right: 32px;
+    }
+
+    div {
+      margin-left: 35px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
 
    .cart__link {
      display: flex;
@@ -335,9 +351,14 @@
   }
 
   .logo {
-    flex: 1;
-    justify-content: flex-end;
+    flex-basis: 100%;
+    justify-content: center;
     display: flex;
+    margin-top: 5px;
+
+    @media (max-width: $ds) {
+      margin-left: 17%;
+    }
 
     svg {
       fill: $basicbrown;
@@ -362,8 +383,18 @@
 
     &__content-wrapper {
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
       background-color: $basicbrown;
+      overflow-y: scroll;
+      position: relative;
+    }
+
+    &__inner {
+      min-height: inherit;
+      min-width: 100%;
+      padding-bottom: 50px;
+      background-color: $basicbrown;
+      position: absolute;
     }
 
     &__header-up {
@@ -445,24 +476,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    &__main-text {
-      text-align: center;
-      font-family: "CormorantGaramond";
-      color: $white;
-
-      h1 {
-        font-size: 3.6rem;
-        font-weight: 700;
-      }
-
-      span {
-        font-family: "CormorantGaramond-MediumItalic";
-        font-size: 2.2rem;
-        font-weight: 500;
-      }
-
     }
   }
 

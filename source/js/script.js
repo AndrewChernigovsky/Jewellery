@@ -6,6 +6,8 @@ let mainNavNojs = 'main-menu--nojs';
 let mainNavClosed = 'main-menu--closed';
 let mainNavOpened = 'main-menu--opened';
 let navList = document.querySelector('.main-menu__list');
+let body = document.getElementsByTagName('body')[0];
+let mainMenuContent = document.querySelector('.main-header__inner');
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -22,19 +24,19 @@ mainBtnMenu.addEventListener('click', function () {
   } else {
     mainMenu.classList.add(mainNavClosed);
     mainMenu.classList.remove(mainNavOpened);
-    navList.style.overflowY='hidden';
+    mainMenuContent.style.overflowY='hidden';
   }
 
   if(mainMenu.classList.contains(mainNavOpened)) {
     body.classList.add('overflow-hidden')
-    navList.style.overflowY='scroll';
+    mainMenuContent.style.overflowY='scroll';
   } else {
     body.classList.remove('overflow-hidden')
   }
 
   if(mainMenu.classList.contains('none')) {
     body.classList.remove('overflow-hidden')
-    navList.style.overflowY='hidden';
+    mainMenuContent.style.overflowY='hidden';
   }
 });
 
