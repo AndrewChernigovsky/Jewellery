@@ -1,0 +1,12 @@
+.loginPopup {
+  display: none;
+  min-width: 300px;
+  max-width: 442px;
+  min-height: 586px;
+  background-color: $basicgray2;
+}
+
+.loginPopup.show {
+  display: block;
+}
+
