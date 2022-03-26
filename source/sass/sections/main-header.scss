@@ -1,0 +1,35 @@
+.main-header {
+  &__main-text {
+    font-family: "CormorantGaramond";
+    color: $white;
+    line-height: 0.4;
+    margin-top: -23px;
+
+    @media (max-width: $ds) {
+      padding: 8px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+
+    span {
+      font-family: "CormorantGaramond-MediumItalic";
+      font-size: 3.8rem;
+      font-weight: 500;
+    }
+
+  }
+
+  &__main-text-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: $ds) {
+      padding-right: 19px;
+    }
+  }
+}

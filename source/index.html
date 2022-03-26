@@ -19,7 +19,7 @@
           <div class="main-header__inner">
             <div class="main-header__header-up">
               <div class="main-header__header-up-inner container">
-                <button class="main-menu__toggle" type="button">
+                <button class="main-menu__toggle" type="button" tabindex="1" id="btnMenuMain">
                   <span>Открыть меню</span>
                 </button>
                 <form action="https://echo.htmlacademy.ru/" method="get" name="headerSearch">
@@ -28,7 +28,7 @@
                       <use xlink:href="img/sprite.svg#search"></use>
                     </svg>
                   </label>
-                  <input type="search" name="search" id="headerSearch" placeholder="Type here to search">
+                  <input type="search" name="search" id="headerSearch" placeholder="Type here to search" tabindex="2">
                 </form>
 
                 <div class="logo">
@@ -41,11 +41,11 @@
 
                 <div class="authorization">
                   <div class="login">
-                    <a href="#" class="login__link" id="login">Login</a>
+                    <a href="#" class="login__link" id="login" tabindex="3">Login</a>
                   </div>
 
                   <div class="cart">
-                    <a href="#" class="cart__link" id="cart">
+                    <a href="#" class="cart__link" id="cart" tabindex="4">
                       <span>Cart</span>
                       <span>0</span>
                       <svg role="img" class="cart" width="20" height="20" aria-label="cart">
@@ -63,36 +63,36 @@
                 <div class="main-nav__wrapper">
                   <ul class="main-nav__list">
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#about-us">What’s new</a>
+                      <a class="main-nav__link" href="#about-us" tabindex="5" aria-label="What’s new">What’s new</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#products-bike">Chokers</a>
+                      <a class="main-nav__link" href="#products-bike" tabindex="6" aria-label="Chokers">Chokers</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#videoBike">Necklaces</a>
+                      <a class="main-nav__link" href="#videoBike" tabindex="7" aria-label="Necklaces">Necklaces</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#contacts">Rings</a>
+                      <a class="main-nav__link" href="#contacts" tabindex="8" aria-label="Rings">Rings</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#contacts">Earrings</a>
+                      <a class="main-nav__link" href="#contacts" tabindex="9" aria-label="Earrings">Earrings</a>
                     </li>
                   </ul>
                 </div>
               </nav>
               <ul class="main-menu__faq-list">
                 <li class="main-menu__faq-item">
-                  <a href="#">About CH</a>
+                  <a href="#" tabindex="10" aria-label="About CH">About CH</a>
                 </li>
                 <li class="main-menu__faq-item">
-                  <a href="#">Stores & Hours</a>
+                  <a href="#" tabindex="11" aria-label="Stores & Hours">Stores & Hours</a>
                 </li>
                 <li class="main-menu__faq-item">
-                  <a href="#">Contact Us</a>
+                  <a href="#" tabindex="12" aria-label="Contact Us">Contact Us</a>
                 </li>
               </ul>
               <div class="loginMenu">
-                <a href="#" class="login__link" id="loginMenu">Login</a>
+                <a href="#" class="login__link" id="loginMenu" tabindex="13" aria-label="Login">Login</a>
               </div>
             </div>
           </div>

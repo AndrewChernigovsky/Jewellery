@@ -58,32 +58,6 @@
       justify-content: center;
       align-items: center;
     }
-
-    &__main-text {
-      text-align: center;
-      font-family: "CormorantGaramond";
-      color: $white;
-      line-height: 0.4;
-      margin-top: -23px;
-
-      h1 {
-        font-size: 4.5rem;
-        font-weight: 700;
-        letter-spacing: 1.4px;
-      }
-
-      span {
-        font-family: "CormorantGaramond-MediumItalic";
-        font-size: 3.8rem;
-        font-weight: 500;
-      }
-
-    }
-
-    &__main-text-content {
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
 
   .main-nav {
@@ -154,6 +128,7 @@
     border: none;
     background-color: transparent;
     display: none;
+    border: 1px solid transparent;
 
     span {
       position: absolute;
@@ -168,6 +143,15 @@
       overflow: hidden;
     }
 
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      border: 1px solid $black;
+      outline: 1px solid transparent;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -176,7 +160,7 @@
       width: 24px;
       height: 2px;
       background-color: $black;
-      box-shadow: 0 8px 0 0 $black, 0 15px 0 0 $black;
+      box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
     }
 
     &:active::before {
@@ -205,6 +189,10 @@
 
     &__header-up {
       border-bottom: 1px solid $basicgray;
+
+      @media (max-width: $ds) {
+        border-bottom: none;
+      }
     }
 
     &__header-up-inner {
@@ -370,6 +358,11 @@
   }
 
   .cart {
+
+    @media (max-width: $ds) {
+      margin-right: -4px;
+    }
+
     svg {
       stroke: $black;
       fill: transparent;
@@ -406,14 +399,15 @@
     }
 
     &__header-up-inner {
-      min-height: 115px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      min-height: 199px;
 
       @media (max-width: $ds) {
         border-bottom: none;
+        margin-bottom: 4px;
       }
     }
 
@@ -422,12 +416,14 @@
       align-items: center;
       cursor: pointer;
       order: 2;
-      min-width: 100%;
+      min-width: 93%;
+      margin: 0 auto;
+      position: relative;
 
       input[type="search"] {
         border: 1px solid transparent;
         min-width: 100%;
-        padding: 10px 5px 10px 30px;
+        padding: 10px 5px 16px 30px;
         border-radius: 50px;
         background-color: $basicbrown1;
       }
@@ -439,10 +435,13 @@
       label {
         padding: 5px;
         position: absolute;
-        left: 30px;
+        left: 7px;
+        top: 5px;
 
         svg {
           fill: $white;
+          width: 16px;
+          height: 16px;
         }
       }
 
@@ -501,7 +500,7 @@
         align-items: flex-start;
         flex-direction: column;
         padding: 0;
-        line-height: 2;
+        line-height: 2.37;
       }
     }
 
@@ -539,14 +538,29 @@
   .authorization {
     min-width: 20px;
     height: 20px;
-    flex: 1;
+    flex-basis: 5%;
     justify-content: flex-end;
+    margin-bottom: 6px;
+
+    @media (max-width: $ds) {
+      margin-bottom: -11px;
+      margin-right: 24px;
+    }
+
+    a {
+      display: flex;
+    }
   }
 
   .logo {
-    flex: 1;
-    justify-content: flex-end;
+    flex-basis: 80%;
+    justify-content: center;
     display: flex;
+    margin-top: 5px;
+
+    @media (max-width: $ds) {
+      margin-left: 9%;
+    }
 
     svg {
       fill: $white;
@@ -560,6 +574,8 @@
       display: block;
       list-style-type: none;
       padding: 0;
+      line-height: 2.37;
+      margin-bottom: 32px;
     }
   }
 
@@ -568,7 +584,7 @@
     a {
       text-decoration: none;
       font-family: "Poppins";
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 500;
       color: $basicgray4;
       border: 1px solid transparent;
@@ -630,5 +646,10 @@
         0 16px 0 0 rgb(255, 255, 255);
     }
 
+  }
+
+  .main-menu__list {
+    padding-left: 44px;
+    line-height: 1.7;
   }
 }

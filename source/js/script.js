@@ -8,6 +8,7 @@ let mainNavOpened = 'main-menu--opened';
 let navList = document.querySelector('.main-menu__list');
 let body = document.getElementsByTagName('body')[0];
 let mainMenuContent = document.querySelector('.main-header__inner');
+let mainMenuOpenedLogin = document.getElementById('loginMenu');
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -40,6 +41,20 @@ mainBtnMenu.addEventListener('click', function () {
   }
 });
 
+if(mainMenuOpenedLogin.focus()) {
+  mainMenuOpenedLogin.addEventListener("blur", ()=> {
+    mainBtnMenu.focus()
+  })
+}
+
+document.addEventListener("keydown", function (e) {
+
+  if(e.key === "Tab") {
+    if(e.shiftKey) {
+      mainBtnMenu.focus()
+    }
+  }
+});
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 

@@ -16,6 +16,10 @@
     fill: $white;
     display: none;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     @media (max-width: $ds) {
       display: block;
     }
