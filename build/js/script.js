@@ -9,6 +9,29 @@ let navList = document.querySelector('.main-menu__list');
 let body = document.getElementsByTagName('body')[0];
 let mainMenuContent = document.querySelector('.main-header__inner');
 let mainMenuOpenedLogin = document.getElementById('loginMenu');
+let mainLogin = document.getElementById('login');
+let loginBtnPopup = document.getElementById('btnloginPopup');
+let loginPopup = document.getElementById('loginPopup');
+
+
+mainLogin.addEventListener('click', ()=> {
+  loginPopup.classList.add('show');
+})
+
+mainMenuOpenedLogin.addEventListener('click', ()=> {
+  loginPopup.classList.add('show');
+})
+
+loginBtnPopup.addEventListener('click', ()=>{
+  loginPopup.classList.remove('show');
+})
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    loginPopup.classList.remove('show');
+  }
+});
+
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -40,6 +63,8 @@ mainBtnMenu.addEventListener('click', function () {
     mainMenuContent.style.overflowY='hidden';
   }
 });
+
+
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 
