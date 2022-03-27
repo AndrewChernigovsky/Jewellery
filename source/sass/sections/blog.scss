@@ -1,3 +1,128 @@
 .blog {
   min-height: 769px;
+
+  &__heading {
+    margin-bottom: 60px;
+    min-width: 100%;
+    text-align: center;
+
+
+    h2 {
+      font-family: "CormorantGaramond";
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: $basicgray3;
+    }
+
+    a {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $basicgray3;
+      cursor: pointer;
+      text-decoration: none;
+      padding-bottom: 10px;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $basicbrown;
+
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        outline: 1px solid transparent;
+        border: 1px solid $black;
+      }
+
+      &:visited {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__gallery {
+
+  }
+
+  &__gallery-bigBlock {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+  }
+
+  &__gallery-itemBigBlock {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__gallery-block {
+    display: flex;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__gallery-item {
+    background: $basicgray2;
+    min-width: 285px;
+    min-height: 300px;
+
+    time {
+      font-family: "Poppins";
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $basicgray1;
+    }
+
+    h3 {
+      font-family: "CormorantGaramond";
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: $black;
+    }
+
+    a {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $basicgray3;
+      cursor: pointer;
+      text-decoration: none;
+      padding-bottom: 10px;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $basicbrown;
+
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        outline: 1px solid transparent;
+        border: 1px solid $black;
+      }
+
+      &:visited {
+        opacity: 0.6;
+      }
+    }
+  }
 }
