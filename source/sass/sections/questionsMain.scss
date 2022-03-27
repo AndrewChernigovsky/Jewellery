@@ -1,0 +1,54 @@
+.questionsMain {
+  &__wrapper {
+    min-width: 100%;
+    text-align: center;
+
+    h2 {
+      font-family: "CormorantGaramond";
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: $basicgray3;
+    }
+  }
+
+  &__content {
+    min-height: 515px;
+    border: 1px solid $basicbrown;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
+  &__content-item {
+    text-align: left;
+    padding: 50px 38px;
+    border-bottom: 1px solid $basicbrown;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    h3 {
+      font-family: "Poppins";
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: $basicgray3;
+    }
+  }
+
+  &__content-item-wrapper {
+    max-width: 60%;
+  }
+
+  &__content-more {
+    max-width: 76%;
+
+    p {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $basicgray3;
+    }
+  }
+}
+
+
