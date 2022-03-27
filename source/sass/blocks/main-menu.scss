@@ -733,6 +733,7 @@
       @media (max-width: $tb) {
         display: grid;
         justify-content: center;
+        padding-bottom: 20px;
       }
     }
 
@@ -799,7 +800,7 @@
   .authorization {
     margin-left: 70px;
     min-height: 20px;
-    max-width: 25%;
+    max-width: 17%;
     flex-wrap: wrap;
 
     @media (max-width: $tb) {
@@ -808,7 +809,7 @@
   }
 
   .logo {
-    margin-left: 8%;
+    margin-left: 3%;
     flex-basis: 30%;
 
     @media (max-width: $tb) {

@@ -1,0 +1,106 @@
+.mainFooter {
+  min-height: 368px;
+  background-color: $black;
+  color: $white;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 0;
+  }
+
+  &__email {
+    p:first-of-type {
+      font-family: "CormorantGaramond";
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: $white;
+    }
+
+    p:last-of-type {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $basicgray1;
+    }
+
+    form {
+      outline: 1px solid transparent;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $white;
+    }
+
+    form input[type="email"] {
+      min-width: 450px;
+      background: transparent;
+      border: 1px solid transparent;
+      outline: 1px solid transparent;
+      min-height: 30px;
+      line-height: 1;
+      padding-right: 10px;
+      padding-left: 0;
+
+      &:focus {
+        outline: 1px solid transparent;
+        border: 1px solid $white;
+        color: $white;
+        font-family: "Poppins";
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+    }
+
+    button[type="submit"] {
+      background: none;
+      border: none;
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $white;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.6;
+
+        svg {
+          opacity: 0.6;
+        }
+      }
+
+      svg {
+        position: absolute;
+        right: -31px;
+        top: 5px;
+        width: 29px;
+        height: 9px;
+      }
+    }
+  }
+
+  &__resources {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__nav-list,
+  &__faq-list {
+    list-style-type: none;
+    padding: 0;
+
+    a {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $white;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

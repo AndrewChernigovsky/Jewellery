@@ -12,6 +12,60 @@ let mainMenuOpenedLogin = document.getElementById('loginMenu');
 let mainLogin = document.getElementById('login');
 let loginBtnPopup = document.getElementById('btnloginPopup');
 let loginPopup = document.getElementById('loginPopup');
+let btnMoreAccardeon1 = document.getElementById('btnAsk1');
+let btnMoreAccardeon2 = document.getElementById('btnAsk2');
+let btnMoreAccardeon3 = document.getElementById('btnAsk3');
+let btnMoreAccardeon4 = document.getElementById('btnAsk4');
+let textAccardeon1 = document.getElementById('btnAsk1-text');
+let textAccardeon2 = document.getElementById('btnAsk2-text');
+let textAccardeon3 = document.getElementById('btnAsk3-text');
+let textAccardeon4 = document.getElementById('btnAsk4-text');
+
+btnMoreAccardeon1.classList.add('showmore')
+textAccardeon1.classList.remove('questionsMain__content-more--nojs')
+textAccardeon2.classList.remove('questionsMain__content-more--nojs')
+textAccardeon3.classList.remove('questionsMain__content-more--nojs')
+textAccardeon4.classList.remove('questionsMain__content-more--nojs')
+
+btnMoreAccardeon1.addEventListener('click', ()=> {
+  if(textAccardeon1.classList.contains('show-text-more') && btnMoreAccardeon1.classList.contains('showmore')) {
+    textAccardeon1.classList.remove('show-text-more')
+    btnMoreAccardeon1.classList.remove('showmore')
+  } else {
+    textAccardeon1.classList.add('show-text-more')
+    btnMoreAccardeon1.classList.add('showmore')
+  }
+});
+
+btnMoreAccardeon2.addEventListener('click', ()=> {
+  if(textAccardeon2.classList.contains('show-text-more') && btnMoreAccardeon2.classList.contains('showmore')) {
+    textAccardeon2.classList.remove('show-text-more')
+    btnMoreAccardeon2.classList.remove('showmore')
+  } else {
+    textAccardeon2.classList.add('show-text-more')
+    btnMoreAccardeon2.classList.add('showmore')
+  }
+});
+
+btnMoreAccardeon3.addEventListener('click', ()=> {
+  if(textAccardeon3.classList.contains('show-text-more') && btnMoreAccardeon3.classList.contains('showmore')) {
+    textAccardeon3.classList.remove('show-text-more')
+    btnMoreAccardeon3.classList.remove('showmore')
+  } else {
+    textAccardeon3.classList.add('show-text-more')
+    btnMoreAccardeon3.classList.add('showmore')
+  }
+});
+
+btnMoreAccardeon4.addEventListener('click', ()=> {
+  if(textAccardeon4.classList.contains('show-text-more') && btnMoreAccardeon4.classList.contains('showmore')) {
+    textAccardeon4.classList.remove('show-text-more')
+    btnMoreAccardeon4.classList.remove('showmore')
+  } else {
+    textAccardeon4.classList.add('show-text-more')
+    btnMoreAccardeon4.classList.add('showmore')
+  }
+});
 
 
 mainLogin.addEventListener('click', ()=> {

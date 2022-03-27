@@ -1,4 +1,6 @@
 .questionsMain {
+  margin-bottom: 110px;
+  
   &__wrapper {
     min-width: 100%;
     text-align: center;
@@ -22,6 +24,22 @@
     text-align: left;
     padding: 50px 38px;
     border-bottom: 1px solid $basicbrown;
+    position: relative;
+
+    @media (max-width: $tb) {
+      padding: 50px 10px;
+    }
+
+    button {
+      position: absolute;
+      right: 70px;
+      top: 105px;
+
+      @media (max-width: $tb) {
+        right: 19px;
+        top: 73px;
+      }
+    }
 
     &:last-of-type {
       border-bottom: none;
@@ -37,10 +55,19 @@
 
   &__content-item-wrapper {
     max-width: 60%;
+
+    @media (max-width: $tb) {
+      max-width: 100%;
+    }
   }
 
   &__content-more {
     max-width: 76%;
+    display: none;
+
+    @media (max-width: $tb) {
+      max-width: 100%;
+    }
 
     p {
       font-family: "Poppins";
@@ -51,4 +78,46 @@
   }
 }
 
+.questionsMain__content-more.show-text-more {
+  display: block;
+}
 
+.questionsMain__content-more.questionsMain__content-more--nojs {
+  display: block;
+}
+
+.btnQuestions {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  svg {
+    fill: $white;
+    width: 18px;
+    height: 23px;
+  }
+
+  svg:first-of-type {
+    display: block;
+  }
+
+  svg:last-of-type {
+    display: none;
+  }
+}
+
+.btnQuestions.showmore {
+  svg:first-of-type {
+    display: none;
+  }
+
+  svg:last-of-type {
+    display: block;
+  }
+}
