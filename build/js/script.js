@@ -24,6 +24,9 @@ let itemAccardeon1 = document.getElementById('btnAsk1-item');
 let itemAccardeon2 = document.getElementById('btnAsk2-item');
 let itemAccardeon3 = document.getElementById('btnAsk3-item');
 let itemAccardeon4 = document.getElementById('btnAsk4-item');
+let overflow = document.getElementById('overflow');
+
+
 
 btnMoreAccardeon1.classList.add('showmore')
 textAccardeon1.classList.remove('questionsMain__content-more--nojs')
@@ -74,14 +77,28 @@ itemAccardeon4.addEventListener('click', ()=> {
 
 mainLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show');
+  overflow.classList.add('show');
 })
 
 mainMenuOpenedLogin.addEventListener('click', ()=> {
-  loginPopup.classList.add('show');
+  loginPopup.classList.add('show')
+  overflow.classList.add('show')
 })
+
+if( loginPopup.classList.contains('show')) {
+  body.style.overflowY = 'hidden'
+  body.classList.add('overflow-hidden')
+  loginPopup.style.overflowY='scroll';
+}
 
 loginBtnPopup.addEventListener('click', ()=>{
   loginPopup.classList.remove('show');
+  overflow.classList.remove('show');
+})
+
+overflow.addEventListener('click', ()=> {
+  loginPopup.classList.remove('show');
+  overflow.classList.remove('show');
 })
 
 document.addEventListener("keydown", function (e) {

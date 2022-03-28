@@ -1,6 +1,6 @@
 .questionsMain {
   margin-bottom: 110px;
-  
+
   &__wrapper {
     min-width: 100%;
     text-align: center;
@@ -25,6 +25,7 @@
     padding: 50px 38px;
     border-bottom: 1px solid $basicbrown;
     position: relative;
+    cursor: pointer;
 
     @media (max-width: $tb) {
       padding: 50px 10px;

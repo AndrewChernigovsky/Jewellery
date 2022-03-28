@@ -83,3 +83,16 @@ input::placeholder {
   color: $basicgray1;
   font-weight: 500;
 }
+
+.overflow {
+  display: none;
+}
+
+.overflow.show {
+  display: block;
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: $basicgray5;
+  z-index: 100;
+}

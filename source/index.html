@@ -12,6 +12,7 @@
 </head>
 
 <body class="page__body">
+  <div class="overflow" id="overflow"></div>
   <div class="page__wrapper">
     <div class="main-menu main-menu--closed main-menu--nojs">
       <header class="main-header">
@@ -445,31 +446,38 @@
 
             </div>
             <div class="mainFooter__contacts-social">
-
-              <a href="#">
-                <svg role="img" width="15" height="15" aria-label="facebook" viewBox="0 0 15 15">
-                  <use xlink:href="img/sprite.svg#facebook"></use>
-                </svg>
-                <span>Facebook</span>
-              </a>
-              <a href="#">
-                <svg role="img" width="15" height="15" aria-label="instagram" viewBox="0 0 15 15">
-                  <use xlink:href="img/sprite.svg#instagram"></use>
-                </svg>
-                <span>Instagram</span>
-              </a>
-              <a href="#">
-                <svg role="img" width="15" height="15" aria-label="pinterest" viewBox="0 0 15 15">
-                  <use xlink:href="img/sprite.svg#pinterest"></use>
-                </svg>
-                <span>Pinterest</span>
-              </a>
-              <a href="#">
-                <svg role="img" width="15" height="13" aria-label="twitter" viewBox="0 0 15 15">
-                  <use xlink:href="img/sprite.svg#twitter"></use>
-                </svg>
-                <span>Twitter</span>
-              </a>
+              <div class="mainFooter__contacts-social-item">
+                <a href="#">
+                  <svg role="img" width="15" height="15" aria-label="facebook" viewBox="0 0 15 15">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
+              <div class="mainFooter__contacts-social-item">
+                <a href="#">
+                  <svg role="img" width="15" height="15" aria-label="instagram" viewBox="0 0 15 15">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+              <div class="mainFooter__contacts-social-item">
+                <a href="#">
+                  <svg role="img" width="15" height="15" aria-label="pinterest" viewBox="0 0 15 15">
+                    <use xlink:href="img/sprite.svg#pinterest"></use>
+                  </svg>
+                  <span>Pinterest</span>
+                </a>
+              </div>
+              <div class="mainFooter__contacts-social-item">
+                <a href="#">
+                  <svg role="img" width="15" height="13" aria-label="twitter" viewBox="0 0 15 15">
+                    <use xlink:href="img/sprite.svg#twitter"></use>
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -480,6 +488,9 @@
 
   <div class="loginPopup" id="loginPopup">
     <div class="loginPopup__wrapper">
+      <button class="loginPopup__toggle" type="button" tabindex="1" id="btnloginPopup">
+        <span>Открыть меню</span>
+      </button>
       <div class="loginPopup__header">
         <picture>
           <source type="image/webp" media="(min-width: 1024px)" srcset="
@@ -496,9 +507,6 @@
         </picture>
       </div>
       <div class="loginPopup__inner">
-        <button class="loginPopup__toggle" type="button" tabindex="1" id="btnloginPopup">
-          <span>Открыть меню</span>
-        </button>
         <p>Log in</p>
         <form action="https://echo.htmlacademy.ru/" method="get">
           <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail">
