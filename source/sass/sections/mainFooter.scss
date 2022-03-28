@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 100px 0;
+    gap: 30px;
   }
 
   &__email {
@@ -88,6 +89,9 @@
   &__faq-list {
     list-style-type: none;
     padding: 0;
+    line-height: 3;
+    min-height: 100%;
+    margin: 0;
 
     a {
       font-family: "Poppins";
@@ -97,6 +101,30 @@
       position: relative;
       cursor: pointer;
       text-decoration: none;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__contacts-social {
+    display: grid;
+    text-align: left;
+
+    a {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $white;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      align-self: center;
+
+      svg {
+        fill: $white;
+      }
 
       &:hover {
         opacity: 0.6;
