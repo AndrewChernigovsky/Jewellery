@@ -20,6 +20,10 @@ let textAccardeon1 = document.getElementById('btnAsk1-text');
 let textAccardeon2 = document.getElementById('btnAsk2-text');
 let textAccardeon3 = document.getElementById('btnAsk3-text');
 let textAccardeon4 = document.getElementById('btnAsk4-text');
+let itemAccardeon1 = document.getElementById('btnAsk1-item');
+let itemAccardeon2 = document.getElementById('btnAsk2-item');
+let itemAccardeon3 = document.getElementById('btnAsk3-item');
+let itemAccardeon4 = document.getElementById('btnAsk4-item');
 
 btnMoreAccardeon1.classList.add('showmore')
 textAccardeon1.classList.remove('questionsMain__content-more--nojs')
@@ -27,7 +31,7 @@ textAccardeon2.classList.remove('questionsMain__content-more--nojs')
 textAccardeon3.classList.remove('questionsMain__content-more--nojs')
 textAccardeon4.classList.remove('questionsMain__content-more--nojs')
 
-btnMoreAccardeon1.addEventListener('click', ()=> {
+itemAccardeon1.addEventListener('click', ()=> {
   if(textAccardeon1.classList.contains('show-text-more') && btnMoreAccardeon1.classList.contains('showmore')) {
     textAccardeon1.classList.remove('show-text-more')
     btnMoreAccardeon1.classList.remove('showmore')
@@ -37,7 +41,7 @@ btnMoreAccardeon1.addEventListener('click', ()=> {
   }
 });
 
-btnMoreAccardeon2.addEventListener('click', ()=> {
+itemAccardeon2.addEventListener('click', ()=> {
   if(textAccardeon2.classList.contains('show-text-more') && btnMoreAccardeon2.classList.contains('showmore')) {
     textAccardeon2.classList.remove('show-text-more')
     btnMoreAccardeon2.classList.remove('showmore')
@@ -47,7 +51,7 @@ btnMoreAccardeon2.addEventListener('click', ()=> {
   }
 });
 
-btnMoreAccardeon3.addEventListener('click', ()=> {
+itemAccardeon3.addEventListener('click', ()=> {
   if(textAccardeon3.classList.contains('show-text-more') && btnMoreAccardeon3.classList.contains('showmore')) {
     textAccardeon3.classList.remove('show-text-more')
     btnMoreAccardeon3.classList.remove('showmore')
@@ -57,7 +61,7 @@ btnMoreAccardeon3.addEventListener('click', ()=> {
   }
 });
 
-btnMoreAccardeon4.addEventListener('click', ()=> {
+itemAccardeon4.addEventListener('click', ()=> {
   if(textAccardeon4.classList.contains('show-text-more') && btnMoreAccardeon4.classList.contains('showmore')) {
     textAccardeon4.classList.remove('show-text-more')
     btnMoreAccardeon4.classList.remove('showmore')
