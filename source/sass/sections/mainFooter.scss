@@ -1,13 +1,26 @@
 .mainFooter {
-  min-height: 368px;
+  min-height: auto;
   background-color: $black;
   color: $white;
+  padding: 100px 0;
+
+  @media (max-width: $tb) {
+    padding: 60px 0;
+  }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 100px 0;
     gap: 30px;
+    min-height: inherit;
+
+    @media (max-width: $ds) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $tb) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__email {
@@ -29,10 +42,11 @@
       outline: 1px solid transparent;
       border: 1px solid transparent;
       border-bottom: 1px solid $white;
+      max-width: max-content;
     }
 
     form input[type="email"] {
-      min-width: 450px;
+      min-width: 370px;
       background: transparent;
       border: 1px solid transparent;
       outline: 1px solid transparent;
@@ -40,6 +54,10 @@
       line-height: 1;
       padding-right: 10px;
       padding-left: 0;
+
+      @media (max-width: $tb) {
+        min-width: 165px;
+      }
 
       &:focus {
         outline: 1px solid transparent;
@@ -83,6 +101,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+
+    @media (max-width: $tb) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__nav-list,
@@ -111,6 +133,15 @@
   &__contacts-social {
     display: grid;
     text-align: left;
+    height: max-content;
+    line-height: 3;
+
+    @media (max-width: $tb) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     a {
       font-family: "Poppins";
@@ -122,8 +153,27 @@
       text-decoration: none;
       align-self: center;
 
+      @media (max-width: $tb) {
+        width: 21px;
+        height: 21px;
+      }
+
+      span {
+        @media (max-width: $tb) {
+          display: none;
+        }
+      }
+
       svg {
         fill: $white;
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+
+        @media (max-width: $tb) {
+          width: 21px;
+          height: 21px;
+        }
       }
 
       &:hover {
