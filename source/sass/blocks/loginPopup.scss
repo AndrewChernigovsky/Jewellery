@@ -3,10 +3,170 @@
   min-width: 300px;
   max-width: 442px;
   min-height: 586px;
-  background-color: $basicgray2;
+  background-color: $basicgray5;
+
+  &__wrapper {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    min-width: 300px;
+    min-height: auto;
+    background-color: $basicgray2;
+    padding-bottom: 60px;
+
+    p {
+      font-family: "CormorantGaramond";
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: $basicgray3;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+
+      input {
+        min-height: 30px;
+        background: none;
+        border: 1px solid transparent;
+        border-bottom: 1px solid $basicgray3;
+        font-family: "Poppins";
+        font-size: 1.4rem;
+        color: $basicgray1;
+        font-weight: 500;
+
+        &:focus {
+          border: 1px solid $black;
+          outline: 1px solid transparent;
+        }
+      }
+
+      button {
+        border: none;
+        min-height: 68px;
+        background-color: $basicbrown;
+        font-family: "Poppins";
+        font-size: 1.6rem;
+        color: $white;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__header {
+    min-height: min-content;
+  }
+
+  &__toggle {
+    left: 32px;
+    position: absolute;
+    top: 37px;
+    right: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    display: none;
+    border: 1px solid transparent;
+
+    span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      border: 1px solid $black;
+      outline: 1px solid transparent;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 13px;
+      width: 24px;
+      height: 2px;
+      background-color: $black;
+      box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+    }
+
+    &:active::before {
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0 8px 0 0 rgb(0, 0, 0),
+        0 16px 0 0 rgb(0, 0, 0);
+    }
+
+    @media (max-width: $ds) {
+      display: block;
+    }
+  }
+
+  &__inner {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__inner-signUp {
+    a {
+      text-decoration: none;
+    }
+    
+    span:first-of-type {
+      font-family: "Poppins";
+      font-size: 1.4rem;
+      color: $basicgray1;
+      font-weight: 500;
+    }
+
+    span:last-of-type {
+      font-family: "Poppins";
+      font-size: 1.4rem;
+      color: $basicgray3;
+      font-weight: 500;
+    }
+  }
 }
 
 .loginPopup.show {
   display: block;
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
+.password-wrapper {
+  display: grid;
+  margin-bottom: 50px;
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-align: right;
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    color: $basicgray1;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}

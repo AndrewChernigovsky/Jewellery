@@ -287,7 +287,6 @@
             </div>
           </div>
         </section>
-
         <section class="aboutMain">
           <div class="aboutMain__wrapper container">
             <div class="aboutMain__heading">
@@ -467,31 +466,47 @@
 
         </div>
       </footer>
-  </div>
+
 
   <div class="loginPopup" id="loginPopup">
     <div class="loginPopup__wrapper">
       <div class="loginPopup__header">
-
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="
+                img/content/login-header/loginBg.webp    1x,
+                img/content/login-header/loginBg@2x.webp 2x
+              ">
+          <source type="image/webp" media="(min-width: 320px)" srcset="
+                img/content/login-header/loginBg-mb.webp    1x,
+                img/content/login-header/loginBg-mb@2x.webp 2x
+              ">
+          <!-- 1х: 430px; 2x: 860px -->
+          <img src="img/content/login-header/loginBg.jpg" srcset="img/content/login-header/loginBg@2x.jpg 2x" alt="blog care" loading="lazy" width="430" height="138">
+        </picture>
       </div>
-      <button class="loginPopup__toggle" type="button" tabindex="1" id="btnloginPopup">
-        <span>Открыть меню</span>
-      </button>
-      <p>Log in</p>
-      <form action="https://echo.htmlacademy.ru/" method="get">
-        <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail">
-        <input type="password" name="loginPassword" id="loginPassword" placeholder="Password">
-        <a href="#">Forgot your password?</a>
-        <button type="submit">Log In</button>
-      </form>
-      <a href="#">
-        <span>Don’t have an account?</span>
-        <span>Sign Up</span>
-      </a>
+      <div class="loginPopup__inner">
+        <button class="loginPopup__toggle" type="button" tabindex="1" id="btnloginPopup">
+          <span>Открыть меню</span>
+        </button>
+        <p>Log in</p>
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail">
+          <div class="password-wrapper">
+            <input type="password" name="loginPassword" id="loginPassword" placeholder="Password">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+        <div class="loginPopup__inner-signUp">
+          <a href="#">
+            <span>Don’t have an account?</span>
+            <span>Sign Up</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-
-
+  </div>
   <script src="js/script.min.js" async=""></script>
 </body>
 
