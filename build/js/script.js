@@ -27,7 +27,9 @@ let itemAccardeon4 = document.getElementById('btnAsk4-item');
 let overflow = document.getElementById('overflow');
 let inputLoginEmail = document.getElementById('loginEmail');
 let inputLoginPassword = document.getElementById('loginPassword');
-let btnLoginSubmit = document.getElementById('loginSubmit');
+let loginSignUp = document.getElementById('loginSignUp');
+let loginWrapper = document.querySelector('loginPopup__wrapper');
+
 
 
 
@@ -77,7 +79,6 @@ itemAccardeon4.addEventListener('click', ()=> {
   }
 });
 
-
 mainLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')
   overflow.classList.add('show');
@@ -101,7 +102,7 @@ loginBtnPopup.addEventListener('click', ()=>{
   overflow.classList.remove('show');
 })
 
-overflow.addEventListener('click', ()=> {
+loginPopup.addEventListener('click', ()=> {
   loginPopup.classList.remove('show')
   overflow.classList.remove('show');
 })
@@ -111,10 +112,28 @@ document.addEventListener("keydown", function (e) {
     loginPopup.classList.remove('show')
     overflow.classList.remove('show');
   }
-});
 
-inputLoginEmail.removeAttribute("required");
-inputLoginPassword.removeAttribute("required");
+  if(loginPopup.classList.contains('show')) {
+
+    loginBtnPopup.addEventListener('focus', ()=> {
+      if(e.key === 'Shift' && e.key === 'Tab') {
+        loginSignUp.focus()
+      }
+    })
+  }
+
+  if(loginPopup.classList.contains('show')) {
+
+    loginSignUp.addEventListener('focus', ()=> {
+      if(e.key === 'Tab') {
+        loginBtnPopup.focus()
+      }
+    })
+  }
+})
+
+inputLoginEmail.removeAttribute('required');
+inputLoginPassword.removeAttribute('required');
 
 loginPopup.addEventListener('submit', function (e) {
 
@@ -135,39 +154,10 @@ loginPopup.addEventListener('submit', function (e) {
     inputLoginPassword.classList.add('success')
   }
 
-  if (isValidEmail(inputLoginEmail)) {
-    inputLoginEmail.classList.add("error");
-    e.preventDefault();
-  } else {
-    inputLoginEmail.classList.remove("error");
-    inputLoginEmail.classList.add("success");
-    localStorage.setItem('LoginEmail', inputLoginEmail.value);
-  }
-
-  if (isValidPassword(inputLoginPassword)) {
-    inputLoginPassword.classList.add("error");
-    e.preventDefault();
-  } else {
-    inputLoginPassword.classList.remove("error");
-    inputLoginPassword.classList.add("success");
-  }
-
-  if ( inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
+  if (inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
     alert("Форма успешно отправлена");
   }
 })
-
-function isValidEmail(input) {
-  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-      input.value
-  );
-}
-
-function isValidPassword(input) {
-  return !/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/.test(
-      input.value
-  );
-}
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -200,19 +190,17 @@ mainBtnMenu.addEventListener('click', function () {
   }
 });
 
+const anchors = document.querySelectorAll('a[href*="#"]')
 
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
 
-// const anchors = document.querySelectorAll('a[href*="#"]')
+    const blockID = anchor.getAttribute('href').substr(1)
 
-// for (let anchor of anchors) {
-//   anchor.addEventListener('click', function (e) {
-//     e.preventDefault()
-
-//     const blockID = anchor.getAttribute('href').substr(1)
-
-//     document.getElementById(blockID).scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start'
-//     })
-//   })
-// }
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}

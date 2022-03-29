@@ -478,7 +478,7 @@
 
   <div class="loginPopup" id="loginPopup">
     <div class="loginPopup__wrapper">
-      <button class="loginPopup__toggle" type="button" tabindex="1" id="btnloginPopup">
+      <button class="loginPopup__toggle" type="button" id="btnloginPopup" aria-label="Close">
         <span>Открыть меню</span>
       </button>
       <div class="loginPopup__header">
@@ -498,15 +498,17 @@
       <div class="loginPopup__inner">
         <p>Log in</p>
         <form action="https://echo.htmlacademy.ru/" method="get">
-          <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail" required="">
+          <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail" required="" minlength="5" aria-label="Input E-mail">
           <div class="password-wrapper">
-            <input type="password" name="loginPassword" id="loginPassword" placeholder="Password" required="">
-            <a href="#">Forgot your password?</a>
+            <input type="password" name="loginPassword" id="loginPassword" placeholder="Password" required="" minlength="5" aria-label="Input Password">
+            <span>
+              <a href="#" aria-label="Forgot your password">Forgot your password?</a>
+            </span>
           </div>
-          <button type="submit" id="loginSubmit">Log In</button>
+          <button type="submit" id="loginSubmit" aria-label="Log In">Log In</button>
         </form>
         <div class="loginPopup__inner-signUp">
-          <a href="#">
+          <a href="#" id="loginSignUp" aria-label="Sing Up">
             <span>Don’t have an account?</span>
             <span>Sign Up</span>
           </a>

@@ -201,8 +201,13 @@
     margin-bottom: 10px;
   }
 
-  a {
+  span {
+    min-width: 100%;
     text-align: right;
+  }
+
+  a {
+    min-width: max-content;
     font-family: "Poppins";
     font-size: 1.2rem;
     color: $basicgray1;
