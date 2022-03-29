@@ -27,6 +27,7 @@ let itemAccardeon4 = document.getElementById('btnAsk4-item');
 let overflow = document.getElementById('overflow');
 let inputLoginEmail = document.getElementById('loginEmail');
 let inputLoginPassword = document.getElementById('loginPassword');
+let btnLoginSubmit = document.getElementById('loginSubmit');
 
 
 
@@ -112,6 +113,61 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+inputLoginEmail.removeAttribute("required");
+inputLoginPassword.removeAttribute("required");
+
+loginPopup.addEventListener('submit', function (e) {
+
+  if (inputLoginEmail.value.length == 0) {
+    e.preventDefault()
+    inputLoginEmail.classList.add('error');
+  } else {
+    inputLoginEmail.classList.remove('error')
+    inputLoginEmail.classList.add('success')
+    localStorage.setItem('LoginEmail', inputLoginEmail.value);
+  }
+
+  if (inputLoginPassword.value.length == 0) {
+    e.preventDefault();
+    inputLoginPassword.classList.add('error')
+  } else {
+    inputLoginPassword.classList.remove('error')
+    inputLoginPassword.classList.add('success')
+  }
+
+  if (isValidEmail(inputLoginEmail)) {
+    inputLoginEmail.classList.add("error");
+    e.preventDefault();
+  } else {
+    inputLoginEmail.classList.remove("error");
+    inputLoginEmail.classList.add("success");
+    localStorage.setItem('LoginEmail', inputLoginEmail.value);
+  }
+
+  if (isValidPassword(inputLoginPassword)) {
+    inputLoginPassword.classList.add("error");
+    e.preventDefault();
+  } else {
+    inputLoginPassword.classList.remove("error");
+    inputLoginPassword.classList.add("success");
+  }
+
+  if (inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
+    alert("Форма успешно отправлена");
+  }
+})
+
+function isValidEmail(input) {
+  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      input.value
+  );
+}
+
+function isValidPassword(input) {
+  return !/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/.test(
+      input.value
+  );
+}
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -146,17 +202,17 @@ mainBtnMenu.addEventListener('click', function () {
 
 
 
-const anchors = document.querySelectorAll('a[href*="#"]')
+// const anchors = document.querySelectorAll('a[href*="#"]')
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault()
 
-    const blockID = anchor.getAttribute('href').substr(1)
+//     const blockID = anchor.getAttribute('href').substr(1)
 
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+//     document.getElementById(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     })
+//   })
+// }

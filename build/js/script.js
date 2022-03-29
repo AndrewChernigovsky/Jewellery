@@ -25,6 +25,9 @@ let itemAccardeon2 = document.getElementById('btnAsk2-item');
 let itemAccardeon3 = document.getElementById('btnAsk3-item');
 let itemAccardeon4 = document.getElementById('btnAsk4-item');
 let overflow = document.getElementById('overflow');
+let inputLoginEmail = document.getElementById('loginEmail');
+let inputLoginPassword = document.getElementById('loginPassword');
+let btnLoginSubmit = document.getElementById('loginSubmit');
 
 
 
@@ -78,18 +81,20 @@ itemAccardeon4.addEventListener('click', ()=> {
 mainLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')
   overflow.classList.add('show');
+  body.style.overflowY = 'hidden'
+  loginPopup.style.overflowY='scroll'
+  body.classList.add('overflow-hidden')
+  inputLoginEmail.focus()
 })
 
 mainMenuOpenedLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')
   overflow.classList.add('show')
-})
-
-if (loginPopup.classList.contains('show')) {
   body.style.overflowY = 'hidden'
   loginPopup.style.overflowY='scroll'
   body.classList.add('overflow-hidden')
-}
+  inputLoginEmail.focus()
+})
 
 loginBtnPopup.addEventListener('click', ()=>{
   loginPopup.classList.remove('show')
@@ -108,6 +113,61 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+inputLoginEmail.removeAttribute("required");
+inputLoginPassword.removeAttribute("required");
+
+loginPopup.addEventListener('submit', function (e) {
+
+  if (inputLoginEmail.value.length == 0) {
+    e.preventDefault()
+    inputLoginEmail.classList.add('error');
+  } else {
+    inputLoginEmail.classList.remove('error')
+    inputLoginEmail.classList.add('success')
+    localStorage.setItem('LoginEmail', inputLoginEmail.value);
+  }
+
+  if (inputLoginPassword.value.length == 0) {
+    e.preventDefault();
+    inputLoginPassword.classList.add('error')
+  } else {
+    inputLoginPassword.classList.remove('error')
+    inputLoginPassword.classList.add('success')
+  }
+
+  if (isValidEmail(inputLoginEmail)) {
+    inputLoginEmail.classList.add("error");
+    e.preventDefault();
+  } else {
+    inputLoginEmail.classList.remove("error");
+    inputLoginEmail.classList.add("success");
+    localStorage.setItem('LoginEmail', inputLoginEmail.value);
+  }
+
+  if (isValidPassword(inputLoginPassword)) {
+    inputLoginPassword.classList.add("error");
+    e.preventDefault();
+  } else {
+    inputLoginPassword.classList.remove("error");
+    inputLoginPassword.classList.add("success");
+  }
+
+  if ( inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
+    alert("Форма успешно отправлена");
+  }
+})
+
+function isValidEmail(input) {
+  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      input.value
+  );
+}
+
+function isValidPassword(input) {
+  return !/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/.test(
+      input.value
+  );
+}
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -142,17 +202,17 @@ mainBtnMenu.addEventListener('click', function () {
 
 
 
-const anchors = document.querySelectorAll('a[href*="#"]')
+// const anchors = document.querySelectorAll('a[href*="#"]')
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault()
 
-    const blockID = anchor.getAttribute('href').substr(1)
+//     const blockID = anchor.getAttribute('href').substr(1)
 
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+//     document.getElementById(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     })
+//   })
+// }

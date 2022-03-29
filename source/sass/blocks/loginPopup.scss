@@ -47,6 +47,15 @@
         }
       }
 
+      input.error {
+        border: 1px solid $red;
+      }
+
+      input.success {
+        border: 1px solid $green;
+      }
+
+
       button {
         border: none;
         min-height: 68px;

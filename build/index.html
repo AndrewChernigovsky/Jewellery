@@ -498,12 +498,12 @@
       <div class="loginPopup__inner">
         <p>Log in</p>
         <form action="https://echo.htmlacademy.ru/" method="get">
-          <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail">
+          <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail" required="">
           <div class="password-wrapper">
-            <input type="password" name="loginPassword" id="loginPassword" placeholder="Password">
+            <input type="password" name="loginPassword" id="loginPassword" placeholder="Password" required="">
             <a href="#">Forgot your password?</a>
           </div>
-          <button type="submit">Log In</button>
+          <button type="submit" id="loginSubmit">Log In</button>
         </form>
         <div class="loginPopup__inner-signUp">
           <a href="#">
