@@ -1,4 +1,6 @@
 .main-header {
+  margin-bottom: 130px;
+
   &__main-text {
     font-family: "CormorantGaramond";
     color: $white;
@@ -19,6 +21,7 @@
       font-family: "CormorantGaramond-MediumItalic";
       font-size: 3.8rem;
       font-weight: 500;
+      line-height: 1;
     }
 
   }

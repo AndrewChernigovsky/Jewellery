@@ -253,6 +253,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: $ds) {
+        background-image: image-set('../img/content/header-background/indexHeader-tb.jpg' 1x, '../img/content/header-background/indexHeader-tb@2x.jpg' 2x);
+      }
+
+      @media (max-width: $tb) {
+        background-image: image-set('../img/content/header-background/indexHeader-mb.jpg' 1x, '../img/content/header-background/indexHeader-mb@2x.jpg' 2x);
+      }
     }
   }
 
@@ -876,4 +884,36 @@
       margin-bottom: 5px;
     }
   }
+}
+
+.main-menu--nojs.main-menu--closed.main-menuCatalog,
+.main-menu--closed.main-menuCatalog{
+  .main-header__wrapper {
+    min-height: 262px;
+    text-align: center;
+    background-color: $basicbrown;
+    background-image: image-set('../img/content/header-background/catalogHeader-ds.jpg' 1x, '../img/content/header-background/catalogHeader-ds@2x.jpg' 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $ds) {
+      background-image: image-set('../img/content/header-background/catalogHeader-tb.jpg' 1x, '../img/content/header-background/catalogHeader-tb@2x.jpg' 2x);
+    }
+
+    @media (max-width: $tb) {
+      background-image: image-set('../img/content/header-background/catalogHeader-mb.jpg' 1x, '../img/content/header-background/catalogHeader-mb@2x.jpg' 2x);
+    }
+  }
+}
+
+.logoCatalog {
+ cursor: pointer;
+
+ &:hover {
+   opacity: 0.6;
+ }
 }

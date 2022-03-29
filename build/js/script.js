@@ -30,54 +30,67 @@ let inputLoginPassword = document.getElementById('loginPassword');
 let loginSignUp = document.getElementById('loginSignUp');
 let loginWrapper = document.querySelector('loginPopup__wrapper');
 
+if(btnMoreAccardeon1) {
+  btnMoreAccardeon1.classList.add('showmore')
+}
+if(textAccardeon1) {
+  textAccardeon1.classList.remove('questionsMain__content-more--nojs')
+}
+if(textAccardeon2) {
+  textAccardeon2.classList.remove('questionsMain__content-more--nojs')
+}
+if(textAccardeon3) {
+  textAccardeon3.classList.remove('questionsMain__content-more--nojs')
+}
+if(textAccardeon4) {
+  textAccardeon4.classList.remove('questionsMain__content-more--nojs')
+}
+if(itemAccardeon1) {
+  itemAccardeon1.addEventListener('click', ()=> {
+    if(textAccardeon1.classList.contains('show-text-more') && btnMoreAccardeon1.classList.contains('showmore')) {
+      textAccardeon1.classList.remove('show-text-more')
+      btnMoreAccardeon1.classList.remove('showmore')
+    } else {
+      textAccardeon1.classList.add('show-text-more')
+      btnMoreAccardeon1.classList.add('showmore')
+    }
+  });
 
+}
+if(itemAccardeon2) {
+  itemAccardeon2.addEventListener('click', ()=> {
+    if(textAccardeon2.classList.contains('show-text-more') && btnMoreAccardeon2.classList.contains('showmore')) {
+      textAccardeon2.classList.remove('show-text-more')
+      btnMoreAccardeon2.classList.remove('showmore')
+    } else {
+      textAccardeon2.classList.add('show-text-more')
+      btnMoreAccardeon2.classList.add('showmore')
+    }
+  });
 
-
-btnMoreAccardeon1.classList.add('showmore')
-textAccardeon1.classList.remove('questionsMain__content-more--nojs')
-textAccardeon2.classList.remove('questionsMain__content-more--nojs')
-textAccardeon3.classList.remove('questionsMain__content-more--nojs')
-textAccardeon4.classList.remove('questionsMain__content-more--nojs')
-
-itemAccardeon1.addEventListener('click', ()=> {
-  if(textAccardeon1.classList.contains('show-text-more') && btnMoreAccardeon1.classList.contains('showmore')) {
-    textAccardeon1.classList.remove('show-text-more')
-    btnMoreAccardeon1.classList.remove('showmore')
-  } else {
-    textAccardeon1.classList.add('show-text-more')
-    btnMoreAccardeon1.classList.add('showmore')
-  }
-});
-
-itemAccardeon2.addEventListener('click', ()=> {
-  if(textAccardeon2.classList.contains('show-text-more') && btnMoreAccardeon2.classList.contains('showmore')) {
-    textAccardeon2.classList.remove('show-text-more')
-    btnMoreAccardeon2.classList.remove('showmore')
-  } else {
-    textAccardeon2.classList.add('show-text-more')
-    btnMoreAccardeon2.classList.add('showmore')
-  }
-});
-
-itemAccardeon3.addEventListener('click', ()=> {
-  if(textAccardeon3.classList.contains('show-text-more') && btnMoreAccardeon3.classList.contains('showmore')) {
-    textAccardeon3.classList.remove('show-text-more')
-    btnMoreAccardeon3.classList.remove('showmore')
-  } else {
-    textAccardeon3.classList.add('show-text-more')
-    btnMoreAccardeon3.classList.add('showmore')
-  }
-});
-
-itemAccardeon4.addEventListener('click', ()=> {
-  if(textAccardeon4.classList.contains('show-text-more') && btnMoreAccardeon4.classList.contains('showmore')) {
-    textAccardeon4.classList.remove('show-text-more')
-    btnMoreAccardeon4.classList.remove('showmore')
-  } else {
-    textAccardeon4.classList.add('show-text-more')
-    btnMoreAccardeon4.classList.add('showmore')
-  }
-});
+}
+if(itemAccardeon3) {
+  itemAccardeon3.addEventListener('click', ()=> {
+    if(textAccardeon3.classList.contains('show-text-more') && btnMoreAccardeon3.classList.contains('showmore')) {
+      textAccardeon3.classList.remove('show-text-more')
+      btnMoreAccardeon3.classList.remove('showmore')
+    } else {
+      textAccardeon3.classList.add('show-text-more')
+      btnMoreAccardeon3.classList.add('showmore')
+    }
+  });
+}
+if(itemAccardeon4) {
+  itemAccardeon4.addEventListener('click', ()=> {
+    if(textAccardeon4.classList.contains('show-text-more') && btnMoreAccardeon4.classList.contains('showmore')) {
+      textAccardeon4.classList.remove('show-text-more')
+      btnMoreAccardeon4.classList.remove('showmore')
+    } else {
+      textAccardeon4.classList.add('show-text-more')
+      btnMoreAccardeon4.classList.add('showmore')
+    }
+  });
+}
 
 mainLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')

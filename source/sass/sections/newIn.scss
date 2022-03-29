@@ -1,4 +1,51 @@
 .newIn {
   min-height: 818px;
   background: rgb(229, 186, 186);
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__heading {
+    text-align: center;
+
+    h2 {
+      font-family: "CormorantGaramond";
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: $basicgray3;
+    }
+
+    a {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $basicgray3;
+      cursor: pointer;
+      text-decoration: none;
+      padding-bottom: 10px;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $basicbrown;
+
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        outline: 1px solid transparent;
+        border: 1px solid $black;
+      }
+
+      &:visited {
+        opacity: 0.6;
+      }
+    }
+  }
+
 }
