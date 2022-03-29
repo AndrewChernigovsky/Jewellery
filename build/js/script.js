@@ -76,7 +76,7 @@ itemAccardeon4.addEventListener('click', ()=> {
 
 
 mainLogin.addEventListener('click', ()=> {
-  loginPopup.classList.add('show');
+  loginPopup.classList.add('show')
   overflow.classList.add('show');
 })
 
@@ -85,25 +85,26 @@ mainMenuOpenedLogin.addEventListener('click', ()=> {
   overflow.classList.add('show')
 })
 
-if( loginPopup.classList.contains('show')) {
+if (loginPopup.classList.contains('show')) {
   body.style.overflowY = 'hidden'
+  loginPopup.style.overflowY='scroll'
   body.classList.add('overflow-hidden')
-  loginPopup.style.overflowY='scroll';
 }
 
 loginBtnPopup.addEventListener('click', ()=>{
-  loginPopup.classList.remove('show');
+  loginPopup.classList.remove('show')
   overflow.classList.remove('show');
 })
 
 overflow.addEventListener('click', ()=> {
-  loginPopup.classList.remove('show');
+  loginPopup.classList.remove('show')
   overflow.classList.remove('show');
 })
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
-    loginPopup.classList.remove('show');
+    loginPopup.classList.remove('show')
+    overflow.classList.remove('show');
   }
 });
 

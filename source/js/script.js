@@ -25,6 +25,8 @@ let itemAccardeon2 = document.getElementById('btnAsk2-item');
 let itemAccardeon3 = document.getElementById('btnAsk3-item');
 let itemAccardeon4 = document.getElementById('btnAsk4-item');
 let overflow = document.getElementById('overflow');
+let inputLoginEmail = document.getElementById('loginEmail');
+let inputLoginPassword = document.getElementById('loginPassword');
 
 
 
@@ -78,18 +80,20 @@ itemAccardeon4.addEventListener('click', ()=> {
 mainLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')
   overflow.classList.add('show');
+  body.style.overflowY = 'hidden'
+  loginPopup.style.overflowY='scroll'
+  body.classList.add('overflow-hidden')
+  inputLoginEmail.focus()
 })
 
 mainMenuOpenedLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')
   overflow.classList.add('show')
-})
-
-if (loginPopup.classList.contains('show')) {
   body.style.overflowY = 'hidden'
   loginPopup.style.overflowY='scroll'
   body.classList.add('overflow-hidden')
-}
+  inputLoginEmail.focus()
+})
 
 loginBtnPopup.addEventListener('click', ()=>{
   loginPopup.classList.remove('show')

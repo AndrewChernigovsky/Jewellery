@@ -1,20 +1,22 @@
 .loginPopup {
   display: none;
-  min-width: 300px;
-  max-width: 442px;
-  min-height: 586px;
-  background-color: $basicgray5;
-  position: absolute;
-  top: -150px;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  min-width: 100vw;
+  min-height: 100vh;
   z-index: 200;
+  position: absolute;
+
 
   &__wrapper {
     min-width: 300px;
+    max-width: 442px;
     min-height: auto;
     background-color: $basicgray2;
     padding-bottom: 60px;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 200;
 
     p {
       font-family: "CormorantGaramond";
