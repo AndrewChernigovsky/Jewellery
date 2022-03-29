@@ -30,6 +30,9 @@ let inputLoginPassword = document.getElementById('loginPassword');
 let loginSignUp = document.getElementById('loginSignUp');
 let loginWrapper = document.querySelector('loginPopup__wrapper');
 
+mainLogin.removeAttribute('href')
+mainLogin.setAttribute('href', '#')
+
 if(btnMoreAccardeon1) {
   btnMoreAccardeon1.classList.add('showmore')
 }
@@ -91,6 +94,9 @@ if(itemAccardeon4) {
     }
   });
 }
+
+
+
 
 mainLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')

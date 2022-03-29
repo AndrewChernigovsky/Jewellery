@@ -112,6 +112,55 @@
       <main class="main">
         <section class="catalog" id="catalog">
           <div class="catalog__wrapper">
+            <form action="https://echo.htmlacademy.ru/" method="get" name="filtersCatalog">
+              <div class="filterCatalog">
+                <div class="filterCatalog__wrapper">
+                  <div class="filterCatalog__products">
+                    <h3>Products</h3>
+
+                    <div class="filterCatalog__products-items">
+                      <input type="checkbox" name="necklaces" id="necklaces">
+                      <label for="necklaces">Necklaces</label>
+                      <input type="checkbox" name="chokers" id="chokers">
+                      <label for="chokers">Chokers</label>
+                      <input type="checkbox" name="rings" id="rings">
+                      <label for="rings">Rings</label>
+                      <input type="checkbox" name="earrings" id="earrings">
+                      <label for="earrings">Earrings</label>
+                    </div>
+                  </div>
+                  <div class="filterCatalog__material">
+                    <h3>Materia</h3>
+                    <div class="filterCatalog__material-items">
+                      <input type="checkbox" name="gold" id="gold">
+                      <label for="gold">Gold</label>
+                      <input type="checkbox" name="silver" id="silver">
+                      <label for="silver">Silver</label>
+                    </div>
+                  </div>
+                  <div class="filterCatalog__collection">
+                    <h3>Collection</h3>
+                    <div class="filterCatalog__collection-items">
+                      <input type="checkbox" name="pink-flamingo" id="pink-flamingo">
+                      <label for="pink-flamingo">Pink flamingo</label>
+                      <input type="checkbox" name="dreams" id="dreams">
+                      <label for="dreams">Dreams</label>
+                    </div>
+                  </div>
+                  <div class="filterCatalog__price">
+                    <h3>Price</h3>
+                    <div class="filterCatalog__price-items">
+                      <div class="filterCatalog__price-range">
+                        <input type="checkbox" name="pink-flamingo" id="pink-flamingo">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit">Apply</button>
+                <button type="button">Clear All</button>
+              </div>
+            </form>
           </div>
         </section>
       </main>
