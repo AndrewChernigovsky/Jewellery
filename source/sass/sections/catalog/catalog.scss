@@ -1,10 +1,29 @@
 .catalog {
   &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
     form {
       input,
       label {
         cursor: pointer;
       }
     }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: inherit;
+  }
+
+  &__products {
+    display: grid;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
   }
 }
