@@ -95,9 +95,6 @@ if(itemAccardeon4) {
   });
 }
 
-
-
-
 mainLogin.addEventListener('click', ()=> {
   loginPopup.classList.add('show')
   overflow.classList.add('show');
@@ -209,17 +206,40 @@ mainBtnMenu.addEventListener('click', function () {
   }
 });
 
-const anchors = document.querySelectorAll('a[href*="#"]')
+let filterWrapperProducts = document.getElementById('products')
+let filterWrapperMaterial = document.getElementById('material')
+let filterWrapperCollection = document.getElementById('collection')
+let filterWrapperPrice = document.getElementById('price')
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
+let filterButtonProducts = document.getElementById('btnfilter1')
+let filterButtonMaterial = document.getElementById('btnfilter2')
+let filterButtonCollection = document.getElementById('btnfilter3')
+let filterButtonPrice = document.getElementById('btnfilter4')
 
-    const blockID = anchor.getAttribute('href').substr(1)
+let filterContentProducts = document.getElementById('productsContent')
+let filterContentMaterial = document.getElementById('materialContent')
+let filterContentCollection = document.getElementById('collectionContent')
+let filterContentPrice = document.getElementById('priceContent')
+let filterBtnClear = document.getElementById('filterClear')
 
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+filterContentProducts.classList.remove('filterCatalog__filter--nojs')
+filterContentMaterial.classList.remove('filterCatalog__filter--nojs')
+filterContentCollection.classList.remove('filterCatalog__filter--nojs')
+filterContentPrice.classList.remove('filterCatalog__filter--nojs')
+
+filterWrapperProducts.addEventListener('click', ()=> {
+  filterContentProducts.classList.toggle('show')
+  filterButtonProducts.classList.toggle('showmore')
+})
+filterWrapperMaterial.addEventListener('click', ()=> {
+  filterContentMaterial.classList.toggle('show')
+  filterButtonMaterial.classList.toggle('showmore')
+})
+filterWrapperCollection.addEventListener('click', ()=> {
+  filterContentCollection.classList.toggle('show')
+  filterButtonCollection.classList.toggle('showmore')
+})
+filterWrapperPrice.addEventListener('click', ()=> {
+  filterContentPrice.classList.toggle('show')
+  filterButtonPrice.classList.toggle('showmore')
+})

@@ -1,0 +1,10 @@
+.catalog {
+  &__wrapper {
+    form {
+      input,
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}

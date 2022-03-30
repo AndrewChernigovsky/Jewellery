@@ -87,7 +87,7 @@
   display: block;
 }
 
-.btnQuestions {
+.btnMore {
   border: none;
   background: transparent;
   cursor: pointer;
@@ -113,7 +113,7 @@
   }
 }
 
-.btnQuestions.showmore {
+.btnMore.showmore {
   svg:first-of-type {
     display: none;
   }
@@ -122,3 +122,4 @@
     display: block;
   }
 }
+
