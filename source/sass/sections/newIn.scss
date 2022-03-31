@@ -3,8 +3,7 @@
   background: rgb(229, 186, 186);
 
   &__wrapper {
-    display: flex;
-    justify-content: center;
+    display: grid;
   }
 
   &__heading {

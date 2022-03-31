@@ -111,8 +111,8 @@
 
     <main class="main">
       <section class="catalog" id="catalog">
-        <div class="catalog__wrapper container">
-          <div class="catalog__main">
+        <div class="catalog__wrapper">
+          <div class="catalog__main container">
             <div class="filter-wrapper">
               <form action="https://echo.htmlacademy.ru/" method="get" name="filtersCatalog">
                 <div class="filterCatalog">
@@ -131,23 +131,23 @@
                       </div>
 
                       <div class="filterCatalog__products-items filterCatalog__products-items-wrapper filterCatalog__filter--nojs" id="productsContent">
-                          <div class=" filterCatalog__products-item">
-                        <input type="checkbox" name="necklaces" id="necklaces" aria-label="necklaces">
-                        <label for="necklaces">Necklaces</label>
+                        <div class=" filterCatalog__products-item">
+                          <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" aria-label="necklaces">
+                          <label for="necklaces">Necklaces</label>
+                        </div>
+                        <div class="filterCatalog__products-item">
+                          <input class="visually-hidden" type="checkbox" name="chokers" id="chokers" aria-label="chokers">
+                          <label for="chokers">Chokers</label>
+                        </div>
+                        <div class="filterCatalog__products-item">
+                          <input class="visually-hidden" type="checkbox" name="rings" id="rings" aria-label="rings">
+                          <label for="rings">Rings</label>
+                        </div>
+                        <div class="filterCatalog__products-item">
+                          <input class="visually-hidden" type="checkbox" name="earrings" id="earrings" aria-label="earrings">
+                          <label for="earrings">Earrings</label>
+                        </div>
                       </div>
-                      <div class="filterCatalog__products-item">
-                        <input type="checkbox" name="chokers" id="chokers" aria-label="chokers">
-                        <label for="chokers">Chokers</label>
-                      </div>
-                      <div class="filterCatalog__products-item">
-                        <input type="checkbox" name="rings" id="rings" aria-label="rings">
-                        <label for="rings">Rings</label>
-                      </div>
-                      <div class="filterCatalog__products-item">
-                        <input type="checkbox" name="earrings" id="earrings" aria-label="earrings">
-                        <label for="earrings">Earrings</label>
-                      </div>
-                    </div>
                     </div>
                     <div class="filterCatalog__material">
                       <div class="filterCatalog__heading filterCatalog__filter" id="material">
@@ -164,11 +164,11 @@
 
                       <div class="filterCatalog__material-items filterCatalog__products-items-wrapper filterCatalog__filter--nojs" id="materialContent">
                         <div class="filterCatalog__products-item">
-                          <input type="checkbox" name="gold" id="gold" aria-label="gold">
+                          <input class="visually-hidden" type="checkbox" name="gold" id="gold" aria-label="gold">
                           <label for="gold">Gold</label>
                         </div>
                         <div class="filterCatalog__products-item">
-                          <input type="checkbox" name="silver" id="silver" aria-label="silver">
+                          <input class="visually-hidden" type="checkbox" name="silver" id="silver" aria-label="silver">
                           <label for="silver">Silver</label>
                         </div>
                       </div>
@@ -188,11 +188,11 @@
 
                       <div class="filterCatalog__collection-items filterCatalog__products-items-wrapper filterCatalog__filter--nojs" id="collectionContent">
                         <div class="filterCatalog__products-item">
-                          <input type="checkbox" name="pink-flamingo" id="pink-flamingo" aria-label="more">
+                          <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo" aria-label="more">
                           <label for="pink-flamingo">Pink flamingo</label>
                         </div>
                         <div class="filterCatalog__products-item">
-                          <input type="checkbox" name="dreams" id="dreams" aria-label="more">
+                          <input class="visually-hidden" type="checkbox" name="dreams" id="dreams" aria-label="more">
                           <label for="dreams">Dreams</label>
                         </div>
                       </div>
@@ -226,15 +226,17 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="filterCatalog__buttons">
                     <button type="submit" aria-label="apply" id="filterApply">Apply</button>
                     <button type="button" aria-label="clear all" id="filterClear">Clear All</button>
                   </div>
+
                 </div>
               </form>
             </div>
-            <div class="catalog__wrapper">
-              <div class="catalog__products">
-                <div class="catalog__inner">
+            <div class="catalog__catalog">
+              <div class="catalog__inner">
                   <div class="catalog__products-item">
                     <a href="#">
                       <picture>
@@ -404,22 +406,22 @@
                     <p>Marble earrings</p>
                     <span>$ 95</span>
                   </div>
-                </div>
               </div>
-
             </div>
           </div>
 
-          <div class="catalog__pagination">
+          <div class="catalog__pagination container">
+            <div class="catalog__pagination-inner">
               <a href="#">Previous</a>
               <div class="catalog__pagination-pages">
                 <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
+                <a href="#" class="notactive-js">2</a>
+                <a href="#" class="notactive-js">3</a>
+                <a href="#" class="notactive-js">4</a>
+                <a href="#" class="notactive-js">5</a>
               </div>
               <a href="#">Next</a>
+            </div>
           </div>
         </div>
       </section>

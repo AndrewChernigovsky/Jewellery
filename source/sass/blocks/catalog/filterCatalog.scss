@@ -1,33 +1,61 @@
 .filterCatalog {
   max-width: 300px;
   min-width: 250px;
-  
+
+  button[type="submit"] {
+    min-height: 68px;
+    background-color: $basicbrown;
+    border: 1px solid transparent;
+    color: $white;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      border: 1px solid $black;
+    }
+  }
+
+  button[type="button"] {
+    min-height: 68px;
+    border: 1px solid $basicbrown;
+    background: transparent;
+    color: $basicgray3;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      border: 1px solid $black;
+    }
+  }
+
   &__heading {
     padding: 20px;
+
+    h3 {
+      font-family: "Poppins";
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $basicgray3;
+    }
   }
 
   &__wrapper {
     display: grid;
     border: 1px solid $basicbrown;
-
-    button[type="submit"] {
-      min-height: 68px;
-      background-color: $basicbrown;
-      border: 1px solid transparent;
-      color: $white;
-      cursor: pointer;
-      font-family: "Poppins";
-      font-size: 1.6rem;
-      font-weight: 500;
-
-      &:hover {
-        opacity: 0.6;
-      }
-
-      &:focus {
-        border: 1px solid $black;
-      }
-    }
+    margin-bottom: 30px;
 
     button[type="button"] {
       min-height: 68px;
@@ -72,6 +100,7 @@
     position: relative;
     min-height: 40px;
     max-width: 300px;
+    margin-bottom: 23px;
   }
 
   &__price-range-leftWrapper {
@@ -83,6 +112,13 @@
     z-index: 3;
     cursor: pointer;
     min-width: 40px;
+
+    label {
+      font-family: "Poppins";
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $basicgray3;
+    }
   }
 
   &__price-range-rightWrapper {
@@ -94,6 +130,13 @@
     z-index: 3;
     cursor: pointer;
     min-width: 40px;
+
+    label {
+      font-family: "Poppins";
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $basicgray3;
+    }
   }
 
   &__price-range-left {
@@ -197,7 +240,178 @@
 
     label {
       margin-left: 20px;
+      font-family: "Poppins";
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $basicgray3;
     }
+  }
+
+  &__products-items {
+
+    label {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    input:checked + label {
+      &:after {
+        background-color: $basicbrown;
+      }
+
+      &:before {
+        background-color: $basicbrown;
+      }
+    }
+
+    input:not(:checked) + label {
+      &:after {
+        border: 1px solid $basicbrown;
+      }
+
+      &:before {
+        border: 1px solid $basicbrown;
+      }
+    }
+
+
+
+    input:checked + label,
+    input:not(:checked) + label {
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 0;
+        border: 1px solid $basicbrown;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 0;
+        border: 1px solid $basicbrown;
+      }
+    }
+  }
+
+  &__material-items {
+    label {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    input:checked + label {
+      &:after {
+        background-color: $basicbrown;
+      }
+
+      &:before {
+        background-color: $basicbrown;
+      }
+    }
+
+    input:not(:checked) + label {
+      &:after {
+        border: 1px solid $basicbrown;
+      }
+
+      &:before {
+        border: 1px solid $basicbrown;
+      }
+    }
+
+
+
+    input:checked + label,
+    input:not(:checked) + label {
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 0;
+        border: 1px solid $basicbrown;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 0;
+        border: 1px solid $basicbrown;
+      }
+    }
+  }
+
+  &__collection-items {
+    label {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    input:checked + label {
+      &:after {
+        background-color: $basicbrown;
+      }
+
+      &:before {
+        background-color: $basicbrown;
+      }
+    }
+
+    input:not(:checked) + label {
+      &:after {
+        border: 1px solid $basicbrown;
+      }
+
+      &:before {
+        border: 1px solid $basicbrown;
+      }
+    }
+
+
+
+    input:checked + label,
+    input:not(:checked) + label {
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 0;
+        border: 1px solid $basicbrown;
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 0;
+        border: 1px solid $basicbrown;
+      }
+    }
+  }
+
+  &__buttons {
+    display: grid;
   }
 }
 
@@ -211,8 +425,4 @@
 
 .filterCatalog__products-items-wrapper.filterCatalog__filter--nojs {
   display: block;
-}
-
-.filter-wrapper {
-  min-width: inherit;
 }
