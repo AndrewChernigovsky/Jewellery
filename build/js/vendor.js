@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper-main', {
     speed: 400,
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     pagination: {
       el: '.swiper-main__pagination',
       clickable: true,
