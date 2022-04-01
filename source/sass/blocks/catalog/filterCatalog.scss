@@ -5,7 +5,8 @@
   @media (max-width: $ds) {
     position: absolute;
     background-color: $white;
-    padding: 10px;
+    padding-bottom: 40px;
+    z-index: 222;
   }
 
   button[type="submit"] {
@@ -62,6 +63,10 @@
     display: grid;
     border: 1px solid $basicbrown;
     margin-bottom: 30px;
+
+    @media (max-width: $ds) {
+      border: none;
+    }
 
     button[type="button"] {
       min-height: 68px;
@@ -416,6 +421,11 @@
 
   &__buttons {
     display: grid;
+
+    @media (max-width: $ds) {
+      max-width: calc(100% - 80px);
+      margin: 0 auto;
+    }
   }
 }
 
@@ -482,7 +492,7 @@
   position: absolute;
   right: -15px;
   top: -15px;
-  z-index: 23;
+  z-index: 223;
   width: 32px;
   height: 32px;
   border-radius: 50%;
