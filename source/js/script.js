@@ -128,6 +128,7 @@ document.addEventListener("keydown", function (e) {
     loginPopup.classList.remove('show')
     overflow.classList.remove('show')
     filterShowContent.classList.remove('show');
+    filterShowContentWrapper.classList.remove('show');
   }
 
   if(loginPopup.classList.contains('show')) {
@@ -247,6 +248,7 @@ filterWrapperPrice.addEventListener('click', ()=> {
 
 let filterShowButton = document.getElementById('filterShowButton');
 let filterShowContent = document.querySelector('.filter-wrapper');
+let filterShowContentWrapper = document.querySelector('.filter-wrapper-all');
 let filterCloseButton = document.getElementById('filterCloseButton');
 
 
@@ -254,6 +256,7 @@ if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
     filterShowContent.classList.toggle('show')
     overflow.classList.add('show')
+    filterShowContentWrapper.classList.add('show')
   })
 }
 
@@ -261,5 +264,6 @@ if (filterCloseButton) {
   filterCloseButton.addEventListener('click', ()=> {
     filterShowContent.classList.toggle('show')
     overflow.classList.remove('show')
+    filterShowContentWrapper.classList.remove('show')
   })
 }

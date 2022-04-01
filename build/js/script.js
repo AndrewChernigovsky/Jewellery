@@ -247,18 +247,22 @@ filterWrapperPrice.addEventListener('click', ()=> {
 
 let filterShowButton = document.getElementById('filterShowButton');
 let filterShowContent = document.querySelector('.filter-wrapper');
+let filterShowContentWrapper = document.querySelector('.filter-wrapper-all');
 let filterCloseButton = document.getElementById('filterCloseButton');
 
 
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
     filterShowContent.classList.toggle('show')
+    overflow.classList.add('show')
+    filterShowContentWrapper.classList.add('show')
   })
 }
 
 if (filterCloseButton) {
   filterCloseButton.addEventListener('click', ()=> {
     filterShowContent.classList.toggle('show')
-    overflow.classList.add('show')
+    overflow.classList.remove('show')
+    filterShowContentWrapper.classList.remove('show')
   })
 }

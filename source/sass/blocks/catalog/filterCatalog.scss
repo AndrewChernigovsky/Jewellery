@@ -7,6 +7,8 @@
     background-color: $white;
     padding-bottom: 40px;
     z-index: 222;
+    max-width: 440px;
+    min-width: 440px;
   }
 
   button[type="submit"] {
@@ -51,6 +53,10 @@
   &__heading {
     padding: 20px;
 
+    @media (max-width: $ds) {
+      padding: 20px 40px;
+    }
+
     h3 {
       font-family: "Poppins";
       font-size: 1.6rem;
@@ -91,6 +97,10 @@
   &__products {
     border-bottom: 1px solid $basicbrown;
     cursor: pointer;
+
+    @media (max-width: $ds) {
+      padding-top: 67px;
+    }
   }
 
   &__material {
@@ -112,6 +122,16 @@
     min-height: 40px;
     max-width: 300px;
     margin-bottom: 23px;
+    min-width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: $ds) {
+      min-width: 80%;
+    }
+
+    @media (max-width: $tb) {
+      min-width: 80%;
+    }
   }
 
   &__price-range-leftWrapper {
@@ -183,6 +203,11 @@
     top: 0px;
     background-color: $basicbrown;
     z-index: 2;
+
+    @media (max-width: $ds) {
+      min-width: 250px;
+      left: 49px;
+    }
   }
 
   &__filter {
@@ -453,11 +478,56 @@
   display: none;
 
   @media (max-width: $ds) {
-    display: block;
+    display: flex;
     position: relative;
-    min-width: 250px;
+    min-width: 270px;
+    max-width: 470px;
+    min-height: 100vh;
     margin: 0 auto;
+    top: 40px;
+    z-index: 114;
   }
+
+  .filterCloseButton {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    z-index: 223;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $basicgray3;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:hover {
+      opacity: 0.8;
+
+      svg {
+        opacity: 0.8;
+      }
+    }
+
+    svg {
+      fill: $white;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.filter-wrapper-all.show {
+  z-index: 222;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: $basicgray5;
+  z-index: 100;
 }
 
 .filterShowButton {
@@ -489,31 +559,5 @@
 }
 
 .filterCloseButton {
-  position: absolute;
-  right: -15px;
-  top: -15px;
-  z-index: 223;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $basicgray3;
-  cursor: pointer;
-  border: 1px solid transparent;
-
-  &:hover {
-    opacity: 0.8;
-
-    svg {
-      opacity: 0.8;
-    }
-  }
-
-  svg {
-    fill: $white;
-    width: 14px;
-    height: 14px;
-  }
+  display: none;
 }
