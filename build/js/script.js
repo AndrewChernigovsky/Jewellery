@@ -243,3 +243,12 @@ filterWrapperPrice.addEventListener('click', ()=> {
   filterContentPrice.classList.toggle('show')
   filterButtonPrice.classList.toggle('showmore')
 })
+
+let filterShowButton = document.getElementById('filterShowButton');
+let filterShowContent = document.querySelector('.filter-wrapper');
+
+if (filterShowButton && filterShowContent) {
+  filterShowButton.addEventListener('click', ()=> {
+    filterShowContent.classList.toggle('show')
+  })
+}

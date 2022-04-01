@@ -2,12 +2,22 @@
 
   &__catalog {
     margin-left: 40px;
+
+
+    @media (max-width: $ds) {
+      margin-left: 0;
+    }
   }
 
   &__main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-direction: row;
+
+    @media (max-width: $ds) {
+      flex-direction: column;
+    }
 
     form {
       input,
@@ -24,6 +34,11 @@
     img {
       height: 272px;
       object-fit: cover;
+
+      @media (max-width: $ds) {
+        object-fit: contain;
+        width: 206px;
+      }
     }
 
     p {
@@ -54,6 +69,10 @@
     padding-top: 40px;
     border-top: 1px solid $basicgray2;
     padding-bottom: 80px;
+
+    @media (max-width: $ds) {
+      justify-content: center;
+    }
   }
 
   &__pagination-inner {

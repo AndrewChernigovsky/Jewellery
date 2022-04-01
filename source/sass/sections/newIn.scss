@@ -3,13 +3,14 @@
 
   &__wrapper {
     display: grid;
-    max-width: 80%;
     margin: 0 auto;
   }
 
   &__heading {
     text-align: center;
-
+    position: relative;
+    z-index: 11;
+    
     h2 {
       font-family: "CormorantGaramond";
       font-size: 3.4rem;

@@ -2,6 +2,12 @@
   max-width: 300px;
   min-width: 250px;
 
+  @media (max-width: $ds) {
+    position: absolute;
+    background-color: $white;
+    padding: 10px;
+  }
+
   button[type="submit"] {
     min-height: 68px;
     background-color: $basicbrown;
@@ -382,8 +388,6 @@
       }
     }
 
-
-
     input:checked + label,
     input:not(:checked) + label {
       &:after {
@@ -425,4 +429,81 @@
 
 .filterCatalog__products-items-wrapper.filterCatalog__filter--nojs {
   display: block;
+}
+
+.filter-wrapper {
+  display: block;
+
+  @media (max-width: $ds) {
+    display: none;
+  }
+}
+
+.filter-wrapper.show {
+  display: none;
+
+  @media (max-width: $ds) {
+    display: block;
+    position: relative;
+    min-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+.filterShowButton {
+  min-height: 68px;
+  background-color: $basicbrown;
+  border: 1px solid transparent;
+  color: $white;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: none;
+
+  @media (max-width: $ds) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    border: 1px solid $black;
+  }
+}
+
+.filterCloseButton {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  z-index: 23;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $basicgray3;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:hover {
+    opacity: 0.8;
+
+    svg {
+      opacity: 0.8;
+    }
+  }
+
+  svg {
+    fill: $white;
+    width: 14px;
+    height: 14px;
+  }
 }

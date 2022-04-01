@@ -37,10 +37,8 @@ const swiper = new Swiper('.swiper-main', {
         slidesPerGroup: 1,
         pagination: {
           type: 'fraction',
-          renderfraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' +
-              ' of ' +
-              '<span class="' + totalClass + '"></span>';
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
           },
         },
       },
@@ -48,11 +46,22 @@ const swiper = new Swiper('.swiper-main', {
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        pagination: {
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
       },
 
       1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+
+      1360: {
         slidesPerView: 4,
         slidesPerGroup: 4,
-      }
+      },
   }
 });
