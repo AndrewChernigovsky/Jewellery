@@ -5,12 +5,18 @@ const swiper = new Swiper('.swiper-main', {
     pagination: {
       el: '.swiper-main__pagination',
       clickable: true,
-      dynamicBullets: true,
+      dynamicBullets: false,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
     },
     navigation: {
       nextEl: '.swiper-main__button-next',
       prevEl: '.swiper-main__button-prev',
     },
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
     grabCursor: true,
     keyboard: {
       enabled: true,
@@ -23,6 +29,30 @@ const swiper = new Swiper('.swiper-main', {
     slidesPerGroup: 4,
     autoplay: {
       delay: 4000,
-    }
+    },
+    breakpoints: {
 
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        pagination: {
+          type: 'fraction',
+          renderfraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+              ' of ' +
+              '<span class="' + totalClass + '"></span>';
+          },
+        },
+      },
+
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      }
+  }
 });
