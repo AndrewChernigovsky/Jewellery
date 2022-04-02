@@ -31,6 +31,14 @@
     text-align: center;
     margin-bottom: 40px;
 
+    @media (max-width: $tb) {
+      max-width: 136px;
+    }
+
+    @media (min-width: 450px) {
+      min-width: 200px;
+    }
+
     img {
       height: 272px;
       object-fit: cover;
@@ -38,6 +46,15 @@
       @media (max-width: $ds) {
         object-fit: contain;
         width: 206px;
+      }
+
+      @media (max-width: $tb) {
+        object-fit: contain;
+        width: 130px;
+      }
+
+      @media (min-width: 450px) {
+        min-width: 200px;
       }
     }
 

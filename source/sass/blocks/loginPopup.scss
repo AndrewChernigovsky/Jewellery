@@ -1,9 +1,9 @@
 .loginPopup {
   display: none;
-  min-width: 100vw;
+  min-width: 300px;
   min-height: 100vh;
   z-index: 200;
-  position: absolute;
+  position: fixed;
 
 
   &__wrapper {

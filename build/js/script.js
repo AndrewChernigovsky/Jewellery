@@ -288,12 +288,14 @@ if (filterCloseButton) {
     filterShowContentWrapper.style.overflowY = 'hidden'
   })
 
-  filterShowContentWrapper.addEventListener('click', ()=> {
-    filterShowContent.classList.remove('show')
-    filterShowContentWrapper.classList.remove('show')
-    body.style.overflowY = 'scroll'
-    filterShowContentWrapper.style.overflowY = 'hidden'
-  })
+  // filterShowContentWrapper.addEventListener('click', ()=> {
+  //   filterShowContent.classList.remove('show')
+  //   filterShowContentWrapper.classList.remove('show')
+  //   body.style.overflowY = 'scroll'
+  //   filterShowContentWrapper.style.overflowY = 'hidden'
+  // })
+
+
 }
 
 if (filterFormCatalog) {

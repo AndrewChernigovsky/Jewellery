@@ -629,6 +629,11 @@
       margin-left: 9%;
     }
 
+    @media (max-width: $tb) {
+      margin-left: 16%;
+      flex-basis: 60%;
+    }
+
     svg {
       fill: $white;
     }

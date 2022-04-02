@@ -246,7 +246,7 @@ filterWrapperPrice.addEventListener('click', ()=> {
 })
 
 let filterShowButton = document.getElementById('filterShowButton');
-let filterClearButton = document.getElementById('filterClearButton');
+let filterClearButton = document.getElementById('filterCloseButton');
 let filterShowContent = document.querySelector('.filter-wrapper');
 let filterShowContentWrapper = document.querySelector('.filter-wrapper-all');
 let filterCloseButton = document.getElementById('filterCloseButton');
@@ -259,12 +259,13 @@ let filterFormCatalogGold = document.getElementById('gold');
 let filterFormCatalogSilver = document.getElementById('silver');
 let filterFormCatalogPinkFlamingo = document.getElementById('pinkFlamingo');
 let filterFormCatalogDreams = document.getElementById('dreams');
+let filterFormClear = document.getElementById('filterClear');
 
 
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
   filterShowContent.classList.toggle('show')
-  // overflow.classList.add('show')
+  overflow.classList.add('show')
   filterShowContentWrapper.classList.add('show')
   body.style.overflowY = 'hidden'
   filterShowContentWrapper.style.overflowY = 'scroll'
@@ -287,19 +288,8 @@ if (filterCloseButton) {
     body.style.overflowY = 'scroll'
     filterShowContentWrapper.style.overflowY = 'hidden'
   })
-
-  // filterShowContentWrapper.addEventListener('click', ()=> {
-  //   filterShowContent.classList.remove('show')
-  //   filterShowContentWrapper.classList.remove('show')
-  //   body.style.overflowY = 'scroll'
-  //   filterShowContentWrapper.style.overflowY = 'hidden'
-  // })
-
-
 }
 
-if (filterFormCatalog) {
-  filterClearButton.addEventListener('click', ()=> {
-    filterFormCatalogNecklaces.removeAttribute('checked')
-  })
-}
+filterFormClear.addEventListener('click', ()=> {
+  filterFormCatalog.reset();
+})

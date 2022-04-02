@@ -11,6 +11,10 @@
     min-width: 440px;
   }
 
+  @media (max-width: $tb) {
+    min-width: 270px;
+  }
+
   button[type="submit"] {
     min-height: 68px;
     background-color: $basicbrown;
@@ -100,6 +104,10 @@
 
     @media (max-width: $ds) {
       padding-top: 67px;
+    }
+
+    @media (max-width: $tb) {
+      padding-top: 20px;
     }
   }
 
@@ -273,6 +281,7 @@
     align-items: center;
     padding: 0 20px;
     padding-bottom: 10px;
+    margin-left: 30px;
 
     label {
       margin-left: 20px;
@@ -309,8 +318,6 @@
         border: 1px solid $basicbrown;
       }
     }
-
-
 
     input:checked + label,
     input:not(:checked) + label {
@@ -520,14 +527,22 @@
 }
 
 .filter-wrapper-all.show {
-  min-width: 458px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  transform: translate(55%, 0);
-  overflow-y: scroll;
-  overflow-x: hidden;
+
+  @media (max-width: $ds) {
+    min-width: 458px;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: $tb) {
+    min-width: 270px;
+  }
 }
 
 .filterShowButton {
