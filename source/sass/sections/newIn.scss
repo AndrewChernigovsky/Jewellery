@@ -1,5 +1,6 @@
 .newIn {
   min-height: 550px;
+  margin-bottom: -61px;
 
   &__wrapper {
     display: grid;
@@ -10,7 +11,7 @@
     text-align: center;
     position: relative;
     z-index: 11;
-    
+
     h2 {
       font-family: "CormorantGaramond";
       font-size: 3.4rem;
@@ -25,7 +26,6 @@
       color: $basicgray3;
       cursor: pointer;
       text-decoration: none;
-      padding-bottom: 10px;
       border: 1px solid transparent;
       border-bottom: 1px solid $basicbrown;
 

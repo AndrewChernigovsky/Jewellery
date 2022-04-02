@@ -1,9 +1,9 @@
 .blog {
   min-height: 769px;
-  margin-bottom: 130px;
+  margin-bottom: 120px;
 
   &__heading {
-    margin-bottom: 60px;
+    margin-bottom: 66px;
     min-width: 100%;
     text-align: center;
 
@@ -13,6 +13,7 @@
       font-size: 3.4rem;
       font-weight: 700;
       color: $basicgray3;
+      margin-bottom: 23px;
     }
 
     a {
@@ -22,7 +23,6 @@
       color: $basicgray3;
       cursor: pointer;
       text-decoration: none;
-      padding-bottom: 10px;
       border: 1px solid transparent;
       border-bottom: 1px solid $basicbrown;
 
@@ -106,6 +106,9 @@
       font-size: 2.6rem;
       font-weight: 600;
       color: $black;
+      margin-top: 13px;
+      line-height: 1.2;
+      margin-bottom: 41px;
     }
 
     a {
@@ -115,7 +118,7 @@
       color: $basicgray3;
       cursor: pointer;
       text-decoration: none;
-      padding-bottom: 10px;
+      padding-bottom: 3px;
       max-width: max-content;
       border: 1px solid transparent;
       border-bottom: 1px solid $basicbrown;
@@ -210,7 +213,7 @@
   }
 
   &__gallery-block2 {
-    flex-direction: row;
+    flex-direction: row-reverse;
 
     @media (max-width: $ds) {
       flex-direction: row-reverse;

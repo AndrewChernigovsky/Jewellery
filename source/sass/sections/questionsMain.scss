@@ -10,6 +10,8 @@
       font-size: 3.4rem;
       font-weight: 700;
       color: $basicgray3;
+      letter-spacing: 1px;
+      margin-bottom: 50px;
     }
   }
 
@@ -22,7 +24,7 @@
 
   &__content-item {
     text-align: left;
-    padding: 50px 38px;
+    padding: 26px 44px;
     border-bottom: 1px solid $basicbrown;
     position: relative;
     cursor: pointer;
