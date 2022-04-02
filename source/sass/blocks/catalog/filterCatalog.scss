@@ -490,7 +490,7 @@
 
   .filterCloseButton {
     position: absolute;
-    right: -15px;
+    right: 0;
     top: -15px;
     z-index: 223;
     width: 32px;
@@ -520,13 +520,14 @@
 }
 
 .filter-wrapper-all.show {
-  min-width: 100vw;
+  min-width: 458px;
   height: 100vh;
   position: fixed;
   top: 0;
   z-index: 100;
-  background: $basicgray5;
-  overflow: scroll;
+  transform: translate(55%, 0);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .filterShowButton {

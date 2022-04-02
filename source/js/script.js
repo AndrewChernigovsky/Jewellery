@@ -264,7 +264,7 @@ let filterFormCatalogDreams = document.getElementById('dreams');
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
   filterShowContent.classList.toggle('show')
-  overflow.classList.add('show')
+  // overflow.classList.add('show')
   filterShowContentWrapper.classList.add('show')
   body.style.overflowY = 'hidden'
   filterShowContentWrapper.style.overflowY = 'scroll'
@@ -288,12 +288,14 @@ if (filterCloseButton) {
     filterShowContentWrapper.style.overflowY = 'hidden'
   })
 
-  filterShowContentWrapper.addEventListener('click', ()=> {
-    filterShowContent.classList.remove('show')
-    filterShowContentWrapper.classList.remove('show')
-    body.style.overflowY = 'scroll'
-    filterShowContentWrapper.style.overflowY = 'hidden'
-  })
+  // filterShowContentWrapper.addEventListener('click', ()=> {
+  //   filterShowContent.classList.remove('show')
+  //   filterShowContentWrapper.classList.remove('show')
+  //   body.style.overflowY = 'scroll'
+  //   filterShowContentWrapper.style.overflowY = 'hidden'
+  // })
+
+
 }
 
 if (filterFormCatalog) {
