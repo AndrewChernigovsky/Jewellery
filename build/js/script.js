@@ -123,7 +123,7 @@ loginPopup.addEventListener('click', ()=> {
   overflow.classList.remove('show');
 })
 
-document.addEventListener("keydown", function (e) {
+document.addEventListener('keydown', function (e) {
   if (e.key === "Escape") {
     loginPopup.classList.remove('show')
     overflow.classList.remove('show')
@@ -257,6 +257,8 @@ if (filterShowButton && filterShowContent) {
     filterShowContent.classList.toggle('show')
     overflow.classList.add('show')
     filterShowContentWrapper.classList.add('show')
+    body.style.overflowY = 'hidden'
+    filterShowContentWrapper.style.overflowY = 'scroll'
   })
 }
 
@@ -265,5 +267,15 @@ if (filterCloseButton) {
     filterShowContent.classList.toggle('show')
     overflow.classList.remove('show')
     filterShowContentWrapper.classList.remove('show')
+    body.style.overflowY = 'scroll'
+    filterShowContentWrapper.style.overflowY = 'hidden'
+  })
+
+  overflow.addEventListener('click', ()=> {
+    overflow.classList.remove('show');
+    filterShowContent.classList.remove('show')
+    filterShowContentWrapper.classList.remove('show')
+    body.style.overflowY = 'scroll'
+    filterShowContentWrapper.style.overflowY = 'hidden'
   })
 }
