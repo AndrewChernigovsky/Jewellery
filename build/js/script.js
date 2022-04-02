@@ -128,6 +128,7 @@ document.addEventListener("keydown", function (e) {
     loginPopup.classList.remove('show')
     overflow.classList.remove('show')
     filterShowContent.classList.remove('show');
+    filterShowContentWrapper.classList.remove('show');
   }
 
   if(loginPopup.classList.contains('show')) {

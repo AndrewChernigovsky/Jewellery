@@ -92,7 +92,7 @@ input::placeholder {
   display: block;
   min-width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   background-color: $basicgray5;
   z-index: 100;
 }
