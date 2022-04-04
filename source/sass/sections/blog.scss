@@ -2,6 +2,11 @@
   min-height: 769px;
   margin-bottom: 120px;
 
+  @media (max-width: $ds) {
+    margin-bottom: 69px;
+  }
+
+
   &__heading {
     margin-bottom: 66px;
     min-width: 100%;
