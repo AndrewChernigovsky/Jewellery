@@ -16,6 +16,10 @@
       color: $basicgray3;
       margin-bottom: 33px;
       letter-spacing: 1.2px;
+
+      @media (max-width: $ds) {
+        margin-bottom: 23px;
+      }
     }
 
     a {
@@ -28,7 +32,6 @@
       padding-bottom: 4px;
       border: 1px solid transparent;
       border-bottom: 1px solid $basicbrown;
-
 
       &:hover {
         opacity: 0.8;
@@ -52,12 +55,31 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   &__content-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  &__content-itembigblock {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &__content-imageRings {
+    margin-right: 20px;
+
+    @media (max-width: $tb) {
+      display: none;
+    }
+  }
+
+  &__content-imageRingsneckale {
+    @media (max-width: $tb) {
+      display: none;
+    }
   }
 }

@@ -1,13 +1,27 @@
 .questionsMain {
   margin-bottom: 110px;
 
+  @media (max-width: $ds) {
+    margin-bottom: 75px;
+  }
+
   &__heading-wrapper {
     margin-bottom: -8px;
+
+    @media (max-width: $ds) {
+      margin-bottom: 29px;
+      margin-top: 20px;
+      padding-left: 4px;
+    }
   }
 
   &__wrapper {
     min-width: 100%;
     text-align: center;
+
+    @media (max-width: $ds) {
+      padding: 0 45px;
+    }
 
     h2 {
       font-family: "CormorantGaramond";
@@ -38,14 +52,23 @@
     position: relative;
     cursor: pointer;
 
+    @media (max-width: $ds) {
+      padding: 26px 47px;
+    }
+
     @media (max-width: $tb) {
       padding: 50px 10px;
     }
 
     .btnMore {
       position: absolute;
-      top: 48px;
-      right: 41px;
+      top: 49px;
+      right: 30px;
+
+      @media (max-width: $ds) {
+        top: 49px;
+        right: 26px;
+      }
     }
 
     button {
@@ -74,6 +97,10 @@
   &__content-item-wrapper {
     max-width: 78%;
 
+    @media (max-width: $ds) {
+      max-width: 100%;
+    }
+
     @media (max-width: $tb) {
       max-width: 100%;
     }
@@ -82,6 +109,10 @@
   &__content-more {
     max-width: 76%;
     display: none;
+
+    @media (max-width: $ds) {
+      max-width: 95%;
+    }
 
     @media (max-width: $tb) {
       max-width: 100%;
@@ -117,8 +148,13 @@
 
   svg {
     fill: $white;
-    width: 18px;
-    height: 23px;
+    width: 30px;
+    height: 28px;
+
+    @media (max-width: $ds) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   svg:first-of-type {
