@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $ds) {
-    max-width: 570px;
+    max-width: 685px;
   }
 
   @media (max-width: $tb) {
@@ -26,6 +26,11 @@
     display: flex;
     align-self: self-end;
     top: -111px;
+
+    @media (max-width: $ds) {
+      top: -60px;
+      left: -3px;
+    }
   }
 
   &__slide {
@@ -33,6 +38,10 @@
     margin: 0 auto;
     min-height: 300px;
     max-width: 270px;
+
+    @media (max-width: $ds) {
+      max-width: 324px;
+    }
 
     .catalog__products-item {
       max-width: 270px;
@@ -44,6 +53,10 @@
 .swiper-main__button-next.swiper-button-next {
   top: 8%;
 
+  @media (max-width: $ds) {
+    z-index: 20;
+  }
+
   @media (max-width: $tb) {
     display: none;
   }
@@ -51,10 +64,18 @@
 
 .swiper-main__button-prev.swiper-button-prev {
   left: 0;
+
+  @media (max-width: $ds) {
+    width: 40px;
+  }
 }
 
 .swiper-main__button-next.swiper-button-next {
   right: 0;
+
+  @media (max-width: $ds) {
+    width: 40px;
+  }
 }
 
 .swiper-main__button-prev.swiper-button-prev::after {
@@ -64,6 +85,11 @@
   height: 15px;
   background-repeat: no-repeat;
   background-image: url('../img/icons/arrow-prevSlider.svg');
+
+  @media (max-width: $ds) {
+    background-image: url('../img/icons/arrow-prevSlider-tb.svg');
+    width: 40px;
+  }
 }
 
 .swiper-main__button-next.swiper-button-next::after {
@@ -74,6 +100,11 @@
   margin-left: -2px;
   background-repeat: no-repeat;
   background-image: url('../img/icons/arrow-nextSlider.svg');
+
+  @media (max-width: $ds) {
+    background-image: url('../img/icons/arrow-nextSlider-tb.svg');
+    width: 40px;
+  }
 }
 
 .swiper-main__pagination .swiper-pagination-bullet {
@@ -86,7 +117,7 @@
   background: transparent;
 
   @media (max-width: $ds) {
-    width: 20px;
+    width: 14px;
   }
 }
 
@@ -99,6 +130,10 @@
 
 .swiper-main__pagination.swiper-pagination {
  bottom: 62px;
+
+ @media (max-width: $ds) {
+    bottom: 23px;
+  }
 }
 
 .swiper-main__slide .swiper-slide {
@@ -112,5 +147,18 @@
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
+  }
+}
+
+.swiper-main__slide .catalog__products-item img {
+  @media (max-width: $ds) {
+    width: 324px;
+    height: 340px;
+  }
+}
+
+.swiper-main__slide .catalog__products-item {
+  @media (max-width: $ds) {
+    min-width: 337px;
   }
 }

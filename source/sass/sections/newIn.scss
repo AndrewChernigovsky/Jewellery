@@ -2,6 +2,11 @@
   min-height: 550px;
   margin-bottom: -61px;
 
+  @media (max-width: $ds) {
+    margin-top: -48px;
+    margin-bottom: -70px;
+  }
+
   &__wrapper {
     display: grid;
     margin: 0 auto;
@@ -11,12 +16,18 @@
     text-align: center;
     position: relative;
     z-index: 11;
+    max-width: 500px;
+    margin: 0 auto;
 
     h2 {
       font-family: "CormorantGaramond";
       font-size: 3.4rem;
       font-weight: 700;
       color: $basicgray3;
+
+      @media (max-width: $ds) {
+        margin-bottom: 23px;
+      }
     }
 
     a {
@@ -29,6 +40,9 @@
       border: 1px solid transparent;
       border-bottom: 1px solid $basicbrown;
 
+      @media (max-width: $ds) {
+        padding-bottom: 4px;
+      }
 
       &:hover {
         opacity: 0.8;

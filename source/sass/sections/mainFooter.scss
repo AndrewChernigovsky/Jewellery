@@ -94,8 +94,8 @@
 
       svg {
         position: absolute;
-        right: -31px;
-        top: 5px;
+        right: -33px;
+        top: 3px;
         width: 29px;
         height: 9px;
       }
@@ -104,9 +104,17 @@
 
   &__resources {
     display: grid;
-    grid-template-columns: 36% 34% 1fr;
+    grid-template-columns: 36% 33.5% 1fr;
     gap: 30px;
     margin-left: -7px;
+
+    @media (min-width: $ds) {
+      grid-template-columns: 36% 26.5% 1fr;
+    }
+
+    @media (min-width: 1210px) {
+      grid-template-columns: 36% 33.5% 1fr;
+    }
 
     @media (max-width: $tb) {
       grid-template-columns: 1fr 1fr;
@@ -117,7 +125,7 @@
   &__faq-list {
     list-style-type: none;
     padding: 0;
-    line-height: 3;
+    line-height: 2.65;
     min-height: 100%;
     margin: 0;
 
@@ -140,7 +148,7 @@
     display: grid;
     text-align: left;
     height: max-content;
-    line-height: 3;
+    line-height: 2.65;
 
     @media (max-width: $tb) {
       display: flex;
@@ -162,6 +170,10 @@
       @media (max-width: $tb) {
         width: 21px;
         height: 21px;
+      }
+
+      .facebook {
+        margin-left: 3px;
       }
 
       span {
