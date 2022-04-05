@@ -7,6 +7,10 @@
     margin-bottom: -70px;
   }
 
+  @media (max-width: $tb) {
+    margin-bottom: -289px;
+  }
+
   &__wrapper {
     display: grid;
     margin: 0 auto;

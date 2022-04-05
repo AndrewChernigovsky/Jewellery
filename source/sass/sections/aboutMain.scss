@@ -62,15 +62,33 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: $ds) {
+      width: 18%;
+    }
+
+    &:last-of-type {
+      margin-left: 20px;
+
+      @media (max-width: $ds) {
+        margin-left: 0;
+      }
+    }
+
   }
 
   &__content-itembigblock {
     margin-left: 20px;
     margin-right: 20px;
+
+    @media (max-width: $ds) {
+      // width: 231px;
+      margin: 0;
+      width: 30%;
+    }
   }
 
   &__content-imageRings {
-    margin-right: 20px;
 
     @media (max-width: $tb) {
       display: none;

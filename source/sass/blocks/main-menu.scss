@@ -130,6 +130,15 @@
     display: none;
     border: 1px solid transparent;
 
+    @media (max-width: $ds) {
+      display: block;
+    }
+
+    @media (max-width: $tb) {
+      left: 1px;
+      top: 19px;
+    }
+
     span {
       position: absolute;
       width: 1px;
@@ -168,10 +177,6 @@
       box-shadow: 0 8px 0 0 rgb(0, 0, 0),
         0 16px 0 0 rgb(0, 0, 0);
     }
-
-    @media (max-width: $ds) {
-      display: block;
-    }
   }
 }
 
@@ -201,6 +206,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media (max-width: $tb) {
+        min-height: 82px;
+      }
     }
 
     form {
@@ -359,6 +368,12 @@
 
     svg {
       fill: $basicbrown;
+
+
+      @media (max-width: $tb) {
+        width: 68px;
+        height: 52px;
+      }
     }
   }
 
@@ -370,6 +385,10 @@
 
     @media (max-width: $ds) {
       margin-right: -4px;
+    }
+
+    @media (max-width: $tb) {
+      margin-right: -15px;
     }
 
     svg {

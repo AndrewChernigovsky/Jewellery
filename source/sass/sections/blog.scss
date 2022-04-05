@@ -12,6 +12,11 @@
     min-width: 100%;
     text-align: center;
 
+    @media (max-width: $tb) {
+      margin-bottom: 55px;
+      position: relative;
+      z-index: 1;
+    }
 
     h2 {
       font-family: "CormorantGaramond";
@@ -62,6 +67,13 @@
     }
   }
 
+  &__gallery {
+    @media (max-width: $tb) {
+      min-width: 300px;
+      max-width: min-content;
+    }
+  }
+
   &__gallery-block {
     display: flex;
     margin-bottom: 29px;
@@ -85,11 +97,19 @@
     min-width: 100%;
     position: relative;
     min-height: inherit;
+    flex-wrap: wrap;
 
     @media (max-width: $ds) {
       justify-content: flex-start;
       max-width: 678px;
       min-width: 678px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $tb) {
+      justify-content: flex-start;
+      max-width: 678px;
+      min-width: 300px;
       margin: 0 auto;
     }
 
@@ -110,8 +130,9 @@
     }
 
     @media (max-width: $tb) {
-      min-width: 100%;
       flex-basis: 100%;
+      min-width: 300px;
+      max-width: min-content;
     }
 
     time {

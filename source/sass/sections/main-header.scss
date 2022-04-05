@@ -1,6 +1,10 @@
 .main-header {
   margin-bottom: 95px;
 
+  @media (max-width: $tb) {
+    margin-bottom: 85px;
+  }
+
   &__main-text {
     font-family: "CormorantGaramond";
     color: $white;
@@ -9,6 +13,10 @@
 
     @media (max-width: $ds) {
       padding: 8px;
+    }
+
+    @media (max-width: $tb) {
+      text-align: center;
     }
 
     h1 {
@@ -20,6 +28,10 @@
 
       @media (max-width: $tb) {
         font-size: 3.4rem;
+        line-height: 1.3;
+        margin-top: 27px;
+        margin-bottom: 3px;
+        letter-spacing: 3.4px;
       }
     }
 
@@ -30,7 +42,7 @@
       line-height: 1;
 
       @media (max-width: $tb) {
-        font-size: 2.2rem;
+        font-size: 3.4rem;
       }
     }
 
@@ -43,6 +55,10 @@
 
     @media (max-width: $ds) {
       padding-right: 19px;
+    }
+
+    @media (max-width: $tb) {
+      padding: 0;
     }
   }
 }

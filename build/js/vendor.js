@@ -33,8 +33,8 @@ const swiper = new Swiper('.swiper-main', {
     breakpoints: {
 
       320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: {
           type: 'fraction',
           renderFraction: function (currentClass, totalClass) {
