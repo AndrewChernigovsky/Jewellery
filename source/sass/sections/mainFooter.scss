@@ -5,7 +5,8 @@
   padding: 83px 0;
 
   @media (max-width: $tb) {
-    padding: 60px 0;
+    padding: 49px 5px;
+    padding-bottom: 40px;
   }
 
   &__wrapper {
@@ -32,6 +33,11 @@
       margin-top: 9px;
       letter-spacing: 1px;
       margin-bottom: -3px;
+
+      @media (max-width: $tb) {
+        padding-right: 60px;
+        margin-bottom: 22px;
+      }
     }
 
     p:last-of-type {
@@ -40,6 +46,10 @@
       font-weight: 400;
       color: $basicgray1;
       margin-bottom: 43px;
+
+      @media (max-width: $tb) {
+        padding-right: 60px;
+      }
     }
 
     form {
@@ -47,6 +57,10 @@
       border: 1px solid transparent;
       border-bottom: 1px solid $white;
       max-width: 88%;
+
+      @media (max-width: $tb) {
+        max-width: 97%;
+      }
     }
 
     form input[type="email"] {
@@ -61,7 +75,7 @@
       margin-right: 22px;
 
       @media (max-width: $tb) {
-        min-width: 165px;
+        min-width: 157px;
       }
 
       &:focus {
@@ -117,7 +131,10 @@
     }
 
     @media (max-width: $tb) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 100%;
+      margin-top: 5px;
+      gap: 18px;
+      padding-left: 7px;
     }
   }
 
@@ -144,6 +161,12 @@
     }
   }
 
+  &__faq-list {
+    @media (max-width: $tb) {
+      margin-bottom: 10px;
+    }
+  }
+
   &__contacts-social {
     display: grid;
     text-align: left;
@@ -154,7 +177,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
 
     a {
@@ -170,10 +193,17 @@
       @media (max-width: $tb) {
         width: 21px;
         height: 21px;
+        margin-left: 0;
+      }
+
+      .facebook-social {
+        @media (max-width: $tb) {
+          margin-left: -1px;
+        }
       }
 
       .facebook {
-        margin-left: 3px;
+        margin-left: 0;
       }
 
       span {
@@ -198,5 +228,29 @@
         opacity: 0.6;
       }
     }
+  }
+
+  &__contacts-social-item {
+    @media (max-width: $tb) {
+      width: 29px;
+      margin-left: 13px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.pinterest-item {
+  @media (max-width: $tb) {
+    margin-left: 20px;
+  }
+}
+
+.twitter {
+  @media (max-width: $tb) {
+    margin-left: 21px;
+    margin-top: 4px;
   }
 }

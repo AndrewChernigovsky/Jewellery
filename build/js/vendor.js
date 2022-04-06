@@ -55,11 +55,6 @@ const swiper = new Swiper('.swiper-main', {
       },
 
       1024: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
-
-      1360: {
         slidesPerView: 4,
         slidesPerGroup: 4,
       },

@@ -5,6 +5,10 @@
     margin-bottom: 80px;
   }
 
+  @media (max-width: $tb) {
+    margin-bottom: 45px;
+  }
+
   &__wrapper {
     @media (max-width: $tb) {
       padding: 0 15px;
@@ -85,6 +89,18 @@
 
     @media (max-width: $tb) {
       width: 46%;
+    }
+
+    &:first-of-type {
+      @media (max-width: $tb) {
+        justify-content: flex-start;
+
+        .aboutMain__content-image {
+          &:first-of-type {
+            margin-bottom: 18%;
+          }
+        }
+      }
     }
 
     &:last-of-type {

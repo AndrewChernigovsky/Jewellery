@@ -414,6 +414,11 @@
     display: none;
     border: 1px solid transparent;
 
+    @media (max-width: $tb) {
+      left: 1px;
+      top: 20px;
+    }
+
     span {
       position: absolute;
       width: 1px;
@@ -495,6 +500,10 @@
         border-bottom: none;
         margin-bottom: 4px;
       }
+
+      @media (max-width: $tb) {
+        min-height: 151px;
+      }
     }
 
     form {
@@ -505,6 +514,10 @@
       min-width: 93%;
       margin: 0 auto;
       position: relative;
+
+      @media (max-width: $tb) {
+        min-width: 97%;
+      }
 
       input[type="search"] {
         border: 1px solid transparent;
@@ -523,6 +536,11 @@
         position: absolute;
         left: 7px;
         top: 5px;
+
+        @media (max-width: $tb) {
+          left: 8px;
+          top: 10px;
+        }
 
         svg {
           fill: $white;
@@ -633,6 +651,11 @@
       margin-right: 24px;
     }
 
+    @media (max-width: $tb) {
+      margin-bottom: -3px;
+      margin-right: 3px;
+    }
+
     a {
       display: flex;
     }
@@ -655,6 +678,11 @@
 
     svg {
       fill: $white;
+
+      @media (max-width: $tb) {
+        width: 75px;
+        height: 52px;
+      }
     }
   }
 
@@ -667,6 +695,11 @@
       padding: 0;
       line-height: 2.37;
       margin-bottom: 32px;
+    }
+
+    @media (max-width: $tb) {
+      margin-bottom: 22px;
+      margin-top: 4px;
     }
   }
 
@@ -742,6 +775,10 @@
   .main-menu__list {
     padding-left: 44px;
     line-height: 1.7;
+
+    @media (max-width: $tb) {
+      padding-left: 13px;
+    }
   }
 }
 

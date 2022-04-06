@@ -147,7 +147,7 @@
     @media (max-width: $tb) {
       flex-basis: 100%;
       min-width: 290px;
-      max-width: min-content;
+      max-width: 100%;
     }
 
     time {
@@ -247,6 +247,10 @@
 
     @media (max-width: $ds) {
       max-width: 50%;
+    }
+
+    @media (max-width: $tb) {
+      max-width: 100%;
     }
 
     img {
