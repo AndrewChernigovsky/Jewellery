@@ -5,9 +5,19 @@
     margin-bottom: 80px;
   }
 
+  &__wrapper {
+    @media (max-width: $tb) {
+      padding: 0 15px;
+    }
+  }
+
   &__heading {
     text-align: center;
     margin-bottom: 66px;
+
+    @media (max-width: $tb) {
+      margin-bottom: 52px;
+    }
 
     h2 {
       font-family: "CormorantGaramond";
@@ -56,6 +66,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+
+    @media (max-width: $tb) {
+      flex-wrap: wrap;
+      min-height: 387px;
+    }
+
   }
 
   &__content-item {
@@ -65,6 +81,10 @@
 
     @media (max-width: $ds) {
       width: 18%;
+    }
+
+    @media (max-width: $tb) {
+      width: 46%;
     }
 
     &:last-of-type {
@@ -82,9 +102,12 @@
     margin-right: 20px;
 
     @media (max-width: $ds) {
-      // width: 231px;
       margin: 0;
       width: 30%;
+    }
+
+    @media (max-width: $tb) {
+      width: 46%;
     }
   }
 
