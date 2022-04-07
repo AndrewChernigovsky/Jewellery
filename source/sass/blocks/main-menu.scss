@@ -253,11 +253,11 @@
     }
 
     &__wrapper {
-      background-color: $basicbrown;
+      background-color: $basicbrown2;
       min-height: 461px;
       background-image: image-set('../img/content/header-background/indexHeader-ds.jpg' 1x, '../img/content/header-background/indexHeader-ds@2x.jpg' 2x);
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: auto;
       background-position: center;
       display: flex;
       justify-content: center;

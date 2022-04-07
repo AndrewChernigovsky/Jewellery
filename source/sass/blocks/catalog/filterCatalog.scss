@@ -55,7 +55,10 @@
   }
 
   &__heading {
-    padding: 20px;
+    padding-right: 7px;
+    padding-top: 24px;
+    padding-left: 25px;
+    padding-bottom: 16px;
 
     @media (max-width: $ds) {
       padding: 20px 40px;
@@ -73,6 +76,8 @@
     display: grid;
     border: 1px solid $basicbrown;
     margin-bottom: 30px;
+    margin-top: 6px;
+    margin-left: 2px;
 
     @media (max-width: $ds) {
       border: none;
@@ -101,6 +106,7 @@
   &__products {
     border-bottom: 1px solid $basicbrown;
     cursor: pointer;
+    padding-bottom: 14px;
 
     @media (max-width: $ds) {
       padding-top: 67px;
@@ -276,15 +282,19 @@
     gap: 10px;
   }
 
+  &__price-items {
+    margin-top: -9px;
+    padding-bottom: 18px;
+  }
+
   &__products-item {
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    padding-bottom: 10px;
-    margin-left: 30px;
+    padding: 0 4px 14px;
+    margin-left: 43px;
 
     label {
-      margin-left: 20px;
+      margin-left: 7px;
       font-family: "Poppins";
       font-size: 1.4rem;
       font-weight: 500;
@@ -296,7 +306,7 @@
 
     label {
       position: relative;
-      padding-left: 20px;
+      padding-left: 8px;
     }
 
     input:checked + label {

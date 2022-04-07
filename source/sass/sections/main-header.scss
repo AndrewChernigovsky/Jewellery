@@ -62,3 +62,32 @@
     }
   }
 }
+
+.main-header-catalog  {
+  h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 8px;
+
+    @media (max-width: $tb) {
+      font-size: 3.4rem;
+      line-height: 1.3;
+      margin-top: 27px;
+      margin-bottom: 3px;
+      letter-spacing: 3.4px;
+    }
+  }
+
+  span {
+    font-family: "CormorantGaramond-MediumItalic";
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1;
+
+    @media (max-width: $tb) {
+      font-size: 3.4rem;
+    }
+  }
+}

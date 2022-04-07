@@ -64,7 +64,7 @@
     }
 
     form input[type="email"] {
-      min-width: 370px;
+      min-width: calc(100% - 135px);
       background: transparent;
       border: 1px solid transparent;
       outline: 1px solid transparent;
@@ -74,9 +74,14 @@
       padding-left: 0;
       margin-right: 22px;
 
-      @media (max-width: $tb) {
-        min-width: 157px;
+      @media (max-width: $ds) {
+        min-width: calc(100% - 130px);
       }
+
+      @media (max-width: $tb) {
+        min-width: calc(100% - 130px);
+      }
+
 
       &:focus {
         outline: 1px solid transparent;
