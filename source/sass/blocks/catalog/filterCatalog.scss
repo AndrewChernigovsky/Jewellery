@@ -24,7 +24,7 @@
     font-family: "Poppins";
     font-size: 1.6rem;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
 
     &:hover {
       opacity: 0.6;
@@ -153,7 +153,7 @@
     display: grid;
     gap: 10px;
     justify-items: center;
-    left: 35px;
+    left: 57px;
     z-index: 3;
     cursor: pointer;
     min-width: 40px;
@@ -171,7 +171,7 @@
     display: grid;
     gap: 10px;
     justify-items: center;
-    right: 35px;
+    right: 43px;
     z-index: 3;
     cursor: pointer;
     min-width: 40px;
@@ -572,6 +572,7 @@
     align-items: center;
     justify-content: center;
     min-width: 100%;
+    margin: 0 auto;
   }
 
   &:hover {

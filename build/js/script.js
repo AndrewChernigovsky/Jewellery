@@ -108,24 +108,31 @@ mainMenuOpenedLogin.addEventListener('click', ()=> {
   overflow.classList.add('show')
   body.style.overflowY = 'hidden'
   loginPopup.style.overflowY='scroll'
+  loginPopup.style.overflowX='hidden'
   body.classList.add('overflow-hidden')
   inputLoginEmail.focus()
 })
 
 loginBtnPopup.addEventListener('click', ()=>{
   loginPopup.classList.remove('show')
-  overflow.classList.remove('show');
+  overflow.classList.remove('show')
+  body.style.overflowY = 'scroll'
+  body.classList.remove('overflow-hidden');
 })
 
-loginPopup.addEventListener('click', ()=> {
+overflow.addEventListener('click', ()=> {
   loginPopup.classList.remove('show')
-  overflow.classList.remove('show');
+  overflow.classList.remove('show')
+  body.style.overflowY = 'scroll'
+  body.classList.remove('overflow-hidden');
 })
 
 document.addEventListener('keydown', function (e) {
   if (e.key === "Escape") {
     loginPopup.classList.remove('show')
     overflow.classList.remove('show')
+    body.style.overflowY = 'scroll'
+    body.classList.remove('overflow-hidden')
     filterShowContent.classList.remove('show');
     filterShowContentWrapper.classList.remove('show');
   }
