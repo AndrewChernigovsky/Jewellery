@@ -952,10 +952,10 @@
   .main-header__wrapper {
     min-height: 262px;
     text-align: center;
-    background-color: $basicbrown;
+    background-color: $basicbrown2;
     background-image: image-set('../img/content/header-background/catalogHeader-ds.jpg' 1x, '../img/content/header-background/catalogHeader-ds@2x.jpg' 2x);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     display: flex;
     justify-content: center;
