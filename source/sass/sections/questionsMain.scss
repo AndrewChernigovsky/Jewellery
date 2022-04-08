@@ -73,7 +73,7 @@
 
   &__content-item {
     text-align: left;
-    padding: 26px 44px;
+    padding: 27px 44px;
     border-bottom: 1px solid $basicbrown;
     position: relative;
     cursor: pointer;
@@ -268,7 +268,7 @@
   padding-top: 46px;
 
   @media (max-width: $ds) {
-    padding-top: 17px;
+    padding-top: 48px;
   }
 
   .btnMore {

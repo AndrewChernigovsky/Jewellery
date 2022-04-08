@@ -575,6 +575,11 @@
     margin: 0 auto;
   }
 
+  @media (max-width: $tb) {
+    margin-top: -11px;
+    margin-bottom: 28px;
+  }
+
   &:hover {
     opacity: 0.6;
   }
