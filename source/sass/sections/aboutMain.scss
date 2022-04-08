@@ -71,6 +71,10 @@
     justify-content: space-between;
     flex-wrap: nowrap;
 
+    @media (max-width: $ds) {
+      padding: 0 25px;
+    }
+
     @media (max-width: $tb) {
       flex-wrap: wrap;
       min-height: 387px;
@@ -84,7 +88,7 @@
     justify-content: space-between;
 
     @media (max-width: $ds) {
-      width: 18%;
+      width: 19.5%;
     }
 
     @media (max-width: $tb) {
@@ -127,7 +131,7 @@
 
     @media (max-width: $ds) {
       margin: 0;
-      width: 30%;
+      width: 34%;
     }
 
     @media (max-width: $tb) {

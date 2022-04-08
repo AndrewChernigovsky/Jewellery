@@ -285,6 +285,12 @@
       padding-bottom: 50px;
       max-width: 50%;
     }
+
+    @media (max-width: $tb) {
+      margin-top: 48px;
+      padding-bottom: 50px;
+      max-width: 59%;
+    }
   }
 
   &__block-1 {
