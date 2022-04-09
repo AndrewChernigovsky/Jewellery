@@ -34,6 +34,11 @@
       @media (max-width: $ds) {
         margin-bottom: 23px;
       }
+
+      @media (max-width: $tb) {
+        margin-bottom: 22px;
+        margin-top: 68px;
+      }
     }
 
     a {
@@ -78,6 +83,7 @@
     @media (max-width: $tb) {
       flex-wrap: wrap;
       min-height: 387px;
+      padding: 0;
     }
 
   }
@@ -98,7 +104,6 @@
     &:first-of-type {
       @media (max-width: $tb) {
         justify-content: flex-start;
-        margin-bottom: 10px;
 
         .aboutMain__content-image {
           &:first-of-type {
@@ -136,7 +141,6 @@
 
     @media (max-width: $tb) {
       width: 46%;
-      margin-bottom: 10px;
     }
   }
 
