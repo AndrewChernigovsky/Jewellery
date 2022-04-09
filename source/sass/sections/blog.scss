@@ -108,7 +108,7 @@
     }
 
     &:last-of-type {
-      margin-bottom: 0;
+      margin-bottom: -2px;
     }
   }
 
@@ -138,9 +138,7 @@
   &__gallery-item {
     background: $basicgray2;
     min-width: 230px;
-    max-width: 285px;
     min-height: 200px;
-    max-height: 300px;
     flex-basis: 50%;
 
     @media (max-width: $ds) {

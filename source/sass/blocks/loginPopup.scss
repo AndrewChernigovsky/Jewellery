@@ -221,3 +221,23 @@
   display: block;
   top: 100px;
 }
+
+.login-wrapper {
+  position: relative;
+  top: 0;
+  z-index: 200;
+  left: 50%;
+  transform: translate(-50%,0);
+  max-width: 430px;
+
+}
+
+.login {
+  position: relative;
+  margin: 0 auto;
+  top: 0;
+}
+
+.main-header-login {
+  margin-bottom: 0;
+}
