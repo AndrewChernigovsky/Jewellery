@@ -947,6 +947,15 @@
       margin-bottom: 5px;
     }
   }
+
+  .login-header-up {
+    justify-content: center;
+
+    .logo {
+      flex-basis: 0;
+      margin-left: 0;
+    }
+  }
 }
 
 .main-menu--nojs.main-menu--closed.main-menuCatalog,

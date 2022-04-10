@@ -137,20 +137,27 @@ document.addEventListener('keydown', function (e) {
     filterShowContentWrapper.classList.remove('show');
   }
 
-  if(loginPopup.classList.contains('show')) {
-
-    loginBtnPopup.addEventListener('focus', ()=> {
-      if(e.key === 'Shift' && e.key === 'Tab') {
-        loginSignUp.focus()
-      }
-    })
+  if (e.key === 'Shift' && e.key === 'Tab') {
+    inputLoginEmail.focus()
   }
 
+  loginBtnPopup.addEventListener('blur', ()=> {
+    if (e.key === 'Shift' && e.key === 'Tab') {
+      loginSignUp.focus()
+    }
+  })
+
   if(loginPopup.classList.contains('show')) {
 
-    loginSignUp.addEventListener('focus', ()=> {
+    loginSignUp.addEventListener('blur', ()=> {
       if(e.key === 'Tab') {
         loginBtnPopup.focus()
+      }
+    })
+
+    loginBtnPopup.addEventListener('blur', ()=> {
+      if (e.key === 'Shift' && e.key === 'Tab') {
+        loginSignUp.focus()
       }
     })
   }
@@ -230,27 +237,46 @@ let filterContentCollection = document.getElementById('collectionContent')
 let filterContentPrice = document.getElementById('priceContent')
 let filterBtnClear = document.getElementById('filterClear')
 
-filterContentProducts.classList.remove('filterCatalog__filter--nojs')
-filterContentMaterial.classList.remove('filterCatalog__filter--nojs')
-filterContentCollection.classList.remove('filterCatalog__filter--nojs')
-filterContentPrice.classList.remove('filterCatalog__filter--nojs')
+if(filterContentProducts) {
+  filterContentProducts.classList.remove('filterCatalog__filter--nojs')
+}
+if(filterContentMaterial) {
+  filterContentMaterial.classList.remove('filterCatalog__filter--nojs')
+}
+if(filterContentCollection) {
+  filterContentCollection.classList.remove('filterCatalog__filter--nojs')
+}
+if(filterContentPrice) {
+  filterContentPrice.classList.remove('filterCatalog__filter--nojs')
+}
 
-filterWrapperProducts.addEventListener('click', ()=> {
-  filterContentProducts.classList.toggle('show')
-  filterButtonProducts.classList.toggle('showmore')
-})
-filterWrapperMaterial.addEventListener('click', ()=> {
-  filterContentMaterial.classList.toggle('show')
-  filterButtonMaterial.classList.toggle('showmore')
-})
-filterWrapperCollection.addEventListener('click', ()=> {
-  filterContentCollection.classList.toggle('show')
-  filterButtonCollection.classList.toggle('showmore')
-})
-filterWrapperPrice.addEventListener('click', ()=> {
-  filterContentPrice.classList.toggle('show')
-  filterButtonPrice.classList.toggle('showmore')
-})
+if(filterWrapperProducts) {
+  filterWrapperProducts.addEventListener('click', ()=> {
+    filterContentProducts.classList.toggle('show')
+    filterButtonProducts.classList.toggle('showmore')
+  })
+}
+
+if(filterWrapperMaterial) {
+  filterWrapperMaterial.addEventListener('click', ()=> {
+    filterContentMaterial.classList.toggle('show')
+    filterButtonMaterial.classList.toggle('showmore')
+  })
+}
+
+if(filterWrapperCollection) {
+  filterWrapperCollection.addEventListener('click', ()=> {
+    filterContentCollection.classList.toggle('show')
+    filterButtonCollection.classList.toggle('showmore')
+  })
+}
+
+if(filterWrapperPrice) {
+  filterWrapperPrice.addEventListener('click', ()=> {
+    filterContentPrice.classList.toggle('show')
+    filterButtonPrice.classList.toggle('showmore')
+  })
+}
 
 let filterShowButton = document.getElementById('filterShowButton');
 let filterClearButton = document.getElementById('filterCloseButton');
@@ -267,7 +293,6 @@ let filterFormCatalogSilver = document.getElementById('silver');
 let filterFormCatalogPinkFlamingo = document.getElementById('pinkFlamingo');
 let filterFormCatalogDreams = document.getElementById('dreams');
 let filterFormClear = document.getElementById('filterClear');
-
 
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
@@ -288,15 +313,19 @@ if (filterCloseButton) {
     filterShowContentWrapper.style.overflowY = 'hidden'
   })
 
-  overflow.addEventListener('click', ()=> {
-    overflow.classList.remove('show')
-    filterShowContent.classList.remove('show')
-    filterShowContentWrapper.classList.remove('show')
-    body.style.overflowY = 'scroll'
-    filterShowContentWrapper.style.overflowY = 'hidden'
-  })
+  if(overflow) {
+    overflow.addEventListener('click', ()=> {
+      overflow.classList.remove('show')
+      filterShowContent.classList.remove('show')
+      filterShowContentWrapper.classList.remove('show')
+      body.style.overflowY = 'scroll'
+      filterShowContentWrapper.style.overflowY = 'hidden'
+    })
+  }
 }
 
-filterFormClear.addEventListener('click', ()=> {
-  filterFormCatalog.reset();
-})
+if(filterFormClear) {
+  filterFormClear.addEventListener('click', ()=> {
+    filterFormCatalog.reset();
+  })
+}

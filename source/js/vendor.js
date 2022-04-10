@@ -58,5 +58,5 @@ const swiper = new Swiper('.swiper-main', {
         slidesPerView: 4,
         slidesPerGroup: 4,
       },
-  }
+    },
 });
