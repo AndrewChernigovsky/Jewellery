@@ -42,7 +42,7 @@
 
                 <div class="authorization">
                   <div class="login">
-                    <a href="login.html" class="login__link" id="login" data-hystmodal="#loginPopup">Login</a>
+                    <a href="login.html" class="login__link" id="login" data-hystmodal="#modalLogin">Login</a>
                   </div>
 
                   <div class="cart">
@@ -93,7 +93,7 @@
                 </li>
               </ul>
               <div class="loginMenu">
-                <a href="#" class="login__link" id="loginMenu" aria-label="Login" data-hystmodal="#loginPopup">Login</a>
+                <a href="#" class="login__link" id="loginMenu" aria-label="Login" data-hystmodal="#modalLogin">Login</a>
               </div>
             </div>
           </div>
@@ -685,53 +685,55 @@
         </div>
     </footer>
 
-    <div class="loginPopup" id="loginPopup" tabindex="-1">
-      <div class="loginPopup__wrapper">
-        <button class="loginPopup__toggle" type="button" id="btnloginPopup" aria-label="Close" tabindex="1">
-          <span>Открыть меню</span>
-        </button>
-        <div class="loginPopup__header">
-          <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="
-                  img/content/login-header/loginBg.webp    1x,
-                  img/content/login-header/loginBg@2x.webp 2x
-                ">
-            <source type="image/webp" media="(min-width: 320px)" srcset="
-                  img/content/login-header/loginBg-mb.webp    1x,
-                  img/content/login-header/loginBg-mb@2x.webp 2x
-                ">
-            <!-- 1х: 430px; 2x: 860px -->
-            <img src="img/content/login-header/loginBg.jpg" srcset="img/content/login-header/loginBg@2x.jpg 2x" alt="blog care" loading="lazy" width="430" height="138">
-          </picture>
-        </div>
-        <div class="loginPopup__inner">
-          <p>Log in</p>
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <input type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail" required="" minlength="5" aria-label="Input E-mail" tabindex="2">
-            <div class="password-wrapper">
-              <input type="password" name="loginPassword" id="loginPassword" placeholder="Password" required="" minlength="5" aria-label="Input Password" tabindex="3">
-              <span>
-                <a href="#" aria-label="Forgot your password" tabindex="4">Forgot your password?</a>
-              </span>
+    <div class="hystmodal loginPopup" id="modalLogin" tabindex="-1" aria-hidden="true">
+      <div class="hystmodal__wrap loginPopup__wrapper">
+        <div class="hystmodal__window loginPopup__window" role="dialog" aria-modal="true">
+          <button data-hystclose="" class="loginPopup__toggle hystmodal__close" type="button" id="modalLoginClosed" aria-label="Close">
+            <span>Открыть меню</span>
+          </button>
+          <div class="loginPopup__header">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="
+                    img/content/login-header/loginBg.webp    1x,
+                    img/content/login-header/loginBg@2x.webp 2x
+                  ">
+              <source type="image/webp" media="(min-width: 320px)" srcset="
+                    img/content/login-header/loginBg-mb.webp    1x,
+                    img/content/login-header/loginBg-mb@2x.webp 2x
+                  ">
+              <!-- 1х: 430px; 2x: 860px -->
+              <img src="img/content/login-header/loginBg.jpg" srcset="img/content/login-header/loginBg@2x.jpg 2x" alt="blog care" loading="lazy" width="430" height="138">
+            </picture>
+          </div>
+          <div class="loginPopup__inner">
+            <p>Log in</p>
+            <form action="https://echo.htmlacademy.ru/" method="get">
+              <input class="emailLogin" type="email" name="loginEmail" id="loginEmail" placeholder="Your E-mail" required="" minlength="5" aria-label="Input E-mail" autofocus="">
+              <div class="password-wrapper">
+                <input type="password" name="loginPassword" id="loginPassword" placeholder="Password" required="" minlength="5" aria-label="Input Password">
+                <span>
+                  <a href="#" aria-label="Forgot your password">Forgot your password?</a>
+                </span>
+              </div>
+              <button type="submit" id="loginSubmit" aria-label="Log In">Log In</button>
+            </form>
+            <div class="loginPopup__inner-signUp">
+              <a href="#" id="modalLoginSignUp" aria-label="Sing Up">
+                <span>Don’t have an account?</span>
+                <span>Sign Up</span>
+              </a>
             </div>
-            <button type="submit" id="loginSubmit" aria-label="Log In" tabindex="5">Log In</button>
-          </form>
-          <div class="loginPopup__inner-signUp">
-            <a href="#" id="loginSignUp" aria-label="Sing Up" tabindex="6">
-              <span>Don’t have an account?</span>
-              <span>Sign Up</span>
-            </a>
           </div>
         </div>
+
       </div>
     </div>
   </div>
   <script src="js/script.min.js" async=""></script>
-  <!-- <script src="js/swiper.js" async></script>
-  <script src="js/vendor.js"></script> -->
-  <script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
-  <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
-  <!-- <script src="js/hystmodal.min.js"></script> -->
+  <script src="js/swiper.js"></script>
+  <script src="js/hystmodal.min.js"></script>
+  <script src="js/vendor.js"></script>
+
 </body>
 
 </html>

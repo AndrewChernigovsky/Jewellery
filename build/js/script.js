@@ -94,106 +94,93 @@ if(itemAccardeon4) {
   });
 }
 
-mainLogin.addEventListener('click', ()=> {
-  loginPopup.classList.add('show')
-  overflow.classList.add('show');
-  body.style.overflowY = 'hidden'
-  loginPopup.style.overflowY='scroll'
-  body.classList.add('overflow-hidden')
-  inputLoginEmail.focus()
-})
+// mainLogin.addEventListener('click', ()=> {
+//   loginPopup.classList.add('show')
+//   overflow.classList.add('show');
+//   body.style.overflowY = 'hidden'
+//   loginPopup.style.overflowY='scroll'
+//   body.classList.add('overflow-hidden')
+//   inputLoginEmail.focus()
+// })
 
-mainMenuOpenedLogin.addEventListener('click', ()=> {
-  loginPopup.classList.add('show')
-  overflow.classList.add('show')
-  body.style.overflowY = 'hidden'
-  loginPopup.style.overflowY='scroll'
-  loginPopup.style.overflowX='hidden'
-  body.classList.add('overflow-hidden')
-  inputLoginEmail.focus()
-})
+// mainMenuOpenedLogin.addEventListener('click', ()=> {
+//   loginPopup.classList.add('show')
+//   overflow.classList.add('show')
+//   body.style.overflowY = 'hidden'
+//   loginPopup.style.overflowY='scroll'
+//   loginPopup.style.overflowX='hidden'
+//   body.classList.add('overflow-hidden')
+//   inputLoginEmail.focus()
+// })
 
-loginBtnPopup.addEventListener('click', ()=>{
-  loginPopup.classList.remove('show')
-  overflow.classList.remove('show')
-  body.style.overflowY = 'scroll'
-  body.classList.remove('overflow-hidden');
-})
+// loginBtnPopup.addEventListener('click', ()=>{
+//   loginPopup.classList.remove('show')
+//   overflow.classList.remove('show')
+//   body.style.overflowY = 'scroll'
+//   body.classList.remove('overflow-hidden');
+// })
 
-overflow.addEventListener('click', ()=> {
-  loginPopup.classList.remove('show')
-  overflow.classList.remove('show')
-  body.style.overflowY = 'scroll'
-  body.classList.remove('overflow-hidden');
-})
+// overflow.addEventListener('click', ()=> {
+//   loginPopup.classList.remove('show')
+//   overflow.classList.remove('show')
+//   body.style.overflowY = 'scroll'
+//   body.classList.remove('overflow-hidden');
+// })
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === "Escape") {
-    loginPopup.classList.remove('show')
-    overflow.classList.remove('show')
-    body.style.overflowY = 'scroll'
-    body.classList.remove('overflow-hidden')
-    filterShowContent.classList.remove('show');
-    filterShowContentWrapper.classList.remove('show');
-  }
+// document.addEventListener('keydown', function (e) {
+//   if (e.key === "Escape") {
+//     loginPopup.classList.remove('show')
+//     overflow.classList.remove('show')
+//     body.style.overflowY = 'scroll'
+//     body.classList.remove('overflow-hidden')
+//     filterShowContent.classList.remove('show');
+//     filterShowContentWrapper.classList.remove('show');
+//   }
 
-  if (loginPopup.classList.contains('show')) {
+  // if (loginPopup.classList.contains('show')) {
 
-    loginSignUp.addEventListener('blur', ()=> {
-      if (e.key === 'Tab') {
-        loginBtnPopup.focus()
-        console.log(222212312)
-      }
-    })
+  //   loginSignUp.addEventListener('blur', ()=> {
+  //     if (e.key === 'Tab') {
+  //       loginBtnPopup.focus()
+  //       console.log(222212312)
+  //     }
+  //   })
 
-    loginBtnPopup.addEventListener('blur', ()=> {
-      if (e.key == 'Tab' && e.key == 'Shift') {
-        loginBtnPopup.focus()
-        console.log(3334412312)
-      }
-    })
-
-    loginPopup.addEventListener('blur', ()=> {
-      loginBtnPopup.focus()
-      console.log(88)
-    })
-  }
-})
-
-loginPopup.addEventListener('focusout', function (event) {
-      if (loginPopup.contains(event.relatedTarget)) return;
-
-      if (event.key == 'Tab' && event.key == 'Shift') {
-        console.log('Фокус снят!');
-      }
-});
+  //   loginBtnPopup.addEventListener('blur', ()=> {
+  //     if (e.key == 'Tab' && e.key == 'Shift') {
+  //       loginBtnPopup.focus()
+  //       console.log(3334412312)
+  //     }
+  //   })
+  // }
+// })
 
 inputLoginEmail.removeAttribute('required');
 inputLoginPassword.removeAttribute('required');
 
-loginPopup.addEventListener('submit', function (e) {
+// loginPopup.addEventListener('submit', function (e) {
 
-  if (inputLoginEmail.value.length == 0) {
-    e.preventDefault()
-    inputLoginEmail.classList.add('error');
-  } else {
-    inputLoginEmail.classList.remove('error')
-    inputLoginEmail.classList.add('success')
-    localStorage.setItem('LoginEmail', inputLoginEmail.value);
-  }
+//   if (inputLoginEmail.value.length == 0) {
+//     e.preventDefault()
+//     inputLoginEmail.classList.add('error');
+//   } else {
+//     inputLoginEmail.classList.remove('error')
+//     inputLoginEmail.classList.add('success')
+//     localStorage.setItem('LoginEmail', inputLoginEmail.value);
+//   }
 
-  if (inputLoginPassword.value.length == 0) {
-    e.preventDefault();
-    inputLoginPassword.classList.add('error')
-  } else {
-    inputLoginPassword.classList.remove('error')
-    inputLoginPassword.classList.add('success')
-  }
+//   if (inputLoginPassword.value.length == 0) {
+//     e.preventDefault();
+//     inputLoginPassword.classList.add('error')
+//   } else {
+//     inputLoginPassword.classList.remove('error')
+//     inputLoginPassword.classList.add('success')
+//   }
 
-  if (inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
-    alert("Форма успешно отправлена");
-  }
-})
+//   if (inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
+//     alert("Форма успешно отправлена");
+//   }
+// })
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -333,4 +320,10 @@ if(filterFormClear) {
   filterFormClear.addEventListener('click', ()=> {
     filterFormCatalog.reset();
   })
+}
+
+let hystmodalActive = document.querySelector('.hystmodal--active')
+
+if(hystmodalActive) {
+  inputLoginEmail.focus();
 }

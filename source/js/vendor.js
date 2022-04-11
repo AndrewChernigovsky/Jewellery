@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper-main', {
+var swiper = new Swiper(document.querySelector('.swiper-main'), {
     speed: 400,
     spaceBetween: 30,
     loop: false,
@@ -60,3 +60,16 @@ const swiper = new Swiper('.swiper-main', {
       },
     },
 });
+
+
+let emailInput = document.querySelector('.emailLogin');
+
+const myModal = new HystModal({
+  linkAttributeName: "data-hystmodal",
+  closeOnOverlay: true,
+  starter: function(){
+    emailInput.focus()
+  },
+  // настройки (не обязательно), см. API
+});
+
