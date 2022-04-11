@@ -137,31 +137,36 @@ document.addEventListener('keydown', function (e) {
     filterShowContentWrapper.classList.remove('show');
   }
 
-  if (e.key === 'Shift' && e.key === 'Tab') {
-    inputLoginEmail.focus()
-  }
-
-  loginBtnPopup.addEventListener('blur', ()=> {
-    if (e.key === 'Shift' && e.key === 'Tab') {
-      loginSignUp.focus()
-    }
-  })
-
-  if(loginPopup.classList.contains('show')) {
+  if (loginPopup.classList.contains('show')) {
 
     loginSignUp.addEventListener('blur', ()=> {
-      if(e.key === 'Tab') {
+      if (e.key === 'Tab') {
         loginBtnPopup.focus()
+        console.log(222212312)
       }
     })
 
     loginBtnPopup.addEventListener('blur', ()=> {
-      if (e.key === 'Shift' && e.key === 'Tab') {
-        loginSignUp.focus()
+      if (e.key == 'Tab' && e.key == 'Shift') {
+        loginBtnPopup.focus()
+        console.log(3334412312)
       }
+    })
+
+    loginPopup.addEventListener('blur', ()=> {
+      loginBtnPopup.focus()
+      console.log(88)
     })
   }
 })
+
+loginPopup.addEventListener('focusout', function (event) {
+      if (loginPopup.contains(event.relatedTarget)) return;
+
+      if (event.key == 'Tab' && event.key == 'Shift') {
+        console.log('Фокус снят!');
+      }
+});
 
 inputLoginEmail.removeAttribute('required');
 inputLoginPassword.removeAttribute('required');
