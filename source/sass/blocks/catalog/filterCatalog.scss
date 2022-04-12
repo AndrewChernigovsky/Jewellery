@@ -1,5 +1,5 @@
 .filterCatalog {
-  max-width: 300px;
+  max-width: 280px;
   min-width: 250px;
 
   @media (max-width: $ds) {
@@ -533,6 +533,10 @@
 
 .filter-window {
   opacity: 1;
+  margin: 0;
+  margin-left: -15px;
+  margin-top: -22px;
+  max-width: 290px;
 
   @media (max-width: $ds) {
     opacity: 0;
@@ -542,6 +546,7 @@
 .filter-wrapper-all {
   visibility: visible;
   position: relative;
+  min-width: 300px;
 
   @media (max-width: $ds) {
     visibility: visible;
@@ -551,10 +556,10 @@
 
 
 .hystmodal.filter-wrapper-all {
-  pointer-events: all;
 
-  @media (max-width: $ds) {
-    pointer-events: none;
+  @media (min-width: $ds) {
+    pointer-events: all;
+    margin-left: -15px;
   }
 }
 
@@ -585,7 +590,7 @@
       min-width: 100vw;
       min-height: 100vh;
       margin: 0 auto;
-      top: 30%;
+      top: -25%;
       z-index: 114;
     }
 

@@ -6,8 +6,11 @@
   }
 
   &__catalog {
-    margin-left: 55px;
+    min-width: 60%;
 
+    @media (min-width: 1170px) {
+      min-width: 865px;
+    }
 
     @media (max-width: $ds) {
       margin-left: 0;
@@ -20,6 +23,7 @@
     align-items: flex-start;
     flex-direction: row;
     margin-top: -23px;
+    max-width: 1170px;
 
     @media (max-width: $ds) {
       flex-direction: column;
