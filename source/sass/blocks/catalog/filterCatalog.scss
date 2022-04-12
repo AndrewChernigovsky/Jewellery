@@ -1,5 +1,5 @@
 .filterCatalog {
-  max-width: 280px;
+  max-width: 250px;
   min-width: 250px;
 
   @media (max-width: $ds) {
@@ -76,7 +76,7 @@
     display: grid;
     border: 1px solid $basicbrown;
     margin-bottom: 30px;
-    margin-top: 6px;
+    margin-top: 0;
     margin-left: 2px;
 
     @media (max-width: $ds) {
@@ -475,10 +475,6 @@
   display: none;
 }
 
-// .filterCatalog__products-items-wrapper.show {
-//   display: block;
-// }
-
 .filterCatalog__products-items-wrapper.filterCatalog__filter--nojs {
   display: block;
 }
@@ -534,9 +530,12 @@
 .filter-window {
   opacity: 1;
   margin: 0;
-  margin-left: -15px;
-  margin-top: -22px;
-  max-width: 290px;
+  margin-top: 8px;
+  max-width: 230px;
+
+  @media (min-width: $ds) {
+    transform: none;
+  }
 
   @media (max-width: $ds) {
     opacity: 0;
@@ -546,7 +545,7 @@
 .filter-wrapper-all {
   visibility: visible;
   position: relative;
-  min-width: 300px;
+  min-width: 250px;
 
   @media (max-width: $ds) {
     visibility: visible;
@@ -560,6 +559,7 @@
   @media (min-width: $ds) {
     pointer-events: all;
     margin-left: -15px;
+    margin-right: 49px;
   }
 }
 
