@@ -14,12 +14,13 @@
       font-weight: 700;
       color: $basicgray3;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 52px;
+      margin-bottom: 31px;
     }
 
     form {
       display: grid;
-      gap: 20px;
+      gap: 33px;
 
       input {
         min-height: 30px;
@@ -80,8 +81,8 @@
 
   &__toggle {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 13px;
+    right: 15px;
     z-index: 2;
     width: 30px;
     height: 30px;
@@ -189,7 +190,7 @@
 
 .password-wrapper {
   display: grid;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 
   input {
     margin-bottom: 10px;
@@ -222,7 +223,8 @@
   left: 50%;
   transform: translate(-50%,0);
   max-width: 430px;
-
+  background-color: $basicgray2;
+  padding-bottom: 60px;
 }
 
 .login-popup {
@@ -253,19 +255,19 @@
   flex-shrink: 0;
   flex-grow: 0;
   background: #fff;
-  width: 600px;
-  max-width: 100%;
+  min-width: 300px;
+  max-width: 430px;
   overflow: visible;
   transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
   transform: scale(0.9);
   opacity: 0;
 }
 
-.hystmodal--active{
+.hystmodal--active {
   visibility: visible;
 }
 
-.hystmodal--active .hystmodal__window{
+.hystmodal--active .hystmodal__window {
   transform: scale(1);
   opacity: 1;
 }

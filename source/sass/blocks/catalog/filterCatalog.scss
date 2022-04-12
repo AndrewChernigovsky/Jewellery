@@ -475,9 +475,9 @@
   display: none;
 }
 
-.filterCatalog__products-items-wrapper.show {
-  display: block;
-}
+// .filterCatalog__products-items-wrapper.show {
+//   display: block;
+// }
 
 .filterCatalog__products-items-wrapper.filterCatalog__filter--nojs {
   display: block;
@@ -488,70 +488,6 @@
 
   @media (max-width: $ds) {
     display: none;
-  }
-}
-
-.filter-wrapper.show {
-  display: none;
-
-  @media (max-width: $ds) {
-    display: flex;
-    position: relative;
-    min-width: 270px;
-    max-width: 470px;
-    min-height: 100vh;
-    margin: 0 auto;
-    top: 30%;
-    z-index: 114;
-  }
-
-  .filterCloseButton {
-    position: absolute;
-    right: 0;
-    top: -15px;
-    z-index: 223;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $basicgray3;
-    cursor: pointer;
-    border: 1px solid transparent;
-
-    &:hover {
-      opacity: 0.8;
-
-      svg {
-        opacity: 0.8;
-      }
-    }
-
-    svg {
-      fill: $white;
-      width: 14px;
-      height: 14px;
-    }
-  }
-}
-
-.filter-wrapper-all.show {
-
-  @media (max-width: $ds) {
-    min-width: 458px;
-    height: 100vh;
-    position: fixed;
-    z-index: 100;
-    left: 50%;
-    transform: translate(-50%,0);
-    top: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  @media (max-width: $tb) {
-    min-width: 270px;
   }
 }
 
@@ -591,4 +527,96 @@
 
 .filterCloseButton {
   display: none;
+  right: -25px;
+  top: -15px;
+}
+
+.filter-window {
+  opacity: 1;
+
+  @media (max-width: $ds) {
+    opacity: 0;
+  }
+}
+
+.filter-wrapper-all {
+  visibility: visible;
+  position: relative;
+
+  @media (max-width: $ds) {
+    visibility: visible;
+    position: fixed;
+  }
+}
+
+
+.hystmodal.filter-wrapper-all {
+  pointer-events: all;
+
+  @media (max-width: $ds) {
+    pointer-events: none;
+  }
+}
+
+.hystmodal--active.filter-wrapper-all {
+
+  @media (max-width: $ds) {
+    min-width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: $tb) {
+    min-width: 270px;
+  }
+
+  .filter-wrapper {
+    display: none;
+
+    @media (max-width: $ds) {
+      display: flex;
+      position: relative;
+      min-width: 100vw;
+      min-height: 100vh;
+      margin: 0 auto;
+      top: 30%;
+      z-index: 114;
+    }
+
+    .filterCloseButton {
+      position: absolute;
+      right: -25px;
+      top: -20px;
+      z-index: 223;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $basicgray3;
+      cursor: pointer;
+      border: 1px solid transparent;
+
+      &:hover {
+        opacity: 0.8;
+
+        svg {
+          opacity: 0.8;
+        }
+      }
+
+      svg {
+        fill: $white;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
 }

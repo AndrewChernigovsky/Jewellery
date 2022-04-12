@@ -10,7 +10,7 @@ let mainMenuContent = document.querySelector('.main-header__inner');
 let mainMenuOpenedLogin = document.getElementById('loginMenu');
 let mainLogin = document.getElementById('login');
 let loginBtnPopup = document.getElementById('btnloginPopup');
-let loginPopup = document.getElementById('loginPopup');
+let loginPopup = document.getElementById('modalLogin');
 let btnMoreAccardeon1 = document.getElementById('btnAsk1');
 let btnMoreAccardeon2 = document.getElementById('btnAsk2');
 let btnMoreAccardeon3 = document.getElementById('btnAsk3');
@@ -158,29 +158,29 @@ if(itemAccardeon4) {
 inputLoginEmail.removeAttribute('required');
 inputLoginPassword.removeAttribute('required');
 
-// loginPopup.addEventListener('submit', function (e) {
+loginPopup.addEventListener('submit', function (e) {
 
-//   if (inputLoginEmail.value.length == 0) {
-//     e.preventDefault()
-//     inputLoginEmail.classList.add('error');
-//   } else {
-//     inputLoginEmail.classList.remove('error')
-//     inputLoginEmail.classList.add('success')
-//     localStorage.setItem('LoginEmail', inputLoginEmail.value);
-//   }
+  if (inputLoginEmail.value.length == 0) {
+    e.preventDefault()
+    inputLoginEmail.classList.add('error');
+  } else {
+    inputLoginEmail.classList.remove('error')
+    inputLoginEmail.classList.add('success')
+    localStorage.setItem('LoginEmail', inputLoginEmail.value);
+  }
 
-//   if (inputLoginPassword.value.length == 0) {
-//     e.preventDefault();
-//     inputLoginPassword.classList.add('error')
-//   } else {
-//     inputLoginPassword.classList.remove('error')
-//     inputLoginPassword.classList.add('success')
-//   }
+  if (inputLoginPassword.value.length == 0) {
+    e.preventDefault();
+    inputLoginPassword.classList.add('error')
+  } else {
+    inputLoginPassword.classList.remove('error')
+    inputLoginPassword.classList.add('success')
+  }
 
-//   if (inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
-//     alert("Форма успешно отправлена");
-//   }
-// })
+  if (inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
+    alert("Форма успешно отправлена");
+  }
+})
 
 mainMenu.classList.remove(mainNavNojs);
 
@@ -320,10 +320,4 @@ if(filterFormClear) {
   filterFormClear.addEventListener('click', ()=> {
     filterFormCatalog.reset();
   })
-}
-
-let hystmodalActive = document.querySelector('.hystmodal--active')
-
-if(hystmodalActive) {
-  inputLoginEmail.focus();
 }
