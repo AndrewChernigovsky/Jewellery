@@ -1,4 +1,5 @@
 "use strict";
+let mainSection = document.getElementsByTagName('main');
 let mainMenu = document.querySelector('.main-menu');
 let mainBtnMenu = document.querySelector('.main-menu__toggle');
 let mainNavNojs = 'main-menu--nojs';
@@ -39,6 +40,7 @@ if(mainNavOpened) {
     }
 
     if(evt.key == "Tab" && evt.key == "Shift") {
+      evt.preventDefault()
       return false;
     }
   })
@@ -48,12 +50,10 @@ if(mainNavOpened) {
     return false;
     }
   }
-}
+  body.setAttribute('inert', '')
+} else {
 
-function shift () {
-  if(evt.key == "Tab" && evt.key == "Shift") {
-    return false;
-  }
+
 }
 
 mainLogin.removeAttribute('href')

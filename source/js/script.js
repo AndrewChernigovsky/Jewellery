@@ -30,30 +30,15 @@ let inputLoginPassword = document.getElementById('loginPassword');
 let loginSignUp = document.getElementById('loginSignUp');
 let loginWrapper = document.querySelector('loginPopup__wrapper');
 
+
 if(mainNavOpened) {
   document.addEventListener('keydown', (evt) => {
     if(evt.key == "Tab") {
       mainMenuOpenedLogin.addEventListener('blur', ()=> {
       mainBtnMenu.focus()
-      console.log(2)
       })
     }
-
-    if(evt.key == "Tab" && evt.key == "Shift") {
-      evt.preventDefault()
-      return false;
-    }
   })
-
-  document.onkeydown = function(evt) {
-    if(evt.key == "Tab" && evt.key == "Shift") {
-    return false;
-    }
-  }
-  body.setAttribute('inert', '')
-} else {
-
-
 }
 
 mainLogin.removeAttribute('href')
@@ -255,7 +240,6 @@ let filterFormClear = document.getElementById('filterClear');
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
   filterShowContent.classList.toggle('show')
-  overflow.classList.add('show')
   filterShowContentWrapper.classList.add('show')
   body.style.overflowY = 'hidden'
   filterShowContentWrapper.style.overflowY = 'scroll'
@@ -265,7 +249,6 @@ if (filterShowButton && filterShowContent) {
 if (filterCloseButton) {
     filterCloseButton.addEventListener('click', ()=> {
     filterShowContent.classList.toggle('show')
-    overflow.classList.remove('show')
     filterShowContentWrapper.classList.remove('show')
     body.style.overflowY = 'scroll'
     filterShowContentWrapper.style.overflowY = 'hidden'
