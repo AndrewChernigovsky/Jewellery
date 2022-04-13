@@ -30,31 +30,50 @@ let inputLoginPassword = document.getElementById('loginPassword');
 let loginSignUp = document.getElementById('loginSignUp');
 let loginWrapper = document.querySelector('loginPopup__wrapper');
 
+
 if(mainNavOpened) {
   document.addEventListener('keydown', (evt) => {
     if(evt.key == "Tab") {
       mainMenuOpenedLogin.addEventListener('blur', ()=> {
       mainBtnMenu.focus()
-      console.log(2)
       })
     }
-
-    if(evt.key == "Tab" && evt.key == "Shift") {
-      evt.preventDefault()
-      return false;
-    }
   })
+}
 
-  document.onkeydown = function(evt) {
-    if(evt.key == "Tab" && evt.key == "Shift") {
-    return false;
+
+
+var menu = $('.main-menu--opened')
+
+.attr( "tabindex", "-1" )
+.focus()
+.keydown(
+    function handleKeydown( event ) {
+        if ( event.key.toLowerCase() !== "tab" ) {
+          return;
+        }
+
+        var tabbable = $()
+          .add( menu.find( "button, input, select, textarea" ) )
+          .add( menu.find( "[href]" ) )
+          .add( menu.find( "[tabindex]:not([tabindex='-1'])" ) )
+        ;
+        var target = $( event.target );
+
+        if ( event.shiftKey ) {
+          if ( target.is( menu ) || target.is( tabbable.first() ) ) {
+            event.preventDefault();
+            tabbable.last().focus();
+          }
+
+        } else {
+          if ( target.is( tabbable.last() ) ) {
+            event.preventDefault();
+            tabbable.first().focus();
+        }
     }
   }
-  body.setAttribute('inert', '')
-} else {
-
-
-}
+);
 
 mainLogin.removeAttribute('href')
 mainLogin.setAttribute('href', '#')
@@ -255,7 +274,6 @@ let filterFormClear = document.getElementById('filterClear');
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
   filterShowContent.classList.toggle('show')
-  overflow.classList.add('show')
   filterShowContentWrapper.classList.add('show')
   body.style.overflowY = 'hidden'
   filterShowContentWrapper.style.overflowY = 'scroll'
@@ -265,7 +283,6 @@ if (filterShowButton && filterShowContent) {
 if (filterCloseButton) {
     filterCloseButton.addEventListener('click', ()=> {
     filterShowContent.classList.toggle('show')
-    overflow.classList.remove('show')
     filterShowContentWrapper.classList.remove('show')
     body.style.overflowY = 'scroll'
     filterShowContentWrapper.style.overflowY = 'hidden'

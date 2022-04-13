@@ -400,6 +400,10 @@
 
 .main-menu--opened.main-menu {
 
+  a, button, input {
+	  display: block;
+  }
+
   .main-menu__toggle {
     left: 32px;
     position: absolute;
@@ -988,4 +992,11 @@
  &:hover {
    opacity: 0.6;
  }
+}
+
+.main-menu {
+  &:focus {
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+  }
 }

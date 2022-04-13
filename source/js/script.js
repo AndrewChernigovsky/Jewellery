@@ -31,14 +31,48 @@ let loginSignUp = document.getElementById('loginSignUp');
 let loginWrapper = document.querySelector('loginPopup__wrapper');
 
 
+// if(mainNavOpened) {
+//   document.addEventListener('keydown', (evt) => {
+//     if(evt.key == "Tab") {
+//       mainMenuOpenedLogin.addEventListener('blur', ()=> {
+//       mainBtnMenu.focus()
+//       })
+//     }
+//   })
+// }
+
 if(mainNavOpened) {
-  document.addEventListener('keydown', (evt) => {
-    if(evt.key == "Tab") {
-      mainMenuOpenedLogin.addEventListener('blur', ()=> {
-      mainBtnMenu.focus()
-      })
+  var menu = $('.main-menu')
+
+  .attr( "tabindex", "-1" )
+  .focus()
+  .keydown(
+      function handleKeydown( event ) {
+          if ( event.key.toLowerCase() !== "tab" ) {
+            return;
+          }
+
+          var tabbable = $()
+            .add( menu.find( "button, input, select, textarea" ) )
+            .add( menu.find( "[href]" ) )
+            .add( menu.find( "[tabindex]:not([tabindex='-1'])" ) )
+          ;
+          var target = $( event.target );
+
+          if ( event.shiftKey ) {
+            if ( target.is( menu ) || target.is( tabbable.first() ) ) {
+              event.preventDefault();
+              tabbable.last().focus();
+            }
+
+          } else {
+            if ( target.is( tabbable.last() ) ) {
+              event.preventDefault();
+              tabbable.first().focus();
+          }
+      }
     }
-  })
+  );
 }
 
 mainLogin.removeAttribute('href')
