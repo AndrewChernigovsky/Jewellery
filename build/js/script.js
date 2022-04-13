@@ -29,6 +29,33 @@ let inputLoginPassword = document.getElementById('loginPassword');
 let loginSignUp = document.getElementById('loginSignUp');
 let loginWrapper = document.querySelector('loginPopup__wrapper');
 
+if(mainNavOpened) {
+  document.addEventListener('keydown', (evt) => {
+    if(evt.key == "Tab") {
+      mainMenuOpenedLogin.addEventListener('blur', ()=> {
+      mainBtnMenu.focus()
+      console.log(2)
+      })
+    }
+
+    if(evt.key == "Tab" && evt.key == "Shift") {
+      return false;
+    }
+  })
+
+  document.onkeydown = function(evt) {
+    if(evt.key == "Tab" && evt.key == "Shift") {
+    return false;
+    }
+  }
+}
+
+function shift () {
+  if(evt.key == "Tab" && evt.key == "Shift") {
+    return false;
+  }
+}
+
 mainLogin.removeAttribute('href')
 mainLogin.setAttribute('href', '#')
 
@@ -93,67 +120,6 @@ if(itemAccardeon4) {
     }
   });
 }
-
-// mainLogin.addEventListener('click', ()=> {
-//   loginPopup.classList.add('show')
-//   overflow.classList.add('show');
-//   body.style.overflowY = 'hidden'
-//   loginPopup.style.overflowY='scroll'
-//   body.classList.add('overflow-hidden')
-//   inputLoginEmail.focus()
-// })
-
-// mainMenuOpenedLogin.addEventListener('click', ()=> {
-//   loginPopup.classList.add('show')
-//   overflow.classList.add('show')
-//   body.style.overflowY = 'hidden'
-//   loginPopup.style.overflowY='scroll'
-//   loginPopup.style.overflowX='hidden'
-//   body.classList.add('overflow-hidden')
-//   inputLoginEmail.focus()
-// })
-
-// loginBtnPopup.addEventListener('click', ()=>{
-//   loginPopup.classList.remove('show')
-//   overflow.classList.remove('show')
-//   body.style.overflowY = 'scroll'
-//   body.classList.remove('overflow-hidden');
-// })
-
-// overflow.addEventListener('click', ()=> {
-//   loginPopup.classList.remove('show')
-//   overflow.classList.remove('show')
-//   body.style.overflowY = 'scroll'
-//   body.classList.remove('overflow-hidden');
-// })
-
-// document.addEventListener('keydown', function (e) {
-//   if (e.key === "Escape") {
-//     loginPopup.classList.remove('show')
-//     overflow.classList.remove('show')
-//     body.style.overflowY = 'scroll'
-//     body.classList.remove('overflow-hidden')
-//     filterShowContent.classList.remove('show');
-//     filterShowContentWrapper.classList.remove('show');
-//   }
-
-  // if (loginPopup.classList.contains('show')) {
-
-  //   loginSignUp.addEventListener('blur', ()=> {
-  //     if (e.key === 'Tab') {
-  //       loginBtnPopup.focus()
-  //       console.log(222212312)
-  //     }
-  //   })
-
-  //   loginBtnPopup.addEventListener('blur', ()=> {
-  //     if (e.key == 'Tab' && e.key == 'Shift') {
-  //       loginBtnPopup.focus()
-  //       console.log(3334412312)
-  //     }
-  //   })
-  // }
-// })
 
 inputLoginEmail.removeAttribute('required');
 inputLoginPassword.removeAttribute('required');
