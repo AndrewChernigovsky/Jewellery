@@ -13,6 +13,7 @@
 
   @media (max-width: $tb) {
     min-width: 270px;
+    top: -70px;
   }
 
   button[type="submit"] {
@@ -64,11 +65,19 @@
       padding: 20px 40px;
     }
 
+    @media (max-width: $tb) {
+      padding: 20px 23px;
+    }
+
     h3 {
       font-family: "Poppins";
       font-size: 1.6rem;
       font-weight: 500;
       color: $basicgray3;
+
+      @media (max-width: $tb) {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -113,7 +122,7 @@
     }
 
     @media (max-width: $tb) {
-      padding-top: 20px;
+      padding-top: 0;
     }
   }
 
@@ -539,6 +548,13 @@
 
   @media (max-width: $ds) {
     opacity: 0;
+    max-width: 100%;
+    width: 430px;
+  }
+
+  @media (max-width: $tb) {
+    width: 280px;
+    min-width: 280px;
   }
 }
 
@@ -550,6 +566,10 @@
   @media (max-width: $ds) {
     visibility: visible;
     position: fixed;
+  }
+
+  @media (max-width: $tb) {
+    min-width: 300px;
   }
 }
 
@@ -578,7 +598,7 @@
   }
 
   @media (max-width: $tb) {
-    min-width: 270px;
+    min-width: 100%;
   }
 
   .filter-wrapper {
@@ -608,6 +628,11 @@
       background-color: $basicgray3;
       cursor: pointer;
       border: 1px solid transparent;
+
+      @media (max-width: $ds) {
+        right: -5px;
+        top: -86px;
+      }
 
       &:hover {
         opacity: 0.8;
