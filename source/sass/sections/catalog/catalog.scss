@@ -138,6 +138,11 @@
       font-weight: 500;
       text-decoration: none;
       border: 1px solid transparent;
+      margin-left: 10px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
 
       &:hover {
         opacity: 0.8;
@@ -160,7 +165,7 @@
   }
 
   &__pagination-pages {
-    justify-content: space-between;
+    justify-content: flex-start;
     display: flex;
     max-width: 300px;
     min-width: 70px;
@@ -221,7 +226,7 @@
 
 .catalog-pag-pages {
   min-width: 98px;
-  margin-left: -34px;
+  margin-left: -19px;
 
   @media (max-width: $tb) {
     min-width: 138%;

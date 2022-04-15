@@ -216,12 +216,15 @@ let filterBtnClear = document.getElementById('filterClear')
 
 if(filterContentProducts) {
   filterContentProducts.classList.remove('filterCatalog__filter--nojs')
+
 }
 if(filterContentMaterial) {
   filterContentMaterial.classList.remove('filterCatalog__filter--nojs')
+  filterButtonMaterial.classList.remove('showmore')
 }
 if(filterContentCollection) {
   filterContentCollection.classList.remove('filterCatalog__filter--nojs')
+  filterButtonCollection.classList.remove('showmore')
 }
 if(filterContentPrice) {
   filterContentPrice.classList.remove('filterCatalog__filter--nojs')

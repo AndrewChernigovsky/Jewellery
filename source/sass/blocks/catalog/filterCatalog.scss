@@ -12,7 +12,7 @@
   }
 
   @media (max-width: $tb) {
-    min-width: 270px;
+    min-width: 280px;
     top: -70px;
   }
 
@@ -69,7 +69,7 @@
     }
 
     @media (max-width: $tb) {
-      padding: 25px 15px 13px 24px;
+      padding: 26px 21px 23px 24px;
     }
 
     .btnMore {
@@ -100,6 +100,10 @@
 
     @media (max-width: $ds) {
       border: none;
+    }
+
+    @media (max-width: $tb) {
+      margin-bottom: 30px;
     }
 
     button[type="button"] {
@@ -138,7 +142,7 @@
 
     @media (max-width: $tb) {
       padding-top: 0;
-      padding-bottom: 14px;
+      padding-bottom: 5px;
     }
   }
 
@@ -393,7 +397,7 @@
     }
 
     @media (max-width: $tb) {
-      margin-left: 36px;
+      margin-left: 43px;
     }
 
     label {
@@ -415,7 +419,7 @@
     margin-top: 3px;
 
     @media (max-width: $tb) {
-      margin-top: 4px;
+      margin-top: 5px;
       padding-bottom: 4px;
     }
 

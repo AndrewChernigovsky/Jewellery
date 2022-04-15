@@ -229,7 +229,11 @@
       }
 
       .facebook {
-        margin-left: 7px;
+        margin-left: 3px;
+
+        @media (max-width: $ds) {
+          margin-left: 7px;
+        }
       }
 
       span {
