@@ -257,6 +257,8 @@
 }
 
 .q-2 {
+  padding-top: 23px;
+
   h3 {
     @media (max-width: $tb) {
       max-width: 68%;
@@ -265,7 +267,7 @@
 }
 
 .q-4 {
-  padding-top: 46px;
+  padding-top: 43px;
 
   @media (max-width: $ds) {
     padding-top: 43px;
