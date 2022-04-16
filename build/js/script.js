@@ -274,6 +274,8 @@ let filterFormCatalogPinkFlamingo = document.getElementById('pinkFlamingo');
 let filterFormCatalogDreams = document.getElementById('dreams');
 let filterFormClear = document.getElementById('filterClear');
 
+// let checkboxFilter = filterFormCatalog.querySelectorAll('input[type="checkbox"]');
+
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
   filterShowContent.classList.toggle('show')
