@@ -273,6 +273,24 @@ let filterFormCatalogSilver = document.getElementById('silver');
 let filterFormCatalogPinkFlamingo = document.getElementById('pinkFlamingo');
 let filterFormCatalogDreams = document.getElementById('dreams');
 let filterFormClear = document.getElementById('filterClear');
+// let modalFilter = document.getElementById('modalFilter');
+
+// let screenWidth = window.screen.width + 'px';
+
+
+
+
+// window.addEventListener('resize', ()=>
+//   {
+//     let screenWidths = window.clientWidth + 'px';
+//     console.log(screenWidths)
+//     if(screenWidth <= '1023px') {
+//       modalFilter.classList.add('hystmodal')
+//     } else {
+//       modalFilter.classList.remove('hystmodal')
+//     }
+// }, false)
+
 
 // let checkboxFilter = filterFormCatalog.querySelectorAll('input[type="checkbox"]');
 

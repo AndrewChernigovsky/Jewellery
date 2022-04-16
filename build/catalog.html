@@ -19,7 +19,7 @@
           <div class="main-header__inner">
             <div class="main-header__header-up">
               <div class="main-header__header-up-inner container">
-                <button class="main-menu__toggle" type="button" tabindex="1" id="btnMenuMain" aria-label="openMenu">
+                <button class="main-menu__toggle" type="button" id="btnMenuMain" aria-label="openMenu">
                   <span>Открыть меню</span>
                 </button>
                 <form action="https://echo.htmlacademy.ru/" method="get" name="headerSearch" aria-label="formSearch">
@@ -28,7 +28,7 @@
                       <use xlink:href="img/sprite.svg#search"></use>
                     </svg>
                   </label>
-                  <input type="search" name="search" id="headerSearch" placeholder="Type here to search" tabindex="2" aria-label="search">
+                  <input type="search" name="search" id="headerSearch" placeholder="Type here to search" aria-label="search">
                 </form>
 
                 <div class="logo">
@@ -41,11 +41,11 @@
 
                 <div class="authorization">
                   <div class="login">
-                    <a href="login.html" class="login__link" id="login" tabindex="3" aria-label="login" data-hystmodal="#modalLogin">Login</a>
+                    <a href="login.html" class="login__link" id="login" aria-label="login" data-hystmodal="#modalLogin">Login</a>
                   </div>
 
                   <div class="cart">
-                    <a href="#" class="cart__link" id="cart" tabindex="4" aria-label="cart">
+                    <a href="#" class="cart__link" id="cart" aria-label="cart">
                       <span>Cart</span>
                       <span>0</span>
                       <svg role="img" class="cart" width="20" height="20">
@@ -63,36 +63,36 @@
                 <div class="main-nav__wrapper">
                   <ul class="main-nav__list">
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#" tabindex="5" aria-label="What’s new">What’s new</a>
+                      <a class="main-nav__link" href="#" aria-label="What’s new">What’s new</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#" tabindex="6" aria-label="Chokers">Chokers</a>
+                      <a class="main-nav__link" href="#" aria-label="Chokers">Chokers</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#" tabindex="7" aria-label="Necklaces">Necklaces</a>
+                      <a class="main-nav__link" href="#" aria-label="Necklaces">Necklaces</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#" tabindex="8" aria-label="Rings">Rings</a>
+                      <a class="main-nav__link" href="#" aria-label="Rings">Rings</a>
                     </li>
                     <li class="main-nav__item">
-                      <a class="main-nav__link" href="#" tabindex="9" aria-label="Earrings">Earrings</a>
+                      <a class="main-nav__link" href="#" aria-label="Earrings">Earrings</a>
                     </li>
                   </ul>
                 </div>
               </nav>
               <ul class="main-menu__faq-list">
                 <li class="main-menu__faq-item">
-                  <a href="#" tabindex="10" aria-label="About CH">About CH</a>
+                  <a href="#" aria-label="About CH">About CH</a>
                 </li>
                 <li class="main-menu__faq-item">
-                  <a href="#" tabindex="11" aria-label="Stores & Hours">Stores & Hours</a>
+                  <a href="#" aria-label="Stores & Hours">Stores & Hours</a>
                 </li>
                 <li class="main-menu__faq-item">
-                  <a href="#" tabindex="12" aria-label="Contact Us">Contact Us</a>
+                  <a href="#" aria-label="Contact Us">Contact Us</a>
                 </li>
               </ul>
-              <div class="loginMenu">
-                <a href="#" class="login__link" id="loginMenu" tabindex="13" aria-label="Login" data-hystmodal="#modalLogin">Login</a>
+              <div class="loginMenu login">
+                <a href="#" class="login__link" id="loginMenu" aria-label="Login" data-hystmodal="#modalLogin">Login</a>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@
           <div class="catalog__main container">
             <button class="filterShowButton" type="button" id="filterShowButton" data-hystmodal="#modalFilter">Filter</button>
 
-            <div class="filter-wrapper-all" id="modalFilter" tabindex="-1" aria-hidden="true">
+            <div class="hystmodal filter-wrapper-all" id="modalFilter" tabindex="-1" aria-hidden="true">
               <div class="hystmodal__wrap filter-wrapper">
                 <div class="hystmodal__window filter-window" role="dialog" aria-modal="true">
                   <button data-hystclose="" class="filterCloseButton hystmodal__close" type="button" id="filterCloseButton" aria-label="Close">
@@ -127,7 +127,7 @@
                       <div class="filterCatalog__wrapper">
                         <div class="filterCatalog__products">
                           <div class="filterCatalog__heading filterCatalog__filter df-1" id="products">
-                            <h3>Product</h3>
+                            <h2>Product</h2>
                             <button class="btnMore showmore" id="btnfilter1" aria-label="more">
                               <svg role="img" width="15" height="8" viewbox="0 0 15 15">
                                 <use xlink:href="img/sprite.svg#arrow-down"></use>
@@ -138,7 +138,7 @@
                             </button>
                           </div>
 
-                          <div class="filterCatalog__products-items filterCatalog__products-items-wrapper filterCatalog__filter--nojs show" id="productsContent">
+                          <div class="filterCatalog__products-items filterCatalog__products-items-wrapper filterCatalog__products-items-wrapper--nojs show" id="productsContent">
                             <div class=" filterCatalog__products-item">
                               <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" aria-label="necklaces">
                               <label for="necklaces">Necklaces</label>
@@ -159,7 +159,7 @@
                         </div>
                         <div class="filterCatalog__material">
                           <div class="filterCatalog__heading filterCatalog__filter" id="material">
-                            <h3>Material</h3>
+                            <h2>Material</h2>
                             <button class="btnMore showmore" id="btnfilter2" aria-label="more">
                               <svg role="img" width="15" height="8" viewbox="0 0 15 15">
                                 <use xlink:href="img/sprite.svg#arrow-down"></use>
@@ -170,7 +170,7 @@
                             </button>
                           </div>
 
-                          <div class="filterCatalog__material-items filterCatalog__products-items-wrapper filterCatalog__filter--nojs" id="materialContent">
+                          <div class="filterCatalog__material-items filterCatalog__products-items-wrapper filterCatalog__products-items-wrapper--nojs" id="materialContent">
                             <div class="filterCatalog__products-item">
                               <input class="visually-hidden" type="checkbox" name="gold" id="gold" aria-label="gold">
                               <label for="gold">Gold</label>
@@ -183,7 +183,7 @@
                         </div>
                         <div class="filterCatalog__collection">
                           <div class="filterCatalog__heading filterCatalog__filter" id="collection">
-                            <h3>Collection</h3>
+                            <h2>Collection</h2>
                             <button class="btnMore showmore" id="btnfilter3" aria-label="more">
                               <svg role="img" width="15" height="8" viewbox="0 0 15 15">
                                 <use xlink:href="img/sprite.svg#arrow-down"></use>
@@ -194,10 +194,10 @@
                             </button>
                           </div>
 
-                          <div class="filterCatalog__collection-items filterCatalog__products-items-wrapper filterCatalog__filter--nojs" id="collectionContent">
+                          <div class="filterCatalog__collection-items filterCatalog__products-items-wrapper filterCatalog__products-items-wrapper--nojs" id="collectionContent">
                             <div class="filterCatalog__products-item">
                               <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pinkFlamingo" aria-label="more">
-                              <label for="pink-flamingo">Pink flamingo</label>
+                              <label for="pinkFlamingo">Pink flamingo</label>
                             </div>
                             <div class="filterCatalog__products-item">
                               <input class="visually-hidden" type="checkbox" name="dreams" id="dreams" aria-label="more">
@@ -207,7 +207,7 @@
                         </div>
                         <div class="filterCatalog__price">
                           <div class="filterCatalog__heading filterCatalog__filter" id="price">
-                            <h3>Price</h3>
+                            <h2>Price</h2>
                             <button class="btnMore showmore" id="btnfilter4" aria-label="more">
                               <svg role="img" width="15" height="8" viewbox="0 0 15 15">
                                 <use xlink:href="img/sprite.svg#arrow-down"></use>
@@ -218,7 +218,7 @@
                             </button>
                           </div>
 
-                          <div class="filterCatalog__price-items filterCatalog__products-items-wrapper filterCatalog__filter--nojs  show" id="priceContent">
+                          <div class="filterCatalog__price-items filterCatalog__products-items-wrapper filterCatalog__products-items-wrapper--nojs show" id="priceContent">
                             <div class="filterCatalog__price-range">
                               <div class="filterCatalog__price-range-leftWrapper">
                                 <input type="text" class="filterCatalog__price-range-left" name="priceLeft" id="priceLeft" aria-label="priceLeft">
@@ -247,175 +247,175 @@
 
             <div class="catalog__catalog">
               <div class="catalog__inner catalog-inner">
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/doublePerl-ds.webp    1x,
                               img/content/products/doublePerl-ds@2x.webp 2x
                             ">
 
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/doublePerl-ds.jpg" srcset="img/content/products/doublePerl-ds@2x.jpg 2x" alt="double Perl" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Double pearl earrings</p>
-                    <span>$ 115</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/doublePerl-ds.jpg" srcset="img/content/products/doublePerl-ds@2x.jpg 2x" alt="double Perl" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Double pearl earrings</p>
+                  <span>$ 115</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/beadchokerGold-ds.webp    1x,
                               img/content/products/beadchokerGold-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/beadchokerGold-ds.jpg" srcset="img/content/products/beadchokerGold-ds@2x.jpg 2x" alt="beadchoker Gold" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Choker with gold bead</p>
-                    <span>$ 55</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/beadchokerGold-ds.jpg" srcset="img/content/products/beadchokerGold-ds@2x.jpg 2x" alt="beadchoker Gold" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Choker with gold bead</p>
+                  <span>$ 55</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/necklacegoldNecklace-ds.webp    1x,
                               img/content/products/necklacegoldNecklace-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/necklacegoldNecklace-ds.jpg" srcset="img/content/products/necklacegoldNecklace-ds@2x.jpg 2x" alt="necklace gold Necklace" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Gold layered necklace</p>
-                    <span>$ 155</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/necklacegoldNecklace-ds.jpg" srcset="img/content/products/necklacegoldNecklace-ds@2x.jpg 2x" alt="necklace gold Necklace" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Gold layered necklace</p>
+                  <span>$ 155</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/bluePendant-ds.webp    1x,
                               img/content/products/bluePendant-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/bluePendant-ds.jpg" srcset="img/content/products/bluePendant-ds@2x.jpg 2x" alt="blue Pendant" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Blue gemstone pendant</p>
-                    <span>$ 105</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/bluePendant-ds.jpg" srcset="img/content/products/bluePendant-ds@2x.jpg 2x" alt="blue Pendant" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Blue gemstone pendant</p>
+                  <span>$ 105</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/bogoEarrings-ds.webp    1x,
                               img/content/products/bogoEarrings-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/bogoEarrings-ds.jpg" srcset="img/content/products/bogoEarrings-ds@2x.jpg 2x" alt="bogo Earrings" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Boho earrings</p>
-                    <span>$ 75</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/bogoEarrings-ds.jpg" srcset="img/content/products/bogoEarrings-ds@2x.jpg 2x" alt="bogo Earrings" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Boho earrings</p>
+                  <span>$ 75</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/necklacebirdNecklace-ds.webp    1x,
                               img/content/products/necklacebirdNecklace-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/necklacebirdNecklace-ds.jpg" srcset="img/content/products/necklacebirdNecklace-ds@2x.jpg 2x" alt="necklace bird Necklace" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Gold bird necklace</p>
-                    <span>$ 135</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/necklacebirdNecklace-ds.jpg" srcset="img/content/products/necklacebirdNecklace-ds@2x.jpg 2x" alt="necklace bird Necklace" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Gold bird necklace</p>
+                  <span>$ 135</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/blackChoker-ds.webp    1x,
                               img/content/products/blackChoker-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/blackChoker-ds.jpg" srcset="img/content/products/blackChoker-ds@2x.jpg 2x" alt="black Choker" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Black leather choker</p>
-                    <span>$ 85</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/blackChoker-ds.jpg" srcset="img/content/products/blackChoker-ds@2x.jpg 2x" alt="black Choker" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Black leather choker</p>
+                  <span>$ 85</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/necklaceNecklace-ds.webp    1x,
                               img/content/products/necklaceNecklace-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/necklaceNecklace-ds.jpg" srcset="img/content/products/necklaceNecklace-ds@2x.jpg 2x" alt="necklace Necklace" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Necklace with amethyst</p>
-                    <span>$ 145</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/necklaceNecklace-ds.jpg" srcset="img/content/products/necklaceNecklace-ds@2x.jpg 2x" alt="necklace Necklace" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Necklace with amethyst</p>
+                  <span>$ 145</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/elephantEarrings-ds.webp    1x,
                               img/content/products/elephantEarrings-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/elephantEarrings-ds.jpg" srcset="img/content/products/elephantEarrings-ds@2x.jpg 2x" alt="elephant Earrings" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Elephant earrings</p>
-                    <span>$ 95</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/elephantEarrings-ds.jpg" srcset="img/content/products/elephantEarrings-ds@2x.jpg 2x" alt="elephant Earrings" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Elephant earrings</p>
+                  <span>$ 95</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/threaderNecklace-ds.webp    1x,
                               img/content/products/threaderNecklace-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/threaderNecklace-ds.jpg" srcset="img/content/products/threaderNecklace-ds@2x.jpg 2x" alt="threader Necklace" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Threader necklace</p>
-                    <span>$ 115</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/threaderNecklace-ds.jpg" srcset="img/content/products/threaderNecklace-ds@2x.jpg 2x" alt="threader Necklace" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Threader necklace</p>
+                  <span>$ 115</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/necklaceorigami-ds.webp    1x,
                               img/content/products/necklaceorigami-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/necklaceorigami-ds.jpg" srcset="img/content/products/necklaceorigami-ds@2x.jpg 2x" alt="necklace origami" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Origami crane necklace</p>
-                    <span>$ 105</span>
-                  </div>
-                  <div class="catalog__products-item catalog-items">
-                    <a href="#">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 320px)" srcset="
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/necklaceorigami-ds.jpg" srcset="img/content/products/necklaceorigami-ds@2x.jpg 2x" alt="necklace origami" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Origami crane necklace</p>
+                  <span>$ 105</span>
+                </div>
+                <div class="catalog__products-item catalog-items">
+                  <a href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="
                               img/content/products/marble-ds.webp    1x,
                               img/content/products/marble-ds@2x.webp 2x
                             ">
-                        <!-- 1х: 270px; 2x: 540px -->
-                        <img src="img/content/products/marble-ds.jpg" srcset="img/content/products/marble-ds@2x.jpg 2x" alt="marble" loading="lazy" width="270" height="272">
-                      </picture>
-                    </a>
-                    <p>Marble earrings</p>
-                    <span>$ 95</span>
-                  </div>
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/content/products/marble-ds.jpg" srcset="img/content/products/marble-ds@2x.jpg 2x" alt="marble" loading="lazy" width="270" height="272">
+                    </picture>
+                  </a>
+                  <p>Marble earrings</p>
+                  <span>$ 95</span>
+                </div>
               </div>
             </div>
           </div>
@@ -529,7 +529,6 @@
       </div>
     </footer>
 
-
     <div class="hystmodal loginPopup" id="modalLogin" tabindex="-1" aria-hidden="true">
       <div class="hystmodal__wrap loginPopup__wrapper">
         <div class="hystmodal__window loginPopup__window" role="dialog" aria-modal="true">
@@ -573,10 +572,11 @@
 
       </div>
     </div>
-  <script type="text/javascript" src="js/vendor/3.6.0/jquery-3.6.0.min.js"></script>
-  <script src="js/script.min.js" async=""></script>
-  <script src="js/hystmodal.min.js"></script>
-  <script src="js/vendor.js"></script>
-</div></body>
+    <script type="text/javascript" src="js/vendor/3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="js/script.min.js" async=""></script>
+    <script src="js/hystmodal.min.js"></script>
+    <script src="js/vendor.js"></script>
+  </div>
+</body>
 
 </html>

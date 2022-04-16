@@ -716,6 +716,7 @@
       font-weight: 500;
       color: $basicgray4;
       border: 1px solid transparent;
+      max-width: max-content;
 
       &:focus {
         outline: none;
@@ -746,6 +747,7 @@
     a {
       color: $white;
       font-size: 1.8rem;
+      max-width: min-content;
     }
   }
 
