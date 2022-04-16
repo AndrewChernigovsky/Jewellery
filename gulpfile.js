@@ -62,6 +62,18 @@ gulp.task("js", function () {
         .pipe(server.stream());
 });
 
+gulp.task("jsMin", function () {
+    return gulp
+        .src("source/js/vendor/vendor.js")
+        .pipe(plumber())
+        .pipe(uglify())
+        .pipe(rename("vendor.min.js"))
+        .pipe(sourcemap.write("."))
+        .pipe(plumber.stop())
+        .pipe(gulp.dest("build/js"))
+        .pipe(server.stream());
+});
+
 gulp.task("refresh", function (done) {
     server.reload();
     done();
@@ -131,5 +143,5 @@ gulp.task("clean", function () {
     return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html", "js"));
+gulp.task("build", gulp.series("clean", "copy", "css", "html", "js", "jsMin"));
 gulp.task("start", gulp.series("build", "server"));

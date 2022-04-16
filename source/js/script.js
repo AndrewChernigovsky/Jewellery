@@ -202,19 +202,19 @@ let filterContentPrice = document.getElementById('priceContent')
 let filterBtnClear = document.getElementById('filterClear')
 
 if(filterContentProducts) {
-  filterContentProducts.classList.remove('filterCatalog__filter--nojs')
+  filterContentProducts.classList.remove('filterCatalog__products-items-wrapper--nojs')
 
 }
 if(filterContentMaterial) {
-  filterContentMaterial.classList.remove('filterCatalog__filter--nojs')
+  filterContentMaterial.classList.remove('filterCatalog__products-items-wrapper--nojs')
   filterButtonMaterial.classList.remove('showmore')
 }
 if(filterContentCollection) {
-  filterContentCollection.classList.remove('filterCatalog__filter--nojs')
+  filterContentCollection.classList.remove('filterCatalog__products-items-wrapper--nojs')
   filterButtonCollection.classList.remove('showmore')
 }
 if(filterContentPrice) {
-  filterContentPrice.classList.remove('filterCatalog__filter--nojs')
+  filterContentPrice.classList.remove('filterCatalog__products-items-wrapper--nojs')
 }
 
 if(filterWrapperProducts) {
