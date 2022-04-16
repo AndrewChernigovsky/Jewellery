@@ -351,10 +351,10 @@
       }
     }
 
-   .cart__link {
-     display: flex;
-   }
+  .cart__link {
+    display: flex;
   }
+}
 
   .logo {
     flex-basis: 100%;
@@ -399,9 +399,10 @@
 }
 
 .main-menu--opened.main-menu {
-
-  a, button, input {
-	  display: block;
+  a,
+  button,
+  input {
+    display: block;
   }
 
   .main-menu__toggle {
@@ -989,11 +990,11 @@
 }
 
 .logoCatalog {
- cursor: pointer;
+  cursor: pointer;
 
- &:hover {
-   opacity: 0.6;
- }
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .main-menu {

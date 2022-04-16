@@ -30,46 +30,33 @@ let inputLoginPassword = document.getElementById('loginPassword');
 let loginSignUp = document.getElementById('loginSignUp');
 let loginWrapper = document.querySelector('loginPopup__wrapper');
 
-
-// if(mainNavOpened) {
-//   document.addEventListener('keydown', (evt) => {
-//     if(evt.key == "Tab") {
-//       mainMenuOpenedLogin.addEventListener('blur', ()=> {
-//       mainBtnMenu.focus()
-//       })
-//     }
-//   })
-// }
-
 if(mainNavOpened) {
-  var menu = $('.main-menu')
+  let menu = $('.main-menu')
 
-  .attr( "tabindex", "-1" )
+  .attr( 'tabindex', '-1' )
   .focus()
   .keydown(
       function handleKeydown( event ) {
-          if ( event.key.toLowerCase() !== "tab" ) {
-            return;
-          }
+        if ( event.key.toLowerCase() !== 'tab' ) {
+          return;
+        }
 
-          var tabbable = $()
-            .add( menu.find( "button, input, select, textarea" ) )
-            .add( menu.find( "[href]" ) )
-            .add( menu.find( "[tabindex]:not([tabindex='-1'])" ) )
-          ;
-          var target = $( event.target );
+        let tabbable = $()
+          .add( menu.find( "button, input, select, textarea" ))
+          .add( menu.find( "[href]" ) )
+          .add( menu.find( "[tabindex]:not([tabindex='-1'])" ));
 
-          if ( event.shiftKey ) {
-            if ( target.is( menu ) || target.is( tabbable.first() ) ) {
-              event.preventDefault();
-              tabbable.last().focus();
-            }
+        let target = $( event.target );
 
-          } else {
-            if ( target.is( tabbable.last() ) ) {
-              event.preventDefault();
-              tabbable.first().focus();
-          }
+        if ( event.shiftKey ) {
+          if ( target.is( menu ) || target.is( tabbable.first() )) {
+            event.preventDefault();
+            tabbable.last().focus();
+          }} else {
+          if ( target.is( tabbable.last() )) {
+            event.preventDefault();
+            tabbable.first().focus();
+        }
       }
     }
   );
@@ -162,8 +149,8 @@ loginPopup.addEventListener('submit', function (e) {
     inputLoginPassword.classList.add('success')
   }
 
-  if (inputLoginEmail.classList.contains("success") && inputLoginPassword.classList.contains("success")) {
-    alert("Форма успешно отправлена");
+  if (inputLoginEmail.classList.contains('success') && inputLoginPassword.classList.contains('success')) {
+    alert('Форма успешно отправлена');
   }
 })
 
@@ -273,26 +260,6 @@ let filterFormCatalogSilver = document.getElementById('silver');
 let filterFormCatalogPinkFlamingo = document.getElementById('pinkFlamingo');
 let filterFormCatalogDreams = document.getElementById('dreams');
 let filterFormClear = document.getElementById('filterClear');
-// let modalFilter = document.getElementById('modalFilter');
-
-// let screenWidth = window.screen.width + 'px';
-
-
-
-
-// window.addEventListener('resize', ()=>
-//   {
-//     let screenWidths = window.clientWidth + 'px';
-//     console.log(screenWidths)
-//     if(screenWidth <= '1023px') {
-//       modalFilter.classList.add('hystmodal')
-//     } else {
-//       modalFilter.classList.remove('hystmodal')
-//     }
-// }, false)
-
-
-// let checkboxFilter = filterFormCatalog.querySelectorAll('input[type="checkbox"]');
 
 if (filterShowButton && filterShowContent) {
   filterShowButton.addEventListener('click', ()=> {
