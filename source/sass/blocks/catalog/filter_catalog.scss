@@ -686,13 +686,12 @@
 .filter-wrapper-all {
   visibility: visible;
   position: relative;
-  min-width: 250px;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  overflow: hidden;
-  overflow-y: auto;
+  // overflow: hidden;
+  // overflow-y: auto;
   opacity: 1;
   display: flex;
   flex-flow: column nowrap;
@@ -703,6 +702,7 @@
     pointer-events: all;
     margin-left: -15px;
     margin-right: 49px;
+    min-width: 250px;
   }
 
   // @media (max-width: $ds) {
