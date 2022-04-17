@@ -95,6 +95,7 @@
         max-width: 100%;
         padding: 0px 20px;
         line-height: 18px;
+        padding-bottom: 5px;
       }
     }
 
@@ -146,6 +147,7 @@
       @media (max-width: $tb) {
         font-size: 1.6rem;
         line-height: 1.36;
+        margin-left: 2px;
       }
     }
   }
@@ -269,6 +271,10 @@
 
   @media (max-width: $ds) {
     padding-top: 27px;
+  }
+
+  @media (max-width: $tb) {
+    padding-top: 1px;
   }
 
   h3 {

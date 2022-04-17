@@ -1,5 +1,5 @@
 .filterCatalog {
-  max-width: 245px;
+  max-width: 250px;
   min-width: 218px;
 
   @media (max-width: $ds) {
@@ -62,7 +62,7 @@
 
   &__heading {
 
-    padding: 24px 33px 22px 18px;
+    padding: 10px 14px 10px 23px;
 
     @media (max-width: $ds) {
       padding: 36px 46px 35px 36px;
@@ -102,9 +102,9 @@
   &__wrapper {
     display: grid;
     border: 1px solid $basicbrown;
-    margin-bottom: 38px;
+    margin-bottom: 35px;
     margin-top: 0;
-    margin-left: 2px;
+    margin-left: 1px;
 
     @media (max-width: $ds) {
       border: none;
@@ -194,7 +194,7 @@
     display: grid;
     gap: 10px;
     justify-items: center;
-    left: 50px;
+    left: 56px;
     z-index: 3;
     cursor: pointer;
     min-width: 40px;
@@ -275,7 +275,7 @@
     height: 1px;
     min-width: 100%;
     position: absolute;
-    top: 10px;
+    top: 15px;
     background-color: $basicgray2;
     z-index: 1;
 
@@ -291,8 +291,8 @@
     top: 0px;
     background-color: $basicbrown;
     z-index: 2;
-    min-width: 122px;
-    left: 63px;
+    min-width: 111px;
+    left: 74px;
 
     @media (max-width: $ds) {
       min-width: 169px;
@@ -317,6 +317,10 @@
 
     h3 {
       margin: 0;
+    }
+
+    .b-2 {
+      padding-top: 10px;
     }
 
     button {
@@ -382,7 +386,7 @@
   }
 
   &__price-items {
-    margin-top: -9px;
+    margin-top: -8px;
     padding-bottom: 25px;
 
     @media (max-width: $ds) {
@@ -400,7 +404,7 @@
     display: flex;
     align-items: center;
     padding: 0 4px 14px;
-    margin-left: 37px;
+    margin-left: 41px;
 
     @media (max-width: $ds) {
       padding: 0 4px 20px;
@@ -690,8 +694,6 @@
   bottom: 0;
   right: 0;
   left: 0;
-  // overflow: hidden;
-  // overflow-y: auto;
   opacity: 1;
   display: flex;
   flex-flow: column nowrap;
@@ -704,12 +706,6 @@
     margin-right: 49px;
     min-width: 250px;
   }
-
-  // @media (max-width: $ds) {
-  //   visibility: visible;
-  //   position: fixed;
-  //   pointer-events: none;
-  // }
 
   @media (max-width: $tb) {
     min-width: 300px;

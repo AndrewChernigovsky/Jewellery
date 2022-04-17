@@ -10,6 +10,7 @@
 
     @media (min-width: 1170px) {
       min-width: 865px;
+      margin-left: 4px;
     }
 
     @media (max-width: $ds) {
@@ -23,7 +24,7 @@
     align-items: flex-start;
     flex-direction: row;
     margin-top: -23px;
-    max-width: 1170px;
+    max-width: 1180px;
 
     @media (max-width: $ds) {
       flex-direction: column;
@@ -67,7 +68,7 @@
 
       @media (max-width: $tb) {
         object-fit: contain;
-        width: 130px;
+        width: 131px;
         height: auto;
       }
 
@@ -139,6 +140,10 @@
       text-decoration: none;
       border: 1px solid transparent;
       margin-left: 10px;
+
+      @media (max-width: $tb) {
+        margin-left: 21px;
+      }
 
       &:first-of-type {
         margin-left: 0;
@@ -229,7 +234,7 @@
   margin-left: -19px;
 
   @media (max-width: $tb) {
-    min-width: 138%;
+    min-width: 100%;
     margin-left: 0px;
   }
 }
@@ -238,5 +243,14 @@
 .catalog-next {
   @media (max-width: $tb) {
     display: none;
+  }
+}
+
+.twitter-1 {
+  svg {
+    @media (max-width: $tb) {
+      margin-top: 8px;
+      margin-left: 4px;
+    }
   }
 }
