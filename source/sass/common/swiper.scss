@@ -47,10 +47,18 @@
 
     @media (max-width: $ds) {
       max-width: 324px;
+
+      .i-1 p {
+        margin-left: 15px;
+      }
     }
 
     @media (max-width: $tb) {
       min-width: 130px;
+
+      .i-1 p {
+        margin-left: 3px;
+      }
     }
 
     .catalog__products-item {
@@ -59,8 +67,14 @@
       p {
         margin-bottom: 11px;
 
+        @media (max-width: $ds) {
+          margin-bottom: 8px;
+          margin-top: 20px;
+        }
+
         @media (max-width: $tb) {
-          margin-bottom: 9px;
+          margin-bottom: 8px;
+          margin-top: 15px;
         }
       }
     }
@@ -166,7 +180,7 @@
 }
 
 .swiper-main__pagination.swiper-pagination {
-  bottom: 62px;
+  bottom: 65px;
 
   @media (max-width: $ds) {
     bottom: 23px;

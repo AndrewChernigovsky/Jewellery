@@ -41,6 +41,12 @@
       letter-spacing: 1px;
       margin-bottom: -3px;
 
+      @media (max-width: $ds) {
+        margin-top: 10px;
+        letter-spacing: 0.9px;
+        margin-bottom: -4px;
+      }
+
       @media (max-width: $tb) {
         padding-right: 60px;
         margin-bottom: 22px;
@@ -232,7 +238,7 @@
         margin-left: 3px;
 
         @media (max-width: $ds) {
-          margin-left: 7px;
+          margin-left: 4px;
         }
       }
 

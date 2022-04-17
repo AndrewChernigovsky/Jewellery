@@ -261,15 +261,6 @@ let filterFormCatalogPinkFlamingo = document.getElementById('pinkFlamingo');
 let filterFormCatalogDreams = document.getElementById('dreams');
 let filterFormClear = document.getElementById('filterClear');
 
-if (filterShowButton && filterShowContent) {
-  filterShowButton.addEventListener('click', ()=> {
-  filterShowContent.classList.toggle('show')
-  filterShowContentWrapper.classList.add('show')
-  body.style.overflowY = 'hidden'
-  filterShowContentWrapper.style.overflowY = 'scroll'
-  })
-}
-
 if (filterCloseButton) {
     filterCloseButton.addEventListener('click', ()=> {
     filterShowContent.classList.toggle('show')
