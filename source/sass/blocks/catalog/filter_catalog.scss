@@ -73,9 +73,17 @@
     }
 
     .btnMore {
+      border: 1px solid transparent;
+      outline: 1px solid transparent;
+
       svg {
         width: 20px;
         height: 20px;
+      }
+
+      &:focus {
+        border: 1px solid $black;
+        outline: 1px solid transparent;
       }
     }
 
@@ -315,8 +323,11 @@
       border: none;
       background: transparent;
       cursor: pointer;
-      width: 20px;
-      height: 15px;
+      width: 40px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
         svg {
@@ -694,17 +705,16 @@
     margin-right: 49px;
   }
 
-  @media (max-width: $ds) {
-    visibility: visible;
-    position: fixed;
-    pointer-events: none;
-  }
+  // @media (max-width: $ds) {
+  //   visibility: visible;
+  //   position: fixed;
+  //   pointer-events: none;
+  // }
 
   @media (max-width: $tb) {
     min-width: 300px;
   }
 }
-
 
 .hystmodal.filter-wrapper-all {
 
