@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $ds) {
-    max-width: 685px;
+    max-width: 680px;
   }
 
   @media (max-width: $tb) {
@@ -27,16 +27,22 @@
     display: flex;
     align-self: self-end;
     top: -116px;
-    padding-top: 262px;
+
+    @media (min-width: $ds) {
+      padding-top: 262px;
+    }
 
     @media (max-width: $ds) {
       top: -66px;
       left: -3px;
+      padding-top: 205px;
     }
 
     @media (max-width: $tb) {
       top: -195px;
+      top: -240px;
       left: 0;
+      padding-top: 360px;
     }
   }
 
@@ -65,8 +71,13 @@
     .catalog__products-item {
       max-width: 270px;
 
+      img {
+        object-fit: cover;
+      }
+
       p {
         margin-bottom: 11px;
+        word-break: break-word;
 
         @media (max-width: $ds) {
           margin-bottom: 8px;

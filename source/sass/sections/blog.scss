@@ -211,10 +211,10 @@
 
     img {
       min-height: 100%;
-      
+      object-fit: cover;
+
       @media (max-width: $ds) {
         min-width: 100%;
-        object-fit: cover;
       }
     }
   }

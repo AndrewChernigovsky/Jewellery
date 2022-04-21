@@ -376,6 +376,18 @@
       margin-top: 8px;
       gap: 8px;
     }
+
+    input:not(:checked):focus + label {
+      &::after {
+        border: 1px solid $black;
+      }
+    }
+
+    input:not(:checked):focus + label {
+      &::before {
+        border: 1px solid $black;
+      }
+    }
   }
 
   &__products-items.show,
@@ -514,8 +526,6 @@
         border: 1px solid $basicbrown;
       }
     }
-
-
 
     input:checked + label,
     input:not(:checked) + label {
