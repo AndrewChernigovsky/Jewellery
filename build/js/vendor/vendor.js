@@ -476,3 +476,31 @@ const myModal = new HystModal({
   linkAttributeName: "data-hystmodal",
   closeOnOverlay: true,
 });
+
+let swiperBtnPrev = document.querySelector('.swiper-button-prev');
+let swiperBtnNext = document.querySelector('.swiper-button-next');
+let swiperDots = document.querySelectorAll('.swiper-pagination-bullet');
+
+// for(let i=0; i <= swiperDots.length; i++) {
+//   swiperDots[i].addAttribute('tabindex', '-1');
+// }
+
+Array.from(swiperDots).forEach((e)=> {
+  e.removeAttribute('tabindex', '0');
+  e.setAttribute('tabindex', '-1');
+
+  e.addEventListener('focus', ()=> {
+    e.blur();
+  })
+})
+
+swiperBtnPrev.addEventListener('focus', ()=> {
+  swiperBtnPrev.blur();
+})
+
+swiperBtnNext.addEventListener('focus', ()=> {
+  swiperBtnNext.blur();
+})
+
+$(swiperBtnPrev).click(function(e){ $(this).trigger('blur') })
+$(swiperBtnNext).click(function(e){ $(this).trigger('blur') })
