@@ -10,13 +10,10 @@
     color: $white;
     line-height: 0.4;
     margin-top: -28px;
+    text-align: center;
 
     @media (max-width: $ds) {
       padding: 8px;
-    }
-
-    @media (max-width: $tb) {
-      text-align: center;
     }
 
     h1 {
