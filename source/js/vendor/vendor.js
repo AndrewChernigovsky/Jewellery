@@ -481,10 +481,6 @@ let swiperBtnPrev = document.querySelector('.swiper-button-prev');
 let swiperBtnNext = document.querySelector('.swiper-button-next');
 let swiperDots = document.querySelectorAll('.swiper-pagination-bullet');
 
-// for(let i=0; i <= swiperDots.length; i++) {
-//   swiperDots[i].addAttribute('tabindex', '-1');
-// }
-
 Array.from(swiperDots).forEach((e)=> {
   e.removeAttribute('tabindex', '0');
   e.setAttribute('tabindex', '-1');
